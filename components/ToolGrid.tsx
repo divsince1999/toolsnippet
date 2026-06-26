@@ -17,10 +17,10 @@ export default function ToolGrid() {
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
       const matchesCategory = activeCategory === "All" || tool.category === activeCategory;
-      const matchesSearch = 
+      const matchesSearch =
         tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         tool.shortDescription.toLowerCase().includes(searchQuery.toLowerCase());
-      
+
       return matchesCategory && matchesSearch;
     });
   }, [activeCategory, searchQuery]);
@@ -52,6 +52,7 @@ export default function ToolGrid() {
           </div>
           <input
             type="text"
+            aria-label="Search tools"
             placeholder="Search tools by name or description..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -71,11 +72,10 @@ export default function ToolGrid() {
                   key={category}
                   type="button"
                   onClick={() => setActiveCategory(category)}
-                  className={`rounded-md px-4 py-2 text-left text-sm font-medium transition ${
-                    isActive
-                      ? "bg-primary-solid text-white"
+                  className={`rounded-md px-4 py-2 text-left text-sm font-medium transition ${isActive
+                      ? "bg-primary-solid text-white dark:text-black"
                       : "border border-black/15 hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/10"
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>

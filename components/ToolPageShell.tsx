@@ -60,15 +60,34 @@ export default function ToolPageShell({
 
       <section className="mx-auto w-full max-w-6xl px-4 mt-15">
         <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
-        <div className="mt-4 space-y-4">
+        <div className="mt-4 space-y-3">
           {tool.faqs.map((faq) => (
-            <div
+            <details
               key={faq.question}
-              className="rounded-lg border border-black/10 p-4 dark:border-white/10"
+              className="group rounded-lg border border-black/10 p-4 transition-colors duration-200 dark:border-white/10 [&_summary::-webkit-details-marker]:hidden"
             >
-              <h3 className="font-semibold">{faq.question}</h3>
-              <p className="mt-1 text-gray-700 dark:text-gray-300">{faq.answer}</p>
-            </div>
+              <summary className="flex cursor-pointer items-center justify-between font-semibold focus:outline-none select-none text-gray-900 dark:text-gray-100">
+                <span>{faq.question}</span>
+                <span className="ml-1.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-black/5 transition duration-300 group-open:-rotate-180 dark:bg-white/10">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </span>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                {faq.answer}
+              </p>
+            </details>
           ))}
         </div>
       </section>

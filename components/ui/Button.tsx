@@ -17,10 +17,10 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const baseStyles = "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50";
-  
+
   const variants = {
-    primary: "bg-primary-solid text-white hover:bg-primary-solid-hover",
-    secondary: "bg-black/5 text-gray-900 hover:bg-black/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/20",
+    primary: "bg-primary-solid text-white hover:bg-primary-solid-hover dark:text-black",
+    secondary: "bg-black/5 text-gray-900 hover:bg-black/10 dark:bg-white/10 dark:text-black dark:hover:bg-white/20",
     outline: "border border-black/15 bg-transparent hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/10",
     ghost: "bg-transparent hover:bg-black/5 dark:hover:bg-white/10",
   };

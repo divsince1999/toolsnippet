@@ -4,96 +4,133 @@ import { useMemo, useState } from "react";
 import Button from "@/components/ui/Button";
 import TextArea from "@/components/ui/TextArea";
 import ToolContainer from "@/components/ui/ToolContainer";
+import { useTool } from "@/hooks/useTool";
 
 export default function RegexTesterTool() {
-  const [pattern, setPattern] = useState("\\b\\w{4}\\b");
-  const [flags, setFlags] = useState("g");
-  const [testText, setTestText] = useState(
-    "This line has code and many words.\nTest regex quickly."
-  );
+  const { input, setInput, output, setOutput, clearAll } = useTool();
+  const [pattern, setPattern] = useState("");
+  const [options, setOptions] = useState({
+    flags: "g",
+    caseSensitive: false,
+    multiline: false,
+    dotAll: false,
+  });
 
-  const result = useMemo(() => {
+  const test = () => {
     try {
-      const regex = new RegExp(pattern, flags);
-      const matches = Array.from(testText.matchAll(regex), (match) => match[0]);
-      return { matches, error: "" };
-    } catch (err) {
-      return {
-        matches: [] as string[],
-        error: err instanceof Error ? err.message : "Invalid regex",
-      };
+      const { flags, caseSensitive, multiline, dotAll } = options;
+      
+      // Build flags string
+      let regexFlags = flags;
+      if (!caseSensitive && !flags.includes('i')) regexFlags += 'i';
+      if (multiline && !flags.includes('m')) regexFlags += 'm';
+      if (dotAll && !flags.includes('s')) regexFlags += 's';
+      
+      // Create regex
+      const regex = new RegExp(pattern, regexFlags);
+      
+      // Test the regex
+      const matches = input.match(regex);
+      
+      let result = `Pattern: ${pattern}\n`;
+      result += `Flags: ${regexFlags}\n\n`;
+      
+      if (matches) {
+        result += `Matches found: ${matches.length}\n\n`;
+        matches.forEach((match, index) => {
+          result += `Match ${index + 1}: "${match}"\n`;
+        });
+        
+        // Show match details with groups
+        if (matches.length > 0) {
+          result += "\nMatch details:\n";
+          let matchIndex = 0;
+          let match;
+          while ((match = regex.exec(input)) !== null) {
+            result += `Match ${matchIndex + 1}:\n`;
+            result += `  Full match: "${match[0]}"\n`;
+            result += `  Position: ${match.index}\n`;
+            
+            if (match.length > 1) {
+              result += `  Groups:\n`;
+              for (let i = 1; i < match.length; i++) {
+                result += `    Group ${i}: "${match[i]}"\n`;
+              }
+            }
+            result += "\n";
+            matchIndex++;
+          }
+        }
+      } else {
+        result += "No matches found\n";
+      }
+      
+      setOutput(result);
+    } catch (error) {
+      setOutput(`Error: ${error instanceof Error ? error.message : "Regex test failed"}`);
     }
-  }, [pattern, flags, testText]);
+  };
+
+  const updateOption = (key: keyof typeof options, value: string | boolean) => {
+    setOptions(prev => ({ ...prev, [key]: value }));
+  };
 
   return (
-    <ToolContainer
-      title="Regex Tester"
-      description="Test your regular expressions against sample text in real-time."
-    >
+    <ToolContainer title="Regex Tester" description="Test regular expressions against text input.">
       <div className="grid gap-6">
-        <div className="grid gap-4 md:grid-cols-[1fr_auto]">
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium">Pattern</label>
-            <input
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium mb-2">Regular Expression</label>
+            <textarea
               value={pattern}
               onChange={(e) => setPattern(e.target.value)}
-              className="w-full rounded-lg border border-black/15 bg-transparent p-3 text-sm outline-none transition focus:ring-2 focus:ring-primary dark:border-white/20"
-              placeholder="Regex pattern"
+              placeholder="Enter your regex pattern..."
+              className="w-full h-24 p-3 border rounded-lg font-mono text-sm"
             />
           </div>
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium">Flags</label>
-            <input
-              value={flags}
-              onChange={(e) => setFlags(e.target.value)}
-              className="w-24 rounded-lg border border-black/15 bg-transparent p-3 text-sm outline-none transition focus:ring-2 focus:ring-primary dark:border-white/20"
-              placeholder="gim"
-            />
+          <div className="space-y-2">
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={options.caseSensitive}
+                onChange={(e) => updateOption("caseSensitive", e.target.checked)}
+                className="mr-2"
+              />
+              <span className="text-sm font-medium">Case sensitive</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={options.multiline}
+                onChange={(e) => updateOption("multiline", e.target.checked)}
+                className="mr-2"
+              />
+              <span className="text-sm font-medium">Multiline</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                checked={options.dotAll}
+                onChange={(e) => updateOption("dotAll", e.target.checked)}
+                className="mr-2"
+              />
+              <span className="text-sm font-medium">Dot matches all</span>
+            </label>
           </div>
         </div>
 
-        <TextArea
-          label="Test Text"
-          value={testText}
-          onChange={(e) => setTestText(e.target.value)}
-          rows={8}
-          placeholder="Enter text to test against..."
-          error={result.error}
+        <TextArea 
+          label="Test Text" 
+          value={input} 
+          onChange={(e) => setInput(e.target.value)} 
+          placeholder="Enter text to test against the regex..." 
+          rows={5} 
         />
-
-        <div className="rounded-lg border border-black/10 bg-black/[0.02] p-4 dark:border-white/10 dark:bg-white/[0.02]">
-          <div className="mb-3 flex items-center justify-between">
-            <h3 className="text-sm font-semibold">Matches ({result.matches.length})</h3>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => {
-                setPattern("");
-                setFlags("g");
-                setTestText("");
-              }}
-            >
-              Reset
-            </Button>
-          </div>
-          
-          <div className="max-h-60 overflow-y-auto rounded border border-black/5 bg-white p-2 dark:border-white/5 dark:bg-black/20">
-            {result.matches.length > 0 ? (
-              <ul className="space-y-1">
-                {result.matches.map((match, index) => (
-                  <li
-                    key={`${match}-${index}`}
-                    className="rounded bg-primary/10 px-2 py-1 text-sm font-mono dark:bg-primary/20"
-                  >
-                    {match}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="py-4 text-center text-sm text-gray-500">No matches found.</p>
-            )}
-          </div>
+        <div className="flex gap-2">
+          <Button onClick={test}>Test</Button>
+          <Button variant="ghost" onClick={clearAll} disabled={!input}>Clear</Button>
         </div>
+        {output && <TextArea label="Test Results" readOnly copyable value={output} rows={8} />}
       </div>
     </ToolContainer>
   );

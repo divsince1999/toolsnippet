@@ -1,5 +1,6 @@
 "use client";
 
+import { load } from "js-yaml";
 import { useTool } from "@/hooks/useTool";
 import Button from "@/components/ui/Button";
 import TextArea from "@/components/ui/TextArea";
@@ -10,52 +11,27 @@ export default function YamlToJsonTool() {
 
   const handleConvert = () => {
     try {
-      if (!input) return;
-      
-      const lines = input.split("\n");
-      const result: any = {};
-      const stack: { obj: any; indent: number }[] = [{ obj: result, indent: -1 }];
+      if (!input.trim()) return;
 
-      lines.forEach(line => {
-        const trimmed = line.trim();
-        if (!trimmed || trimmed.startsWith("#")) return;
-
-        const indent = line.search(/\S/);
-        const [key, ...valueParts] = trimmed.split(":");
-        const value = valueParts.join(":").trim();
-        const cleanKey = key.trim();
-
-        while (stack.length > 1 && indent <= stack[stack.length - 1].indent) {
-          stack.pop();
-        }
-
-        const current = stack[stack.length - 1].obj;
-        if (value) {
-          current[cleanKey] = isNaN(Number(value)) ? value : Number(value);
-        } else {
-          current[cleanKey] = {};
-          stack.push({ obj: current[cleanKey], indent });
-        }
-      });
-
-      setOutput(JSON.stringify(result, null, 2));
+      const parsed = load(input);
+      setOutput(JSON.stringify(parsed, null, 2));
       setError("");
-    } catch (err) {
-      setError("Failed to convert YAML. Please ensure consistent indentation.");
+    } catch (err: any) {
+      setError(err.message || "Failed to parse YAML. Please check your input.");
     }
   };
 
   return (
     <ToolContainer
       title="YAML to JSON Converter"
-      description="Convert simple YAML configurations to JSON format."
+      description="Convert YAML configurations to JSON format."
     >
       <div className="grid gap-6">
         <TextArea
           label="Input YAML"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="name: John\nage: 30..."
+          placeholder="name: John\nage: 30\nitems:\n  - name: Item 1\n  - name: Item 2"
           rows={10}
         />
 

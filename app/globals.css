@@ -1,11 +1,25 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+:root {
+  --app-primary: #0f766e;
+  --app-primary-hover: #115e59;
+  --app-primary-solid: #0f766e;
+  --app-primary-solid-hover: #115e59;
+}
+
+.dark {
+  --app-primary: #2dd4bf;
+  --app-primary-hover: #5eead4;
+  --app-primary-solid: #2dd4bf;
+  --app-primary-solid-hover: #5eead4;
+}
+
 @theme {
-  --color-primary: #0f766e;
-  --color-primary-hover: #115e59;
-  --color-primary-solid: #0f766e;
-  --color-primary-solid-hover: #115e59;
+  --color-primary: var(--app-primary);
+  --color-primary-hover: var(--app-primary-hover);
+  --color-primary-solid: var(--app-primary-solid);
+  --color-primary-solid-hover: var(--app-primary-solid-hover);
   --font-sans: var(--font-poppins);
   
   /* Extended colors for light mode */

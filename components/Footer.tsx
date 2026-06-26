@@ -13,12 +13,12 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-solid text-white">
+            <Link href="/" aria-label="ToolSnippet home" className="inline-flex items-center gap-2 hover:opacity-90 transition-opacity">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-solid text-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -29,11 +29,11 @@ export default function Footer() {
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
                 </svg>
-              </div>
-              <span className="text-xl font-bold tracking-tight text-primary-solid">
+              </span>
+              <span className="text-2xl font-bold tracking-tight text-primary-solid">
                 ToolSnippet
               </span>
-            </div>
+            </Link>
             <p className="mt-4 max-w-xs text-sm text-gray-600 dark:text-gray-400">
               Modern utilities built with Vanilla JS & Standardized Design. Fast,
               secure, and free online utilities.

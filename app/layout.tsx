@@ -11,6 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://toolsnippet.com"),
   title: "ToolSnippet - Free Online Developer Tools",
   description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
   keywords: "online tools, developer tools, text tools, data conversion, validation tools, encoding tools, free utilities",

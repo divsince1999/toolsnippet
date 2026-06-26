@@ -10,8 +10,25 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `https://toolsnippet.com${item.href}`
+    }))
+  };
+
   return (
     <nav aria-label="Breadcrumb navigation" className="mb-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema, null, 2)
+        }}
+      />
       <ol className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-300">
         {items.map((item, index) => (
           <li key={item.href} className="flex items-center">

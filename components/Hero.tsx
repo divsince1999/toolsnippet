@@ -42,7 +42,7 @@ export default function Hero({
         <div className="mt-10">
           <Link
             href={ctaHref}
-            className="inline-flex items-center rounded-md bg-primary-solid px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-solid-hover"
+            className="inline-flex items-center rounded-md bg-primary-solid px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-solid-hover dark:text-black"
           >
             {ctaLabel}
           </Link>
