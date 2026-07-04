@@ -24,6 +24,16 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/images/site-logo.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/images/site-logo.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.json",
   openGraph: {
     title: "ToolSnippet - Free Online Developer Tools",
     description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
@@ -33,9 +43,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://toolsnippet.com/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/images/site-logo.png",
+        width: 512,
+        height: 512,
         alt: "ToolSnippet - Free Online Developer Tools",
       },
     ],
@@ -48,9 +58,9 @@ export const metadata: Metadata = {
     creator: "@toolsnippet",
     images: [
       {
-        url: "https://toolsnippet.com/twitter-image.jpg",
-        width: 1200,
-        height: 600,
+        url: "/images/site-logo.png",
+        width: 512,
+        height: 512,
         alt: "ToolSnippet - Free Online Developer Tools",
       },
     ],

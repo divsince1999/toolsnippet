@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { tools } from "@/lib/tools";
 
 export default function ToolGrid() {
+  const searchParams = useSearchParams();
   const categories = useMemo(
     () => ["All", ...Array.from(new Set(tools.map((tool) => tool.category)))],
     []
@@ -13,6 +15,13 @@ export default function ToolGrid() {
     "All"
   );
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    const query = searchParams.get("q");
+    if (query) {
+      setSearchQuery(query);
+    }
+  }, [searchParams]);
 
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
