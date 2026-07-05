@@ -21,8 +21,8 @@ export default function StructuredData({ tool }: StructuredDataProps) {
       ...tool.whyUse,
       ...tool.howToUse
     ],
-    screenshot: "https://toolsnippet.com/images/site-logo.png",
-    url: `https://toolsnippet.com/tools/${tool.slug}`,
+    screenshot: "https://www.toolsnippet.com/images/site-logo.png",
+    url: `https://www.toolsnippet.com/tools/${tool.slug}`,
     author: {
       "@type": "Organization",
       name: "ToolSnippet"
@@ -30,10 +30,10 @@ export default function StructuredData({ tool }: StructuredDataProps) {
     publisher: {
       "@type": "Organization",
       name: "ToolSnippet",
-      url: "https://toolsnippet.com",
+      url: "https://www.toolsnippet.com",
       logo: {
         "@type": "ImageObject",
-        "url": "https://toolsnippet.com/images/site-logo.png"
+        "url": "https://www.toolsnippet.com/images/site-logo.png"
       }
     },
     datePublished: "2024-01-01",

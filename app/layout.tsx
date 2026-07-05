@@ -16,7 +16,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://toolsnippet.com"),
+  metadataBase: new URL("https://www.toolsnippet.com"),
   title: "ToolSnippet - Free Online Developer Tools",
   description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
   keywords: "online tools, developer tools, text tools, data conversion, validation tools, encoding tools, free utilities",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ToolSnippet - Free Online Developer Tools",
     description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
-    url: "https://toolsnippet.com",
+    url: "https://www.toolsnippet.com",
     siteName: "ToolSnippet",
     locale: "en_US",
     type: "website",

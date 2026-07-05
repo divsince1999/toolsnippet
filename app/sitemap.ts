@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { tools } from "@/lib/tools";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://toolsnippet.com";
+  const baseUrl = "https://www.toolsnippet.com";
   const currentDate = new Date();
 
   const staticPages = [

@@ -17,7 +17,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://toolsnippet.com${item.href}`
+      item: `https://www.toolsnippet.com${item.href}`
     }))
   };
 

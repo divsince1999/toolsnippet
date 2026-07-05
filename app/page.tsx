@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Fast, secure, and 100% private client-side utilities for developers. Format JSON, CSV, SQL, XML, HTML, decode JWT, generate secure passwords, passwords, and convert encoding instantly.",
   alternates: {
-    canonical: "https://toolsnippet.com/",
+    canonical: "https://www.toolsnippet.com/",
   },
 };
 
@@ -16,10 +16,10 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "ToolSnippet",
-    "url": "https://toolsnippet.com",
+    "url": "https://www.toolsnippet.com",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://toolsnippet.com/?q={search_term_string}",
+      "target": "https://www.toolsnippet.com/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
