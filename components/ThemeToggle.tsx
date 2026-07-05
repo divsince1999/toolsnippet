@@ -1,21 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
-
-const STORAGE_KEY = "theme";
-
 export default function ThemeToggle() {
-  useEffect(() => {
-    const savedTheme = window.localStorage.getItem(STORAGE_KEY);
-    const shouldUseDark = savedTheme === "dark";
-    document.documentElement.classList.toggle("dark", shouldUseDark);
-  }, []);
-
   function toggleTheme() {
     const root = document.documentElement;
     const nextIsDark = !root.classList.contains("dark");
     root.classList.toggle("dark", nextIsDark);
-    window.localStorage.setItem(STORAGE_KEY, nextIsDark ? "dark" : "light");
+    window.localStorage.setItem("theme", nextIsDark ? "dark" : "light");
   }
 
   return (

@@ -2,11 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { tools } from "@/lib/tools";
 
 export default function ToolGrid() {
-  const searchParams = useSearchParams();
   const categories = useMemo(
     () => ["All", ...Array.from(new Set(tools.map((tool) => tool.category)))],
     []
@@ -17,11 +15,12 @@ export default function ToolGrid() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    const query = searchParams.get("q");
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q");
     if (query) {
       setSearchQuery(query);
     }
-  }, [searchParams]);
+  }, []);
 
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
@@ -82,8 +81,8 @@ export default function ToolGrid() {
                   type="button"
                   onClick={() => setActiveCategory(category)}
                   className={`rounded-md px-4 py-2 text-left text-sm font-medium transition ${isActive
-                      ? "bg-primary-solid text-white dark:text-black"
-                      : "border border-black/15 hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/10"
+                    ? "bg-primary-solid text-white dark:text-black"
+                    : "border border-black/15 hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/10"
                     }`}
                 >
                   {category}

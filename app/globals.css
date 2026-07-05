@@ -21,7 +21,8 @@
   --color-primary-solid: var(--app-primary-solid);
   --color-primary-solid-hover: var(--app-primary-solid-hover);
   --font-sans: var(--font-poppins);
-  
+  --font-weight-medium: 600;
+
   /* Extended colors for light mode */
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
@@ -39,6 +40,18 @@
 body {
   background-color: #ffffff;
   color: #171717;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
 }
 
 /* Dark mode */

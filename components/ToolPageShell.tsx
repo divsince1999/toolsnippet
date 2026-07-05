@@ -27,7 +27,7 @@ export default function ToolPageShell({
         <Breadcrumbs items={breadcrumbItems} />
       </div>
       <section className="mx-auto w-full max-w-6xl px-4 pb-15 text-center">
-        <h1 className="text-4xl font-bold tracking-tight">{tool.heroTitle}</h1>
+        <h1 className="text-4xl font-bold tracking-tight [text-wrap:balance]">{tool.heroTitle}</h1>
         <p className="mx-auto mt-4 max-w-3xl text-gray-600 dark:text-gray-300">
           {tool.heroDescription}
         </p>

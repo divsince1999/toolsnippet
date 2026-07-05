@@ -20,7 +20,7 @@ export default function Hero({
   return (
     <section className="px-4 py-20 sm:py-25">
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl [text-wrap:balance]">
           {title} <span className="text-primary">{highlight}</span>
         </h1>
 

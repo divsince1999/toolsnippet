@@ -3,7 +3,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
   return (
-    <header className="border-b border-black/10 dark:border-white/10">
+    <header className="min-h-[73px] border-b border-black/10 dark:border-white/10">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between p-4">
         <Link href="/" aria-label="ToolSnippet home" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
           <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-solid text-white">

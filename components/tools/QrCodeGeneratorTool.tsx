@@ -119,8 +119,11 @@ export default function QrCodeGeneratorTool() {
           <Button variant="ghost" onClick={clearAll} disabled={!input}>Clear</Button>
         </div>
         {output && (
-          <div className="flex justify-center p-4 border rounded-lg bg-gray-50">
-            <div dangerouslySetInnerHTML={{ __html: output }} />
+          <div className="flex min-h-[220px] items-center justify-center rounded-lg border border-black/10 bg-gray-50 p-4 dark:border-white/10 dark:bg-white/[0.02]">
+            <div
+              className="[&_svg]:block [&_svg]:h-auto [&_svg]:max-w-full"
+              dangerouslySetInnerHTML={{ __html: output }}
+            />
           </div>
         )}
       </div>

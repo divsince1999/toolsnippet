@@ -3,11 +3,16 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ThemeScript from "@/components/ThemeScript";
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  adjustFontFallback: true,
+  preload: true,
+  fallback: ["system-ui", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -28,11 +33,8 @@ export const metadata: Metadata = {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico", type: "image/x-icon", sizes: "any" },
-      { url: "/images/site-logo.png", type: "image/png", sizes: "32x32" },
     ],
-    apple: [
-      { url: "/images/site-logo.png", sizes: "180x180", type: "image/png" },
-    ],
+    apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
   manifest: "/manifest.json",
   openGraph: {
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/site-logo.png",
+        url: "/icon.svg",
         width: 512,
         height: 512,
         alt: "ToolSnippet - Free Online Developer Tools",
@@ -52,14 +54,14 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "ToolSnippet - Free Online Developer Tools",
     description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
     site: "@toolsnippet",
     creator: "@toolsnippet",
     images: [
       {
-        url: "/images/site-logo.png",
+        url: "/icon.svg",
         width: 512,
         height: 512,
         alt: "ToolSnippet - Free Online Developer Tools",
@@ -77,8 +79,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${poppins.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className={`${poppins.className} min-h-full flex flex-col`}>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className={`${poppins.className} min-h-full flex flex-col font-sans`}>
         <Header />
         <div className="flex-1">
           {children}

@@ -2,8 +2,8 @@ import dynamic from "next/dynamic";
 import React from "react";
 
 const ToolSkeleton = () => (
-  <div className="mx-auto w-full max-w-4xl px-4 mt-6">
-    <div className="h-64 animate-pulse rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
+  <div className="mx-auto w-full max-w-6xl px-4 mt-6 min-h-[420px]">
+    <div className="h-full min-h-[420px] animate-pulse rounded-xl border border-black/10 bg-black/5 dark:border-white/10 dark:bg-white/5" />
   </div>
 );
 

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Hero from "@/components/Hero";
 import ToolGrid from "@/components/ToolGrid";
 
@@ -34,13 +33,7 @@ export default function Home() {
         }}
       />
       <Hero />
-      <Suspense fallback={
-        <div className="mx-auto w-full max-w-6xl px-4 py-20 text-center text-gray-500">
-          Loading tools...
-        </div>
-      }>
-        <ToolGrid />
-      </Suspense>
+      <ToolGrid />
     </main>
   );
 }

@@ -19,7 +19,7 @@ export default function MarkdownPreviewerTool() {
       .replace(/^# (.*$)/gim, "<h1>$1</h1>")
       .replace(/\*\*(.*)\*\*/gim, "<strong>$1</strong>")
       .replace(/\*(.*)\*/gim, "<em>$1</em>")
-      .replace(/!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" alt="$1" class="max-w-full h-auto rounded-lg" />')
+      .replace(/!\[(.*?)\]\((.*?)\)/gim, '<img src="$2" alt="$1" width="640" height="360" loading="lazy" decoding="async" class="max-w-full h-auto rounded-lg aspect-video object-cover" />')
       .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2" target="_blank" class="text-primary hover:underline">$1</a>')
       .replace(/^\- (.*$)/gim, "<li>$1</li>")
       .replace(/^\d+\. (.*$)/gim, "<li>$1</li>")

@@ -31,7 +31,16 @@ export default function ImageToBase64Tool() {
         </div>
         {output && (
           <div className="grid gap-4">
-            <img src={output} alt="Preview" className="max-h-40 w-fit rounded-lg border border-black/10" />
+            <div className="flex min-h-40 items-center justify-center overflow-hidden rounded-lg border border-black/10 bg-black/[0.02] dark:border-white/10 dark:bg-white/[0.02]">
+              <img
+                src={output}
+                alt="Uploaded image preview"
+                width={320}
+                height={160}
+                decoding="async"
+                className="max-h-40 w-auto object-contain"
+              />
+            </div>
             <TextArea label="Base64 Data URI" readOnly copyable value={output} rows={5} />
           </div>
         )}
