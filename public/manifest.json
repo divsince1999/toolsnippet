@@ -1,7 +1,7 @@
 {
   "name": "ToolSnippet",
   "short_name": "ToolSnippet",
-  "description": "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
+  "description": "Free online text, JSON, Base64, URL, regex, encoding, decoding, formatting and developer tools. Fast, secure and works entirely in your browser.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",

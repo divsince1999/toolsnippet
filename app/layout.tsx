@@ -17,8 +17,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.toolsnippet.com"),
-  title: "ToolSnippet - Free Online Developer Tools",
-  description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
+  title: "Free Online Developer & Text Tools | ToolSnippet",
+  description: "Free online text, JSON, Base64, URL, regex, encoding, decoding, formatting and developer tools. Fast, secure and works entirely in your browser.",
   keywords: "online tools, developer tools, text tools, data conversion, validation tools, encoding tools, free utilities",
   authors: [{ name: "ToolSnippet" }],
   robots: {
@@ -29,6 +29,13 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  applicationName: "ToolSnippet",
+  alternates: {
+    canonical: "https://www.toolsnippet.com",
+  },
+  category: "Developer Tools",
+  creator: "ToolSnippet",
+  publisher: "ToolSnippet",
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -38,33 +45,31 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   openGraph: {
-    title: "ToolSnippet - Free Online Developer Tools",
-    description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
+    title: "Free Online Developer & Text Tools | ToolSnippet",
+    description: "Free online text, JSON, Base64, URL, regex, encoding, decoding, formatting and developer tools. Fast, secure and works entirely in your browser.",
     url: "https://www.toolsnippet.com",
     siteName: "ToolSnippet",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/icon.svg",
-        width: 512,
-        height: 512,
-        alt: "ToolSnippet - Free Online Developer Tools",
+        url: "/images/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Free Online Developer & Text Tools | ToolSnippet",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: "ToolSnippet - Free Online Developer Tools",
-    description: "Fast, secure, and free online utilities for developers, writers, and digital professionals.",
-    site: "@toolsnippet",
-    creator: "@toolsnippet",
+    card: "summary_large_image",
+    title: "Free Online Developer & Text Tools | ToolSnippet",
+    description: "Free online text, JSON, Base64, URL, regex, encoding, decoding, formatting and developer tools. Fast, secure and works entirely in your browser.",
     images: [
       {
-        url: "/icon.svg",
-        width: 512,
-        height: 512,
-        alt: "ToolSnippet - Free Online Developer Tools",
+        url: "/images/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Free Online Developer & Text Tools | ToolSnippet",
       },
     ],
   },

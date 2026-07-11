@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import ToolGrid from "@/components/ToolGrid";
 
 export const metadata: Metadata = {
-  title: "ToolSnippet - Free Online Developer Tools & Formatting Utilities",
+  title: "Free Online Developer & Text Tools | ToolSnippet & Formatting Utilities",
   description:
     "Fast, secure, and 100% private client-side utilities for developers. Format JSON, CSV, SQL, XML, HTML, decode JWT, generate secure passwords, passwords, and convert encoding instantly.",
   alternates: {

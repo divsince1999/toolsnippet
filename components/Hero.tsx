@@ -12,7 +12,7 @@ type HeroProps = {
 export default function Hero({
   title = "Powerful Tools,",
   highlight = "Simplified.",
-  description = "Fast, secure, and free online utilities for developers, writers, and digital professionals. No registration, no ads, just tools.",
+  description = "Free online text, JSON, Base64, URL, regex, encoding, decoding, formatting and developer tools. Fast, secure and works entirely in your browser. No registration, no ads, just tools.",
   badges = ["Free & Easy", "No Signup", "100% Private"],
   ctaLabel = "Explore Tools",
   ctaHref = "/#tools",

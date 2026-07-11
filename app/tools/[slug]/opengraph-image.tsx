@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getToolBySlug } from "@/lib/tools";
 
-export const alt = "ToolSnippet - Free Online Developer Tools";
+export const alt = "Free Online Developer & Text Tools | ToolSnippet";
 export const size = {
   width: 1200,
   height: 630,

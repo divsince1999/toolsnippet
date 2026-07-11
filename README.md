@@ -1,6 +1,6 @@
 # ToolSnippet
 
-Fast, secure, and free online utilities for developers, writers, and digital professionals. No registration, no ads, just tools.
+Free online text, JSON, Base64, URL, regex, encoding, decoding, formatting and developer tools. Fast, secure and works entirely in your browser. No registration, no ads, just tools.
 
 ## Getting Started
 
