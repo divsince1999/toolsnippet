@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import ToolGrid from "@/components/ToolGrid";
+import RecentlyUsedTools from "@/components/RecentlyUsedTools";
 
 export const metadata: Metadata = {
-  title: "Free Online Developer & Text Tools | ToolSnippet & Formatting Utilities",
+  title: "Free Online Developer & Text Tools | ToolSnippet",
   description:
-    "Fast, secure, and 100% private client-side utilities for developers. Format JSON, CSV, SQL, XML, HTML, decode JWT, generate secure passwords, passwords, and convert encoding instantly.",
+    "Fast, secure, and 100% private browser-based developer tools. Format JSON, CSV, SQL, XML, HTML, decode JWT, generate secure passwords, convert Base64, encode URLs, and more—no data leaves your browser.",
   alternates: {
     canonical: "https://www.toolsnippet.com/",
   },
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const siteSchema = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "Organization",
     "name": "ToolSnippet",
     "url": "https://www.toolsnippet.com",
     "potentialAction": {
@@ -33,6 +34,7 @@ export default function Home() {
         }}
       />
       <Hero />
+      <RecentlyUsedTools />
       <ToolGrid />
     </main>
   );

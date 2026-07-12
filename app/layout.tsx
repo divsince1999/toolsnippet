@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ThemeScript from "@/components/ThemeScript";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Clarity from "@/components/Clarity";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -95,7 +97,9 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
+        <Clarity />
       </body>
+      <GoogleAnalytics gaId="G-CKEXP6Q1X4" />
     </html>
   );
 }

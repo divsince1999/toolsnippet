@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import ToolPageShell from "@/components/ToolPageShell";
 import { buildToolMetadata, getRelatedTools, getToolBySlug, tools } from "@/lib/tools";
 import { ToolRegistry } from "@/components/tools";
+import { buildAllSchemas } from "@/lib/seo/schema";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -35,9 +36,22 @@ export default async function ToolPage({ params }: Props) {
     notFound();
   }
 
+  const schemas = buildAllSchemas(tool);
+
   return (
-    <ToolPageShell tool={tool} relatedTools={relatedTools}>
-      <ToolComponent />
-    </ToolPageShell>
+    <>
+      {schemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema, null, 2),
+          }}
+        />
+      ))}
+      <ToolPageShell tool={tool} relatedTools={relatedTools}>
+        <ToolComponent />
+      </ToolPageShell>
+    </>
   );
 }

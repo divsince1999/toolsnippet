@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ToolInfo } from "@/lib/tools";
 import StructuredData from "@/components/StructuredData";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AddToRecentTools from "@/components/AddToRecentTools";
 
 type ToolPageShellProps = {
   tool: ToolInfo;
@@ -23,6 +24,7 @@ export default function ToolPageShell({
 
   return (
     <main>
+      <AddToRecentTools tool={tool} />
       <div className="mx-auto w-full max-w-6xl px-4 pt-25">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
@@ -39,6 +41,38 @@ export default function ToolPageShell({
         <h2 className="text-2xl font-bold">About This Tool</h2>
         <p className="mt-3 text-gray-700 dark:text-gray-300">{tool.about}</p>
       </section>
+
+      {tool.features && tool.features.length > 0 && (
+        <section className="mx-auto w-full max-w-6xl px-4 mt-15">
+          <h2 className="text-2xl font-bold">Key Features</h2>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {tool.features.map((feature) => (
+              <div
+                key={feature}
+                className="rounded-lg border border-black/10 p-4 transition hover:border-primary/50 dark:border-white/10"
+              >
+                <div className="flex items-start gap-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mt-0.5 flex-shrink-0 text-green-600 dark:text-green-400"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto w-full max-w-6xl px-4 mt-15">
         <h2 className="text-2xl font-bold">How to Use This Tool</h2>
@@ -57,6 +91,22 @@ export default function ToolPageShell({
           ))}
         </ul>
       </section>
+
+      {tool.tips && tool.tips.length > 0 && (
+        <section className="mx-auto w-full max-w-6xl px-4 mt-15">
+          <h2 className="text-2xl font-bold">Pro Tips</h2>
+          <ul className="mt-4 space-y-3">
+            {tool.tips.map((tip) => (
+              <li
+                key={tip}
+                className="rounded-lg border border-black/10 p-4 transition hover:border-primary/50 dark:border-white/10"
+              >
+                <span className="text-gray-700 dark:text-gray-300">{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="mx-auto w-full max-w-6xl px-4 mt-15">
         <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>

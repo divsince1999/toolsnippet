@@ -16,6 +16,8 @@ export type ToolInfo = {
   howToUse: string[];
   whyUse: string[];
   faqs: ToolFaq[];
+  features?: string[];
+  tips?: string[];
 };
 
 export const tools: ToolInfo[] = [
@@ -49,6 +51,19 @@ export const tools: ToolInfo[] = [
         answer: "Yes, it works for both short and long text.",
       },
     ],
+    features: [
+      "Convert to uppercase, lowercase, and title case",
+      "Instant transformation",
+      "One-click copy to clipboard",
+      "Works with any text length",
+      "Client-side processing",
+    ],
+    tips: [
+      "Use title case for headings and titles",
+      "Use uppercase for emphasis or acronyms",
+      "Use lowercase for normal body text",
+      "Check special characters after conversion",
+    ],
   },
   {
     slug: "json-formatter",
@@ -79,6 +94,19 @@ export const tools: ToolInfo[] = [
         question: "Can I minify JSON too?",
         answer: "Yes, use the Minify JSON action on this page.",
       },
+    ],
+    features: [
+      "Beautify JSON instantly",
+      "Validate JSON syntax",
+      "Minify JSON",
+      "Client-side processing",
+      "Works on mobile",
+    ],
+    tips: [
+      "Validate before formatting",
+      "Remove trailing commas if parsing fails",
+      "Large files may take slightly longer",
+      "Check for escaped characters",
     ],
   },
   {
@@ -111,6 +139,19 @@ export const tools: ToolInfo[] = [
         answer: "The input must be valid Base64 text.",
       },
     ],
+    features: [
+      "Encode and decode instantly",
+      "UTF-8 support",
+      "Browser-based",
+      "One-click copy",
+      "No data upload",
+    ],
+    tips: [
+      "Base64 is encoding, not encryption",
+      "Double-check UTF-8 encoding for special characters",
+      "Never store secrets as Base64 expecting security",
+      "Use for auth headers and tokens",
+    ],
   },
   {
     slug: "url-encoder-decoder",
@@ -141,6 +182,19 @@ export const tools: ToolInfo[] = [
         question: "Is this different from Base64?",
         answer: "Yes. URL encoding and Base64 solve different problems.",
       },
+    ],
+    features: [
+      "Encode URL components safely",
+      "Decode encoded URLs",
+      "Handle special characters",
+      "Instant conversion",
+      "No server calls",
+    ],
+    tips: [
+      "Encode query parameters, not full URLs",
+      "Double-check encoding for spaces and symbols",
+      "Use for API request building",
+      "Test encoded URLs before deployment",
     ],
   },
   {
@@ -173,6 +227,19 @@ export const tools: ToolInfo[] = [
         answer: "Yes, decoding works even if token is expired.",
       },
     ],
+    features: [
+      "Decode JWT header and payload",
+      "View token claims instantly",
+      "Check expiry dates",
+      "Identify issuer information",
+      "No data sent to server",
+    ],
+    tips: [
+      "Never share tokens with untrusted parties",
+      "Check the exp claim for expiry",
+      "Verify issuer with your backend",
+      "This does not validate signatures",
+    ],
   },
   {
     slug: "regex-tester",
@@ -203,6 +270,19 @@ export const tools: ToolInfo[] = [
         question: "Why do I get no matches?",
         answer: "Check pattern, flags, and escaping in your expression.",
       },
+    ],
+    features: [
+      "Test regex patterns in real-time",
+      "Highlight all matches",
+      "Support for flags (g, i, m, etc.)",
+      "Show match groups",
+      "Instant feedback",
+    ],
+    tips: [
+      "Test edge cases with your pattern",
+      "Use the i flag for case-insensitive matching",
+      "Escape special characters properly",
+      "Test with realistic sample data",
     ],
   },
   {
@@ -235,6 +315,19 @@ export const tools: ToolInfo[] = [
         answer: "UUID v4 has a very low probability of collision, making it suitable for most applications.",
       },
     ],
+    features: [
+      "Generate UUID v4 instantly",
+      "Generate multiple UUIDs at once",
+      "Cryptographically random",
+      "One-click copy",
+      "No external dependencies",
+    ],
+    tips: [
+      "Use UUIDs for database primary keys",
+      "Perfect for mock data generation",
+      "Suitable for session identifiers",
+      "Not for security-critical secrets",
+    ],
   },
   {
     slug: "lorem-ipsum-generator",
@@ -261,6 +354,19 @@ export const tools: ToolInfo[] = [
         question: "Can I generate words instead of paragraphs?",
         answer: "Yes, you can choose between words, sentences, or paragraphs.",
       },
+    ],
+    features: [
+      "Generate paragraphs, sentences, or words",
+      "Customizable text length",
+      "Classic Lorem Ipsum text",
+      "Instant generation",
+      "Easy to copy",
+    ],
+    tips: [
+      "Use for UI mockups and prototypes",
+      "Adjust length to match your design",
+      "Replace with real content before launch",
+      "Great for testing typography",
     ],
   },
   {
@@ -289,6 +395,19 @@ export const tools: ToolInfo[] = [
         answer: "Yes, it supports standard SQL which is compatible with most major databases.",
       },
     ],
+    features: [
+      "Beautify SQL queries instantly",
+      "Support for multiple SQL dialects",
+      "Proper indentation and spacing",
+      "Keyword highlighting",
+      "Works with complex queries",
+    ],
+    tips: [
+      "Use for code reviews and debugging",
+      "Standardize your team's SQL formatting",
+      "Check for syntax errors while formatting",
+      "Great for documentation",
+    ],
   },
   {
     slug: "yaml-to-json",
@@ -315,6 +434,19 @@ export const tools: ToolInfo[] = [
         question: "Can I convert JSON back to YAML?",
         answer: "Yes, we also have a JSON to YAML converter tool.",
       },
+    ],
+    features: [
+      "Convert YAML to JSON instantly",
+      "Handle nested structures",
+      "Preserve data types",
+      "Error detection",
+      "One-click copy",
+    ],
+    tips: [
+      "Check YAML indentation before conversion",
+      "Use for config file migration",
+      "Validate output structure",
+      "Works with complex nested data",
     ],
   },
   {
@@ -343,6 +475,19 @@ export const tools: ToolInfo[] = [
         answer: "Yes, it will show an error if the input JSON is invalid.",
       },
     ],
+    features: [
+      "Convert JSON to YAML instantly",
+      "Human-readable output",
+      "Handle arrays and objects",
+      "Preserve data integrity",
+      "Instant validation",
+    ],
+    tips: [
+      "Validate JSON before conversion",
+      "Use for creating config files",
+      "Check output indentation",
+      "Great for Kubernetes configs",
+    ],
   },
   {
     slug: "html-formatter",
@@ -369,6 +514,19 @@ export const tools: ToolInfo[] = [
         question: "Does it minify HTML too?",
         answer: "This version focuses on formatting for readability.",
       },
+    ],
+    features: [
+      "Beautify HTML code instantly",
+      "Proper tag indentation",
+      "Fix messy markup",
+      "Detect unclosed tags",
+      "Works with any HTML size",
+    ],
+    tips: [
+      "Use for debugging HTML structure",
+      "Improves code readability",
+      "Helps find missing closing tags",
+      "Great for code reviews",
     ],
   },
   {
@@ -397,6 +555,19 @@ export const tools: ToolInfo[] = [
         answer: "Yes, it supports standard Markdown features used on GitHub.",
       },
     ],
+    features: [
+      "Live Markdown preview",
+      "Support for GFM syntax",
+      "Instant rendering",
+      "Side-by-side view",
+      "Copy rendered HTML",
+    ],
+    tips: [
+      "Write READMEs with confidence",
+      "Test links and images before publishing",
+      "Use for documentation drafting",
+      "Check formatting in real-time",
+    ],
   },
   {
     slug: "url-parser",
@@ -423,6 +594,19 @@ export const tools: ToolInfo[] = [
         question: "Can it handle encoded URLs?",
         answer: "Yes, it will automatically decode components for readability.",
       },
+    ],
+    features: [
+      "Parse URL components instantly",
+      "Extract query parameters",
+      "Identify protocol and host",
+      "Decode encoded parts",
+      "Copy individual components",
+    ],
+    tips: [
+      "Use for debugging routing issues",
+      "Analyze API request URLs",
+      "Check query string structure",
+      "Great for security auditing",
     ],
   },
   {
@@ -451,6 +635,19 @@ export const tools: ToolInfo[] = [
         answer: "Yes, it will alert you if the XML is malformed.",
       },
     ],
+    features: [
+      "Format XML with proper indentation",
+      "Validate XML structure",
+      "Handle nested elements",
+      "Detect syntax errors",
+      "Instant beautification",
+    ],
+    tips: [
+      "Use for debugging XML APIs",
+      "Check config file formatting",
+      "Validate before processing",
+      "Great for data integration",
+    ],
   },
   {
     slug: "hash-generator",
@@ -478,6 +675,19 @@ export const tools: ToolInfo[] = [
         answer: "No, MD5 is considered insecure for password storage. Use SHA-256 or better.",
       },
     ],
+    features: [
+      "Generate MD5, SHA-1, SHA-256 hashes",
+      "Instant hash calculation",
+      "Multiple algorithm support",
+      "Client-side processing",
+      "One-click copy",
+    ],
+    tips: [
+      "Use SHA-256 for security-critical data",
+      "MD5 is only for non-security use cases",
+      "Great for file checksums",
+      "Never use MD5 for passwords",
+    ],
   },
   {
     slug: "json-minifier",
@@ -490,6 +700,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your formatted JSON.", "Click Minify JSON.", "Copy the compact result."],
     whyUse: ["Reduces payload size.", "Faster API responses.", "Saves storage space."],
     faqs: [{ question: "Is minified JSON still valid?", answer: "Yes, minification only affects formatting, not the data structure." }],
+    features: [
+      "Minify JSON instantly",
+      "Remove all whitespace",
+      "Reduce payload size",
+      "Faster data transfer",
+      "Maintain data integrity",
+    ],
+    tips: [
+      "Use for production API responses",
+      "Reduces bandwidth usage",
+      "Keep a formatted copy for debugging",
+      "Test minified output before deployment",
+    ],
   },
   {
     slug: "css-formatter",
@@ -502,6 +725,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your CSS code.", "Click Format CSS.", "Copy the beautified result."],
     whyUse: ["Improves maintainability.", "Easier to debug.", "Consistent coding style."],
     faqs: [{ question: "Does it support SCSS?", answer: "It works best with standard CSS syntax." }],
+    features: [
+      "Beautify CSS instantly",
+      "Proper indentation",
+      "Consistent spacing",
+      "Handle nested selectors",
+      "Improve readability",
+    ],
+    tips: [
+      "Use for code reviews",
+      "Standardize team CSS formatting",
+      "Great for debugging styles",
+      "Improves maintainability",
+    ],
   },
   {
     slug: "css-minifier",
@@ -514,6 +750,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your CSS.", "Click Minify CSS.", "Copy the optimized code."],
     whyUse: ["Improves page load speed.", "Reduces bandwidth usage.", "Production-ready code."],
     faqs: [{ question: "Will it break my styles?", answer: "No, it only removes non-functional characters like spaces and comments." }],
+    features: [
+      "Minify CSS for production",
+      "Remove whitespace and comments",
+      "Reduce file size",
+      "Faster page load",
+      "Maintain functionality",
+    ],
+    tips: [
+      "Use for production builds",
+      "Keep source CSS for development",
+      "Test minified output thoroughly",
+      "Improves website performance",
+    ],
   },
   {
     slug: "js-formatter",
@@ -526,6 +775,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your JS code.", "Click Format JS.", "Copy the result."],
     whyUse: ["Easier code reviews.", "Better debugging experience.", "Standardizes formatting."],
     faqs: [{ question: "Does it support ES6+?", answer: "Yes, it supports modern JavaScript syntax." }],
+    features: [
+      "Format JavaScript instantly",
+      "Support ES6+ syntax",
+      "Proper indentation",
+      "Consistent code style",
+      "Handle arrow functions",
+    ],
+    tips: [
+      "Use for code reviews",
+      "Standardize team JS formatting",
+      "Great for debugging minified code",
+      "Improves code readability",
+    ],
   },
   {
     slug: "js-minifier",
@@ -538,6 +800,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your JS code.", "Click Minify JS.", "Copy the result."],
     whyUse: ["Faster script loading.", "Saves bandwidth.", "Protects source code slightly."],
     faqs: [{ question: "Is the code still executable?", answer: "Yes, it remains functionally identical to the source." }],
+    features: [
+      "Minify JavaScript for production",
+      "Remove unnecessary characters",
+      "Reduce file size",
+      "Faster script loading",
+      "Maintain functionality",
+    ],
+    tips: [
+      "Use for production bundles",
+      "Keep source for debugging",
+      "Test minified code thoroughly",
+      "Improves website performance",
+    ],
   },
   {
     slug: "html-minifier",
@@ -550,6 +825,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your HTML.", "Click Minify HTML.", "Copy the result."],
     whyUse: ["Faster TTI (Time to Interactive).", "Lower page weight.", "Cleaner production source."],
     faqs: [{ question: "Does it remove script tags?", answer: "No, it only minifies the markup itself." }],
+    features: [
+      "Minify HTML for production",
+      "Remove whitespace and comments",
+      "Reduce page weight",
+      "Faster TTI",
+      "Maintain functionality",
+    ],
+    tips: [
+      "Use for production builds",
+      "Keep source for development",
+      "Test minified HTML thoroughly",
+      "Improves page load speed",
+    ],
   },
   {
     slug: "xml-minifier",
@@ -562,6 +850,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your XML.", "Click Minify XML.", "Copy the result."],
     whyUse: ["Efficient data transfer.", "Saves bandwidth.", "Smaller file sizes."],
     faqs: [{ question: "Is the XML still valid?", answer: "Yes, valid XML remains valid after minification." }],
+    features: [
+      "Minify XML instantly",
+      "Remove whitespace",
+      "Reduce file size",
+      "Faster data transfer",
+      "Maintain validity",
+    ],
+    tips: [
+      "Use for production APIs",
+      "Keep formatted copy for debugging",
+      "Test minified output",
+      "Saves bandwidth",
+    ],
   },
   {
     slug: "csv-to-json",
@@ -574,6 +875,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your CSV data.", "Click Convert to JSON.", "Copy the JSON output."],
     whyUse: ["Easy data migration.", "Developer-friendly format.", "Fast conversion."],
     faqs: [{ question: "Does it support headers?", answer: "Yes, it uses the first row as keys for the JSON objects." }],
+    features: [
+      "Convert CSV to JSON instantly",
+      "Handle headers automatically",
+      "Support large files",
+      "Preserve data structure",
+      "One-click copy",
+    ],
+    tips: [
+      "Ensure first row has headers",
+      "Check for special characters",
+      "Use for Excel data import",
+      "Validate output structure",
+    ],
   },
   {
     slug: "json-to-csv",
@@ -586,6 +900,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your JSON array.", "Click Convert to CSV.", "Copy the result."],
     whyUse: ["Export data for analysis.", "Spreadsheet compatibility.", "Fast and reliable."],
     faqs: [{ question: "What JSON structure is required?", answer: "It works best with arrays of objects." }],
+    features: [
+      "Convert JSON to CSV instantly",
+      "Handle nested objects",
+      "Export to spreadsheet format",
+      "Support large datasets",
+      "One-click copy",
+    ],
+    tips: [
+      "Use arrays of objects for best results",
+      "Check for special characters",
+      "Great for data analysis",
+      "Works with Excel and Google Sheets",
+    ],
   },
   {
     slug: "unix-timestamp-converter",
@@ -598,6 +925,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter a Unix timestamp.", "The readable date appears instantly.", "Toggle between seconds and milliseconds."],
     whyUse: ["Essential for debugging.", "Quick time conversion.", "Supports various formats."],
     faqs: [{ question: "What is a Unix timestamp?", answer: "It's the number of seconds since Jan 01 1970 (UTC)." }],
+    features: [
+      "Convert Unix timestamp to date",
+      "Support seconds and milliseconds",
+      "Instant conversion",
+      "Multiple date formats",
+      "Timezone aware",
+    ],
+    tips: [
+      "Check if timestamp is in seconds or milliseconds",
+      "Useful for debugging logs",
+      "Understand UTC vs local time",
+      "Great for API development",
+    ],
   },
   {
     slug: "date-to-unix-timestamp",
@@ -610,6 +950,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Select or type a date/time.", "The Unix timestamp is generated instantly.", "Copy the result."],
     whyUse: ["API development.", "Database seeding.", "Time-based logic testing."],
     faqs: [{ question: "Is the timestamp in UTC?", answer: "Yes, Unix timestamps are inherently UTC-based." }],
+    features: [
+      "Convert date to Unix timestamp",
+      "Support various date formats",
+      "Instant generation",
+      "UTC-based output",
+      "One-click copy",
+    ],
+    tips: [
+      "Use for API request parameters",
+      "Database seeding with timestamps",
+      "Understand UTC timezone",
+      "Great for time-based logic",
+    ],
   },
   {
     slug: "rgb-to-hex",
@@ -622,6 +975,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter R, G, and B values (0-255).", "The HEX code is updated live.", "Copy the HEX value."],
     whyUse: ["Web design workflow.", "CSS development.", "Quick color conversion."],
     faqs: [{ question: "Does it support transparency?", answer: "This version focuses on standard RGB to HEX." }],
+    features: [
+      "Convert RGB to HEX instantly",
+      "Support 0-255 range",
+      "Live color preview",
+      "One-click copy",
+      "Web-ready format",
+    ],
+    tips: [
+      "Use for CSS color values",
+      "Check RGB values before conversion",
+      "Great for web design",
+      "Works with design tools",
+    ],
   },
   {
     slug: "hex-to-rgb",
@@ -634,6 +1000,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter a 3 or 6 digit HEX code.", "The RGB values are updated live.", "Copy the result."],
     whyUse: ["Design consistency.", "UI development.", "Fast conversion."],
     faqs: [{ question: "Can I enter the # symbol?", answer: "Yes, both with and without the # are supported." }],
+    features: [
+      "Convert HEX to RGB instantly",
+      "Support 3 and 6 digit HEX",
+      "Live color preview",
+      "One-click copy",
+      "Design tool compatible",
+    ],
+    tips: [
+      "Use for CSS color manipulation",
+      "Works with design software",
+      "Check HEX format before conversion",
+      "Great for color matching",
+    ],
   },
   {
     slug: "password-generator",
@@ -646,6 +1025,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Choose password length.", "Select character types (numbers, symbols).", "Click Generate and copy."],
     whyUse: ["Improves security.", "Customizable complexity.", "Runs entirely in browser."],
     faqs: [{ question: "Are my passwords stored?", answer: "No, they are generated locally and never leave your browser." }],
+    features: [
+      "Generate secure passwords instantly",
+      "Customizable length",
+      "Include numbers and symbols",
+      "Cryptographically random",
+      "No data storage",
+    ],
+    tips: [
+      "Use at least 12 characters",
+      "Include special characters",
+      "Never reuse passwords",
+      "Use a password manager",
+    ],
   },
   {
     slug: "number-base-converter",
@@ -658,6 +1050,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter a number in any base.", "See it converted to all other bases live.", "Copy the result you need."],
     whyUse: ["CS education.", "Embedded programming.", "Quick math checks."],
     faqs: [{ question: "What is the limit?", answer: "It supports standard 64-bit integer ranges." }],
+    features: [
+      "Convert between number bases",
+      "Support Binary, Octal, Decimal, Hex",
+      "Instant conversion",
+      "Live updates",
+      "One-click copy",
+    ],
+    tips: [
+      "Use for CS education",
+      "Great for embedded programming",
+      "Check base before conversion",
+      "Understand binary representation",
+    ],
   },
   {
     slug: "binary-to-text",
@@ -670,6 +1075,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your binary string.", "Click Convert.", "Read the decoded text."],
     whyUse: ["Data decoding.", "Educational purposes.", "Fun and puzzles."],
     faqs: [{ question: "What encoding is used?", answer: "It uses standard ASCII/UTF-8 character encoding." }],
+    features: [
+      "Convert binary to text instantly",
+      "Support ASCII and UTF-8",
+      "Handle 8-bit binary",
+      "One-click copy",
+      "No server calls",
+    ],
+    tips: [
+      "Ensure binary is 8-bit aligned",
+      "Check for Unicode characters",
+      "Use for data decoding",
+      "Educational purposes",
+    ],
   },
   {
     slug: "text-to-binary",
@@ -682,6 +1100,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Type your text.", "The binary code updates live.", "Copy the result."],
     whyUse: ["Learning binary.", "Secret messages.", "Data representation."],
     faqs: [{ question: "Does it support emojis?", answer: "Yes, it handles Unicode characters including emojis." }],
+    features: [
+      "Convert text to binary instantly",
+      "Support Unicode and emojis",
+      "Live binary generation",
+      "One-click copy",
+      "No server calls",
+    ],
+    tips: [
+      "Understand binary representation",
+      "Check for Unicode characters",
+      "Use for educational purposes",
+      "Great for learning encoding",
+    ],
   },
   {
     slug: "html-entity-encoder",
@@ -694,6 +1125,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your text.", "Click Encode.", "Copy the entity-encoded result."],
     whyUse: ["Prevents security issues.", "Ensures correct rendering.", "Handles special symbols."],
     faqs: [{ question: "What characters are encoded?", answer: "All characters that have special meaning in HTML." }],
+    features: [
+      "Encode special characters instantly",
+      "Prevent XSS attacks",
+      "Handle all HTML entities",
+      "One-click copy",
+      "Security-focused",
+    ],
+    tips: [
+      "Use for user-generated content",
+      "Prevent XSS vulnerabilities",
+      "Encode before displaying in HTML",
+      "Great for security hardening",
+    ],
   },
   {
     slug: "html-entity-decoder",
@@ -706,6 +1150,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste encoded text.", "Click Decode.", "Read the original characters."],
     whyUse: ["Data cleanup.", "Debugging encoded text.", "API integration."],
     faqs: [{ question: "Does it support numeric entities?", answer: "Yes, both named and numeric entities are supported." }],
+    features: [
+      "Decode HTML entities instantly",
+      "Support named and numeric entities",
+      "Restore original characters",
+      "One-click copy",
+      "Handle all entity types",
+    ],
+    tips: [
+      "Use for reading encoded content",
+      "Debug API responses",
+      "Clean up encoded text",
+      "Great for data processing",
+    ],
   },
   {
     slug: "string-escape",
@@ -718,6 +1175,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your text.", "Select language style (JS, C#, etc.).", "Copy the escaped string."],
     whyUse: ["Code generation.", "Avoids syntax errors.", "Saves time manual escaping."],
     faqs: [{ question: "Does it handle newlines?", answer: "Yes, it converts them to \\n sequences." }],
+    features: [
+      "Escape strings for code instantly",
+      "Handle quotes and newlines",
+      "Support multiple language styles",
+      "One-click copy",
+      "Prevent syntax errors",
+    ],
+    tips: [
+      "Use for code generation",
+      "Select appropriate language style",
+      "Check escaped output",
+      "Saves manual escaping time",
+    ],
   },
   {
     slug: "string-unescape",
@@ -730,6 +1200,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste escaped string.", "Click Unescape.", "See the original text."],
     whyUse: ["Log analysis.", "Debugging code.", "Data extraction."],
     faqs: [{ question: "Which styles are supported?", answer: "Common C-style escapes used in JS, Java, and Python." }],
+    features: [
+      "Unescape strings instantly",
+      "Restore escaped characters",
+      "Handle C-style escapes",
+      "One-click copy",
+      "Read raw string data",
+    ],
+    tips: [
+      "Use for log analysis",
+      "Debug escaped code",
+      "Extract data from logs",
+      "Great for data processing",
+    ],
   },
   {
     slug: "advanced-case-converter",
@@ -742,6 +1225,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter your variable name.", "Select target case (snake, camel, etc.).", "Copy the result."],
     whyUse: ["Code refactoring.", "Naming consistency.", "API development."],
     faqs: [{ question: "Does it support kebab-case?", answer: "Yes, it supports all common dev cases." }],
+    features: [
+      "Convert between naming conventions",
+      "Support snake_case, camelCase, PascalCase",
+      "Handle kebab-case and more",
+      "Instant conversion",
+      "One-click copy",
+    ],
+    tips: [
+      "Use for code refactoring",
+      "Standardize variable naming",
+      "Great for API development",
+      "Maintain naming consistency",
+    ],
   },
   {
     slug: "duplicate-line-remover",
@@ -754,6 +1250,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your multi-line text.", "Click Remove Duplicates.", "Copy the unique list."],
     whyUse: ["Data deduplication.", "Log cleanup.", "List management."],
     faqs: [{ question: "Is it case-sensitive?", answer: "You can toggle case sensitivity as needed." }],
+    features: [
+      "Remove duplicate lines instantly",
+      "Toggle case sensitivity",
+      "Handle large lists",
+      "One-click copy",
+      "Clean data quickly",
+    ],
+    tips: [
+      "Use for data deduplication",
+      "Clean up log files",
+      "Manage email lists",
+      "Toggle case for precision",
+    ],
   },
   {
     slug: "text-reverser",
@@ -766,6 +1275,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Type your text.", "Choose reverse characters or words.", "Copy the flipped result."],
     whyUse: ["Data obfuscation.", "Educational fun.", "Testing edge cases."],
     faqs: [{ question: "Does it support RTL languages?", answer: "It works with all character sets including Unicode." }],
+    features: [
+      "Reverse characters or words",
+      "Support Unicode text",
+      "Instant reversal",
+      "One-click copy",
+      "Handle any text length",
+    ],
+    tips: [
+      "Use for data obfuscation",
+      "Educational purposes",
+      "Test edge cases",
+      "Works with all languages",
+    ],
   },
   {
     slug: "list-randomizer",
@@ -778,6 +1300,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your list.", "Click Shuffle.", "Get a randomized version."],
     whyUse: ["Fair selection.", "Randomizing test data.", "Task assignment."],
     faqs: [{ question: "Is it truly random?", answer: "It uses a cryptographically strong random number generator." }],
+    features: [
+      "Shuffle lists instantly",
+      "Cryptographically random",
+      "Handle any list size",
+      "One-click copy",
+      "Fair randomization",
+    ],
+    tips: [
+      "Use for fair selection",
+      "Randomize test data",
+      "Assign tasks randomly",
+      "Choose winners fairly",
+    ],
   },
   {
     slug: "user-agent-parser",
@@ -790,6 +1325,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste a User Agent string.", "The details are parsed and displayed.", "View OS and Browser info."],
     whyUse: ["Debugging.", "Traffic analysis.", "Browser support testing."],
     faqs: [{ question: "Is it always accurate?", answer: "It uses the latest UA patterns to ensure high accuracy." }],
+    features: [
+      "Parse User Agent strings instantly",
+      "Identify browser and version",
+      "Detect OS and platform",
+      "Extract engine information",
+      "One-click copy",
+    ],
+    tips: [
+      "Use for debugging client issues",
+      "Analyze traffic patterns",
+      "Test browser compatibility",
+      "Understand user demographics",
+    ],
   },
   {
     slug: "morse-code-converter",
@@ -802,6 +1350,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Type text or Morse code.", "The translation appears instantly.", "Copy the result."],
     whyUse: ["Education.", "Fun projects.", "Historical interest."],
     faqs: [{ question: "What separator is used?", answer: "It uses standard spaces between characters." }],
+    features: [
+      "Convert text to Morse code",
+      "Decode Morse to text",
+      "Standard Morse alphabet",
+      "Instant translation",
+      "One-click copy",
+    ],
+    tips: [
+      "Use for educational purposes",
+      "Learn Morse code",
+      "Fun projects",
+      "Historical interest",
+    ],
   },
   {
     slug: "rot13-converter",
@@ -814,6 +1375,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter your text.", "The ROT13 version is generated live.", "Copy the result."],
     whyUse: ["Obfuscating spoilers.", "Basic encryption puzzles.", "CS history."],
     faqs: [{ question: "Is ROT13 secure?", answer: "No, it's easily reversible and not for security." }],
+    features: [
+      "Encode and decode ROT13 instantly",
+      "Simple letter substitution",
+      "Reversible cipher",
+      "One-click copy",
+      "No server calls",
+    ],
+    tips: [
+      "Use for obfuscating spoilers",
+      "Basic encryption puzzles",
+      "CS history education",
+      "Not for security purposes",
+    ],
   },
   {
     slug: "url-slug-generator",
@@ -826,6 +1400,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Type your title.", "The slug is generated instantly.", "Copy for your URL."],
     whyUse: ["SEO optimization.", "Clean URL structures.", "Consistent naming."],
     faqs: [{ question: "Does it remove special characters?", answer: "Yes, it removes all non-alphanumeric characters." }],
+    features: [
+      "Generate clean URL slugs instantly",
+      "Lowercase conversion",
+      "Remove special characters",
+      "Hyphen-separated words",
+      "SEO-friendly format",
+    ],
+    tips: [
+      "Use for blog post URLs",
+      "Create clean URL structures",
+      "Improve SEO",
+      "Consistent naming convention",
+    ],
   },
   {
     slug: "json-validator",
@@ -838,6 +1425,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your JSON.", "See if it's valid or get error details.", "Fix errors live."],
     whyUse: ["Debugging APIs.", "Config file validation.", "Catching syntax errors."],
     faqs: [{ question: "Will it fix my JSON?", answer: "It points out errors so you can fix them easily." }],
+    features: [
+      "Validate JSON syntax instantly",
+      "Show detailed error messages",
+      "Highlight syntax errors",
+      "Check structure integrity",
+      "Real-time validation",
+    ],
+    tips: [
+      "Use before API integration",
+      "Debug config files",
+      "Catch syntax errors early",
+      "Ensure data integrity",
+    ],
   },
   {
     slug: "cron-descriptor",
@@ -850,6 +1450,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter a cron expression.", "Read the human-friendly schedule description.", "Copy for documentation."],
     whyUse: ["Avoid scheduling mistakes.", "Better documentation.", "Quick verification."],
     faqs: [{ question: "Does it support 6-part cron?", answer: "Yes, it supports both 5 and 6 part expressions." }],
+    features: [
+      "Convert cron to readable text",
+      "Support 5 and 6 part expressions",
+      "Instant description",
+      "Handle complex schedules",
+      "One-click copy",
+    ],
+    tips: [
+      "Verify scheduled tasks",
+      "Better documentation",
+      "Avoid scheduling mistakes",
+      "Great for sysadmins",
+    ],
   },
   {
     slug: "qr-code-generator",
@@ -862,6 +1475,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Enter URL or text.", "The QR code is generated as an SVG.", "Download or copy the SVG."],
     whyUse: ["Marketing materials.", "Quick link sharing.", "Contact info sharing."],
     faqs: [{ question: "Is the QR code permanent?", answer: "Yes, the code itself is static and never expires." }],
+    features: [
+      "Generate QR codes instantly",
+      "Support URLs and text",
+      "SVG format output",
+      "High quality",
+      "One-click download",
+    ],
+    tips: [
+      "Use for marketing materials",
+      "Quick link sharing",
+      "Contact info sharing",
+      "Test before printing",
+    ],
   },
   {
     slug: "image-to-base64",
@@ -874,6 +1500,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Upload an image file.", "Copy the generated Base64 data URI.", "Paste into your code."],
     whyUse: ["Reducing HTTP requests.", "CSS background images.", "Email template embedding."],
     faqs: [{ question: "What is the file limit?", answer: "It supports files up to 5MB for browser stability." }],
+    features: [
+      "Convert images to Base64 instantly",
+      "Support multiple formats",
+      "Generate data URI strings",
+      "Client-side processing",
+      "No server upload",
+    ],
+    tips: [
+      "Use for small icons only",
+      "Reduces HTTP requests",
+      "CSS background images",
+      "Email template embedding",
+    ],
   },
   {
     slug: "json-to-typescript",
@@ -886,6 +1525,19 @@ export const tools: ToolInfo[] = [
     howToUse: ["Paste your JSON object.", "Click Convert to TypeScript.", "Copy the generated interfaces."],
     whyUse: ["Saves manual typing time.", "Ensures type safety.", "Handles nested objects."],
     faqs: [{ question: "Does it support nested arrays?", answer: "Yes, it recursively generates types for nested structures." }],
+    features: [
+      "Convert JSON to TypeScript instantly",
+      "Generate interface definitions",
+      "Handle nested objects",
+      "Support arrays and unions",
+      "One-click copy",
+    ],
+    tips: [
+      "Use for API response types",
+      "Saves manual typing time",
+      "Ensure type safety",
+      "Great for frontend development",
+    ],
   }
 ];
 
@@ -903,14 +1555,35 @@ export function getRelatedTools(slug: string, limit = 3) {
 
 export function buildToolMetadata(tool: ToolInfo): Metadata {
   return {
-    title: `${tool.name} - ToolSnippet`,
+    title: `${tool.name} - Free Online Tool | ToolSnippet`,
     description: tool.shortDescription,
     alternates: {
       canonical: `/tools/${tool.slug}`,
     },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       title: tool.heroTitle,
       description: tool.heroDescription,
+      url: `https://www.toolsnippet.com/tools/${tool.slug}`,
+      siteName: "ToolSnippet",
+      type: "website",
+      images: [
+        {
+          url: "/images/og.jpg",
+          width: 1200,
+          height: 630,
+          alt: tool.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: tool.heroTitle,
+      description: tool.heroDescription,
+      images: ["/images/og.jpg"],
     },
   };
 }
