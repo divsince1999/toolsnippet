@@ -1538,6 +1538,993 @@ export const tools: ToolInfo[] = [
       "Ensure type safety",
       "Great for frontend development",
     ],
+  },
+  {
+    slug: "word-counter",
+    name: "Word Counter",
+    category: "Text",
+    shortDescription: "Count words, characters, sentences, paragraphs, and estimated reading time.",
+    heroTitle: "Count words and characters instantly",
+    heroDescription:
+      "Real-time word count, character count, sentence count, paragraph count, and reading time estimation.",
+    about:
+      "Word Counter helps writers, students, bloggers, and developers analyze text length, character limits, and readability metrics instantly.",
+    howToUse: [
+      "Paste or type your text into the input box.",
+      "View real-time statistics for words, characters, sentences, and paragraphs.",
+      "Check estimated reading and speaking times.",
+      "Copy the summary metrics or clear input as needed.",
+    ],
+    whyUse: [
+      "Instant real-time calculation as you type.",
+      "Helpful for social media posts, blog articles, and essays.",
+      "100% private client-side text processing.",
+    ],
+    faqs: [
+      {
+        question: "How are words counted?",
+        answer: "Words are counted by splitting non-empty character sequences separated by whitespace.",
+      },
+      {
+        question: "How is reading time calculated?",
+        answer: "Reading time is estimated using an average reading speed of 200 words per minute.",
+      },
+      {
+        question: "Is my text uploaded to a server?",
+        answer: "No. All calculations are performed entirely in your browser.",
+      },
+    ],
+    features: [
+      "Real-time word and character counting",
+      "Character count with and without spaces",
+      "Sentence and paragraph detection",
+      "Estimated reading and speaking time",
+      "One-click metrics copy",
+      "100% private and client-side",
+    ],
+    tips: [
+      "Use character counts to optimize social media posts for platform limits",
+      "Check reading time to gauge blog post engagement length",
+      "Inspect paragraph count to improve content readability and layout",
+    ],
+  },
+  {
+    slug: "line-counter",
+    name: "Line Counter",
+    category: "Text",
+    shortDescription: "Count total lines, empty lines, and non-empty lines in text.",
+    heroTitle: "Count text lines instantly",
+    heroDescription:
+      "Quickly analyze text to find total lines, empty lines, and non-empty lines without leaving your browser.",
+    about:
+      "Line Counter is a simple utility for developers, writers, and data analysts to instantly count the number of lines in logs, code, or large text documents.",
+    howToUse: [
+      "Paste or type text in the input area.",
+      "The tool instantly counts total lines, empty lines, and non-empty lines.",
+      "View the summary metrics or copy them for your records.",
+    ],
+    whyUse: [
+      "Useful for analyzing log files or code files.",
+      "Helps verify dataset sizes before processing.",
+      "Works instantly on the client side with no data uploads.",
+    ],
+    faqs: [
+      {
+        question: "What is considered an empty line?",
+        answer: "An empty line is a line containing no characters or only whitespace characters (spaces, tabs).",
+      },
+      {
+        question: "Can I count lines in very large text?",
+        answer: "Yes, it can handle large text chunks efficiently within your browser's memory limits.",
+      },
+    ],
+    features: [
+      "Count total lines",
+      "Count empty lines",
+      "Count non-empty lines",
+      "Real-time processing",
+      "100% private and secure",
+    ],
+    tips: [
+      "Use this to estimate the size of a text dataset",
+      "Quickly check if a file has trailing empty lines",
+      "Compare total lines vs non-empty lines to gauge text density",
+    ],
+  },
+  {
+    slug: "character-counter",
+    name: "Character Counter",
+    category: "Text",
+    shortDescription: "Count characters with and without spaces, and calculate byte size.",
+    heroTitle: "Detailed character counting tool",
+    heroDescription:
+      "Instantly count characters with spaces, without spaces, and calculate the estimated byte size of your text.",
+    about:
+      "Character Counter is perfect for ensuring text meets strict length requirements for SMS, social media, meta descriptions, and database limits.",
+    howToUse: [
+      "Paste your text into the input field.",
+      "View the character counts with and without spaces.",
+      "Check the estimated UTF-8 byte size of the text.",
+    ],
+    whyUse: [
+      "Helps you stay within strict character limits.",
+      "Byte size estimation is useful for database field limits.",
+      "Calculations happen instantly in your browser.",
+    ],
+    faqs: [
+      {
+        question: "How is byte size calculated?",
+        answer: "Byte size is estimated using UTF-8 encoding, where regular characters are 1 byte, but emojis and special symbols can be up to 4 bytes.",
+      },
+      {
+        question: "Does it count spaces as characters?",
+        answer: "Yes, standard character count includes spaces, but it also provides a 'without spaces' count.",
+      },
+    ],
+    features: [
+      "Count characters with spaces",
+      "Count characters without spaces",
+      "Estimate UTF-8 byte size",
+      "Real-time calculation",
+      "No server requests",
+    ],
+    tips: [
+      "Use for SMS character limits (typically 160 characters)",
+      "Check meta description lengths (typically 150-160 characters)",
+      "Use byte size for database column length constraints",
+    ],
+  },
+  {
+    slug: "text-trimmer",
+    name: "Text Trimmer",
+    category: "Text",
+    shortDescription: "Remove leading, trailing, and extra whitespace from text.",
+    heroTitle: "Clean up messy whitespace in text",
+    heroDescription:
+      "Instantly remove leading spaces, trailing spaces, and collapse multiple spaces into single spaces.",
+    about:
+      "Text Trimmer helps you clean up messy text copied from PDFs, websites, or poorly formatted documents by normalizing whitespace.",
+    howToUse: [
+      "Paste messy text into the input area.",
+      "Select trimming options (Leading/Trailing, Extra Spaces, Empty Lines).",
+      "Copy the cleaned text to your clipboard.",
+    ],
+    whyUse: [
+      "Saves time manually deleting spaces.",
+      "Ensures clean data for database entry or configuration files.",
+      "Runs completely in the browser for privacy.",
+    ],
+    faqs: [
+      {
+        question: "What does 'Trim Leading & Trailing' do?",
+        answer: "It removes spaces and tabs from the very beginning and very end of every line.",
+      },
+      {
+        question: "What does 'Collapse Extra Spaces' do?",
+        answer: "It replaces multiple consecutive spaces within a line with a single space.",
+      },
+    ],
+    features: [
+      "Trim leading and trailing whitespace",
+      "Collapse multiple spaces into one",
+      "Remove empty lines",
+      "Real-time preview",
+      "One-click copy to clipboard",
+    ],
+    tips: [
+      "Use before comparing two text strings to avoid false negatives",
+      "Clean up text copied from badly formatted PDFs",
+      "Normalize user input before saving to a database",
+    ],
+  },
+  {
+    slug: "text-sorter",
+    name: "Text Sorter",
+    category: "Text",
+    shortDescription: "Sort text lines alphabetically (A-Z, Z-A), numerically, or by length.",
+    heroTitle: "Sort lists and lines instantly",
+    heroDescription:
+      "Sort lines of text alphabetically, in reverse, numerically, or by line length with options to ignore case.",
+    about:
+      "Text Sorter helps you quickly organize unsorted lists, tags, or code lines in the exact order you need.",
+    howToUse: [
+      "Paste your unsorted list into the input box.",
+      "Select a sorting method: A-Z, Z-A, Length, or Numeric.",
+      "Copy the sorted result back to your clipboard.",
+    ],
+    whyUse: [
+      "No need to use a heavy spreadsheet app just to sort a list.",
+      "Works perfectly for organizing tags, names, or code imports.",
+      "Client-side processing means zero latency and high privacy.",
+    ],
+    faqs: [
+      {
+        question: "Does it support numeric sorting?",
+        answer: "Yes, you can choose numeric sorting to properly order lines that start with numbers (e.g., 2 before 10).",
+      },
+      {
+        question: "Can it ignore case while sorting?",
+        answer: "Yes, there is a toggle to enable or disable case-sensitive sorting.",
+      },
+    ],
+    features: [
+      "Sort alphabetically (A-Z and Z-A)",
+      "Sort by line length",
+      "Sort numerically",
+      "Case-sensitive or insensitive sorting",
+      "Remove duplicates option",
+    ],
+    tips: [
+      "Use 'Remove duplicates' to clean your list before sorting",
+      "Sort CSS properties alphabetically for better code organization",
+      "Sort tags by length to create visual 'tag clouds'",
+    ],
+  },
+  {
+    slug: "prefix-suffix-adder",
+    name: "Prefix & Suffix Adder",
+    category: "Text",
+    shortDescription: "Add a custom prefix or suffix to each line of text.",
+    heroTitle: "Batch add prefixes and suffixes",
+    heroDescription:
+      "Quickly prepend or append custom text to every single line in a list.",
+    about:
+      "Prefix & Suffix Adder is a huge time-saver for generating arrays, formatting SQL lists, or building HTML tags around bulk text.",
+    howToUse: [
+      "Paste a list of text into the input area.",
+      "Type the desired prefix (e.g., <li>) and suffix (e.g., </li>).",
+      "The tool updates all lines instantly in the output area.",
+    ],
+    whyUse: [
+      "Eliminates repetitive manual typing or cursor manipulation.",
+      "Perfect for wrapping lists in quotes, brackets, or HTML tags.",
+      "All processing happens privately in your browser.",
+    ],
+    faqs: [
+      {
+        question: "Can I use spaces in the prefix/suffix?",
+        answer: "Yes, any spaces you type will be exactly prepended or appended to the lines.",
+      },
+      {
+        question: "Does it skip empty lines?",
+        answer: "There is an option you can toggle to skip adding prefixes/suffixes to empty lines.",
+      },
+    ],
+    features: [
+      "Add custom text to the beginning of lines",
+      "Add custom text to the end of lines",
+      "Option to ignore empty lines",
+      "Real-time preview",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Use prefix \" and suffix \", to format text into a JSON or SQL array",
+      "Wrap lines in <li> and </li> for quick HTML lists",
+      "Add a comma suffix to convert vertical lists to CSV format",
+    ],
+  },
+  {
+    slug: "line-numberer",
+    name: "Line Numberer",
+    category: "Text",
+    shortDescription: "Add line numbers to text lines with customizable format and padding.",
+    heroTitle: "Add line numbers to any text",
+    heroDescription:
+      "Prepend sequential line numbers to text, code snippets, or lists with custom separators and padding.",
+    about:
+      "Line Numberer makes it easy to reference specific lines in documentation, code reviews, or raw text files.",
+    howToUse: [
+      "Paste text into the input box.",
+      "Customize the starting number, padding style, and separator (e.g., dot, colon).",
+      "Copy the numbered text.",
+    ],
+    whyUse: [
+      "Great for sharing code snippets that need line referencing.",
+      "Useful for numbering long lists of names or items.",
+      "Fully customizable and works locally in the browser.",
+    ],
+    faqs: [
+      {
+        question: "What is zero-padding?",
+        answer: "Zero-padding adds leading zeros to numbers so they all align perfectly (e.g., 01, 02... 10).",
+      },
+      {
+        question: "Can I skip empty lines?",
+        answer: "Yes, you can choose whether empty lines increment the counter or are skipped.",
+      },
+    ],
+    features: [
+      "Custom starting number",
+      "Zero-padding for visual alignment",
+      "Custom separator choices (. , : |)",
+      "Option to skip empty lines",
+      "Real-time preview",
+    ],
+    tips: [
+      "Use zero-padding to keep the text aligned vertically",
+      "Use a pipe (|) separator when numbering code snippets",
+      "Skip empty lines when numbering a list of disjointed paragraphs",
+    ],
+  },
+  {
+    slug: "whitespace-remover",
+    name: "Whitespace Remover",
+    category: "Text",
+    shortDescription: "Remove all spaces, tabs, or newlines from text.",
+    heroTitle: "Remove whitespace instantly",
+    heroDescription:
+      "Strip out spaces, tabs, empty lines, or all whitespace characters from your text completely.",
+    about:
+      "Whitespace Remover is an essential utility for cleaning up copy-pasted text, preparing code for minification manually, or cleaning data imports.",
+    howToUse: [
+      "Paste your text into the input area.",
+      "Select what to remove: Spaces, Tabs, Newlines, or All Whitespace.",
+      "The cleaned text appears instantly for copying.",
+    ],
+    whyUse: [
+      "Quickly compress text blocks.",
+      "Fix formatting errors from copying out of PDFs or Word documents.",
+      "Runs instantly in the browser without server processing.",
+    ],
+    faqs: [
+      {
+        question: "Can I remove just newlines?",
+        answer: "Yes, you can toggle specific whitespace characters like just newlines or just tabs.",
+      },
+      {
+        question: "Is this different from the Text Trimmer tool?",
+        answer: "Yes, Text Trimmer only cleans the edges and extra spaces, whereas this tool can remove ALL spaces entirely.",
+      },
+    ],
+    features: [
+      "Remove all spaces",
+      "Remove all tabs",
+      "Remove all line breaks (newlines)",
+      "Remove all whitespace (spaces + tabs + newlines)",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Use 'Remove Newlines' to turn a vertical list into a single paragraph",
+      "Use 'Remove All' to quickly strip spaces out of phone numbers or credit cards",
+      "Remove tabs to clean up poorly aligned code snippets before pasting into a terminal",
+    ],
+  },
+  {
+    slug: "find-and-replace",
+    name: "Find and Replace",
+    category: "Text",
+    shortDescription: "Find and replace text with case sensitivity and whole word options.",
+    heroTitle: "Find and replace text in bulk",
+    heroDescription:
+      "Quickly find occurrences of a word or phrase and replace them all instantly.",
+    about:
+      "Find and Replace helps writers and coders bulk-edit text directly in the browser without needing to open a full IDE or word processor.",
+    howToUse: [
+      "Paste your text into the input area.",
+      "Enter the text you want to find.",
+      "Enter the replacement text.",
+      "Toggle options like Match Case or Whole Word if needed.",
+    ],
+    whyUse: [
+      "Faster than opening a desktop app for a quick edit.",
+      "Great for renaming variables, names, or fixing common typos in bulk.",
+      "100% private and runs securely on your device.",
+    ],
+    faqs: [
+      {
+        question: "What does 'Whole Word' mean?",
+        answer: "It ensures that searching for 'cat' doesn't accidentally replace the 'cat' inside 'category'.",
+      },
+      {
+        question: "Does it support regular expressions?",
+        answer: "No, this tool performs literal text replacement. Use the Regex Tester tool for regex-based workflows.",
+      },
+    ],
+    features: [
+      "Find all occurrences instantly",
+      "Replace all matches",
+      "Match Case (case-sensitive) option",
+      "Match Whole Word option",
+      "Live preview of modified text",
+    ],
+    tips: [
+      "Use 'Whole Word' when replacing variable names to avoid breaking other words",
+      "Check the 'Match Case' option when renaming proper nouns",
+      "You can leave the replace field empty to simply delete the matched text",
+    ],
+  },
+  {
+    slug: "text-word-wrap",
+    name: "Text Word Wrap",
+    category: "Text",
+    shortDescription: "Wrap text lines at a specified column width.",
+    heroTitle: "Wrap text to specific column widths",
+    heroDescription:
+      "Automatically wrap long paragraphs and lines of text to a specific character column width.",
+    about:
+      "Text Word Wrap is a formatting tool useful for writing email plain-text fallbacks, writing git commit messages, or formatting code comments to a standard width like 80 characters.",
+    howToUse: [
+      "Paste your long text into the input area.",
+      "Enter the desired character width (e.g., 80).",
+      "The tool wraps the text at the nearest space before the column limit.",
+    ],
+    whyUse: [
+      "Ensures plain text emails read well on all devices.",
+      "Fixes horizontal scrolling issues in code editors.",
+      "No data is sent to the server.",
+    ],
+    faqs: [
+      {
+        question: "Will it cut words in half?",
+        answer: "No, the tool intelligently wraps at the last space before the column width limit to preserve words.",
+      },
+      {
+        question: "What happens to existing line breaks?",
+        answer: "Existing line breaks and paragraphs are preserved during the wrapping process.",
+      },
+    ],
+    features: [
+      "Custom character width limit",
+      "Word-safe wrapping (does not split words)",
+      "Preserves existing paragraphs",
+      "Live preview",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Use 80 characters for standard code comments and git commit messages",
+      "Use 60-70 characters for plain-text email newsletters",
+      "Long URLs cannot be split, so they may exceed the column limit",
+    ],
+  },
+  {
+    slug: "text-diff-checker",
+    name: "Text Diff Checker",
+    category: "Text",
+    shortDescription: "Compare two texts to highlight line differences.",
+    heroTitle: "Compare text and find differences",
+    heroDescription:
+      "Quickly compare two text documents, code files, or configurations to see exactly what changed.",
+    about:
+      "Text Diff Checker helps developers and writers spot insertions, deletions, and modifications between two versions of text without needing git or an IDE.",
+    howToUse: [
+      "Paste the original text into the 'Original' box.",
+      "Paste the new text into the 'Modified' box.",
+      "The tool instantly highlights the line-by-line differences.",
+    ],
+    whyUse: [
+      "Spot tiny typos or missing punctuation instantly.",
+      "Compare configuration files (JSON, YAML) before deploying.",
+      "All comparisons happen in the browser, keeping your data secure.",
+    ],
+    faqs: [
+      {
+        question: "Does it compare word-by-word or line-by-line?",
+        answer: "This tool performs a line-by-line comparison, highlighting lines that were added or removed.",
+      },
+      {
+        question: "Is there a limit on how much text I can compare?",
+        answer: "It handles large files efficiently, up to a few megabytes in size, directly in your browser.",
+      },
+    ],
+    features: [
+      "Line-by-line diff comparison",
+      "Highlight added (green) and removed (red) lines",
+      "Real-time comparison",
+      "Handles long text and code",
+      "No data sent to server",
+    ],
+    tips: [
+      "Use this to review changes in a legal document or contract draft",
+      "Compare two API JSON responses to see what data changed",
+      "Format your code before comparing to get a cleaner diff",
+    ],
+  },
+  {
+    slug: "text-indent-formatter",
+    name: "Text Indent Formatter",
+    category: "Text",
+    shortDescription: "Indent or un-indent lines of text by tabs or spaces.",
+    heroTitle: "Indent text and code easily",
+    heroDescription:
+      "Bulk add or remove indentation from lists, code blocks, and plain text using spaces or tabs.",
+    about:
+      "Text Indent Formatter is a simple utility to fix indentation issues when pasting code or text from different editors that mix tabs and spaces.",
+    howToUse: [
+      "Paste text into the input area.",
+      "Select your indent type (Tabs or Spaces).",
+      "Click 'Indent' to add indentation, or 'Un-Indent' to remove it.",
+    ],
+    whyUse: [
+      "Quickly fix messy Python or YAML code indentation.",
+      "Align lists and paragraphs uniformly.",
+      "Works fully offline and instantly.",
+    ],
+    faqs: [
+      {
+        question: "Will un-indenting delete my text?",
+        answer: "No, un-indenting only removes leading whitespace (spaces or tabs) up to the specified amount.",
+      },
+      {
+        question: "Can I convert tabs to spaces?",
+        answer: "You can un-indent completely and then re-indent with spaces.",
+      },
+    ],
+    features: [
+      "Add indentation (Tabs or Spaces)",
+      "Remove indentation (Un-indent)",
+      "Customizable space count (2, 4, 8)",
+      "Instant preview",
+      "One-click copy",
+    ],
+    tips: [
+      "Use 2 spaces for JSON/YAML and 4 spaces for Python/Java",
+      "Un-indent completely to flush all text to the left margin",
+      "Use this to prepare code snippets for markdown files",
+    ],
+  },
+  {
+    slug: "csv-column-extractor",
+    name: "CSV Column Extractor",
+    category: "Text",
+    shortDescription: "Extract or reorder specific columns from CSV data.",
+    heroTitle: "Extract CSV columns without Excel",
+    heroDescription:
+      "Quickly pull out specific columns, names, or emails from raw CSV text using column indexes.",
+    about:
+      "CSV Column Extractor is perfect for quickly grabbing a list of emails, IDs, or specific data points from a large CSV dump without needing to open a heavy spreadsheet app.",
+    howToUse: [
+      "Paste raw CSV text into the input.",
+      "Enter the column numbers you want to extract (e.g., 1, 3).",
+      "Choose a separator (Comma or Tab).",
+      "Copy the extracted output.",
+    ],
+    whyUse: [
+      "Faster than opening Excel or writing a Python script.",
+      "Great for extracting email lists for marketing tools.",
+      "100% private processing in the browser.",
+    ],
+    faqs: [
+      {
+        question: "How do I specify columns?",
+        answer: "Columns are 1-indexed. Entering '1' extracts the first column. Enter multiple columns separated by commas (e.g., 1, 3).",
+      },
+      {
+        question: "Does it handle quotes in CSV?",
+        answer: "This is a simple text splitter tool. It splits blindly by the delimiter. For advanced CSV parsing with escaped quotes, use the CSV to JSON tool.",
+      },
+    ],
+    features: [
+      "Extract single or multiple columns",
+      "1-based column indexing",
+      "Supports comma and tab delimiters",
+      "Real-time extraction preview",
+      "Copy extracted list instantly",
+    ],
+    tips: [
+      "Extract just the email column (e.g. Column 2) for mailing lists",
+      "Extract multiple columns (e.g. 1, 3) to drop unnecessary data",
+      "Switch delimiter to Tab to parse TSV data pasted from Excel",
+    ],
+  },
+  {
+    slug: "percentage-calculator",
+    name: "Percentage Calculator",
+    category: "Number",
+    shortDescription: "Calculate percentages, percentage change, and reverse percentages.",
+    heroTitle: "Quick percentage calculations",
+    heroDescription:
+      "Calculate what percent X is of Y, find percentage change between two values, or compute a percentage of a number instantly.",
+    about:
+      "Percentage Calculator covers the three most common percentage problems: finding a percent of a number, finding what percent one number is of another, and calculating percentage change between two values.",
+    howToUse: [
+      "Enter values in any of the three calculator modes.",
+      "The result updates automatically.",
+      "Switch between modes as needed.",
+    ],
+    whyUse: [
+      "Handles the three most common percentage problems in one tool.",
+      "No need to remember formulas — just plug in numbers.",
+      "Instant calculations entirely in your browser.",
+    ],
+    faqs: [
+      {
+        question: "How is percentage change calculated?",
+        answer: "Percentage change = ((New − Old) / |Old|) × 100. A positive result means an increase, negative means a decrease.",
+      },
+      {
+        question: "Can it handle decimal percentages?",
+        answer: "Yes, both input values and results support decimals.",
+      },
+      {
+        question: "What is a reverse percentage?",
+        answer: "A reverse percentage finds what percent one number is of another, e.g. what percent is 25 of 200?",
+      },
+    ],
+    features: [
+      "Calculate X% of a number",
+      "Find what percent X is of Y",
+      "Calculate percentage increase or decrease",
+      "Decimal precision support",
+      "Three calculator modes in one tool",
+    ],
+    tips: [
+      "Use percentage change to compare sales figures month over month",
+      "Use 'X% of Y' to calculate tips, discounts, and tax amounts",
+      "Negative percentage change means a decrease",
+    ],
+  },
+  {
+    slug: "prime-number-checker",
+    name: "Prime Number Checker",
+    category: "Number",
+    shortDescription: "Check if a number is prime and list its prime factors.",
+    heroTitle: "Check prime numbers instantly",
+    heroDescription:
+      "Determine if any integer is prime and find its complete list of prime factors.",
+    about:
+      "Prime Number Checker is useful for math students, competitive programmers, and developers working with cryptography or hashing algorithms that rely on prime numbers.",
+    howToUse: [
+      "Enter any positive integer.",
+      "The tool instantly tells you if it is prime.",
+      "View the full prime factorization for composite numbers.",
+    ],
+    whyUse: [
+      "Instant primality test without manual trial division.",
+      "Full prime factorization shown for composite numbers.",
+      "Helpful for math coursework and algorithm problems.",
+    ],
+    faqs: [
+      {
+        question: "Is 1 a prime number?",
+        answer: "No. By mathematical definition, prime numbers must have exactly two distinct divisors: 1 and themselves. 1 has only one divisor.",
+      },
+      {
+        question: "What is prime factorization?",
+        answer: "Prime factorization breaks a number into a product of prime numbers, e.g. 12 = 2 × 2 × 3.",
+      },
+      {
+        question: "What is the largest number I can check?",
+        answer: "The tool works well up to numbers in the billions range directly in the browser.",
+      },
+    ],
+    features: [
+      "Instant prime or composite result",
+      "Prime factorization display",
+      "List all factors",
+      "Handles large numbers efficiently",
+      "100% client-side",
+    ],
+    tips: [
+      "Use for competitive programming problems involving primes",
+      "Check if RSA key components are prime",
+      "Factor numbers to find GCD manually",
+    ],
+  },
+  {
+    slug: "random-number-generator",
+    name: "Random Number Generator",
+    category: "Number",
+    shortDescription: "Generate random numbers with custom min, max, and quantity settings.",
+    heroTitle: "Generate random numbers fast",
+    heroDescription:
+      "Create one or many random integers or decimals within any range, suitable for testing, sampling, and games.",
+    about:
+      "Random Number Generator produces cryptographically-seeded random numbers using the browser's built-in crypto API for better randomness than standard Math.random().",
+    howToUse: [
+      "Set your minimum and maximum range.",
+      "Choose how many numbers to generate.",
+      "Toggle between integers and decimals.",
+      "Click Generate and copy the results.",
+    ],
+    whyUse: [
+      "Better randomness using the browser crypto API.",
+      "Generate batches of random values for testing data.",
+      "Supports both integer and decimal modes.",
+    ],
+    faqs: [
+      {
+        question: "Are these numbers truly random?",
+        answer: "They use the browser's crypto.getRandomValues(), which provides cryptographically strong random values.",
+      },
+      {
+        question: "Can I generate floating-point decimals?",
+        answer: "Yes, toggle on 'Decimal Mode' to get random numbers with decimal precision.",
+      },
+      {
+        question: "Is there a limit to how many numbers I can generate?",
+        answer: "You can generate up to 10,000 numbers at once.",
+      },
+    ],
+    features: [
+      "Configurable min and max range",
+      "Batch generation (1 to 10,000 numbers)",
+      "Integer and decimal modes",
+      "Cryptographically strong randomness",
+      "Copy all results at once",
+    ],
+    tips: [
+      "Use for generating test data and mock IDs",
+      "Generate dice rolls by setting range 1-6",
+      "Use decimal mode for random probability weights",
+    ],
+  },
+  {
+    slug: "roman-numeral-converter",
+    name: "Roman Numeral Converter",
+    category: "Number",
+    shortDescription: "Convert numbers (1–3999) to Roman numerals and back.",
+    heroTitle: "Convert Roman numerals instantly",
+    heroDescription:
+      "Quickly convert between standard integers and Roman numeral notation in both directions.",
+    about:
+      "Roman Numeral Converter is a handy utility for historians, students, designers working with clock faces or chapter numbering, and developers building internationalization features.",
+    howToUse: [
+      "Enter a number (1–3999) to convert to Roman numerals.",
+      "Or enter Roman numerals (e.g. XIV) to convert back to a number.",
+      "The conversion is automatic and instant.",
+    ],
+    whyUse: [
+      "Supports both conversion directions in a single tool.",
+      "Handles full standard Roman numeral notation up to 3999.",
+      "Useful for design, publishing, and academic work.",
+    ],
+    faqs: [
+      {
+        question: "What is the largest Roman numeral?",
+        answer: "Standard Roman numerals go up to 3999 (MMMCMXCIX). Beyond that, a bar notation is required.",
+      },
+      {
+        question: "Is 0 representable in Roman numerals?",
+        answer: "No. Roman numerals do not have a symbol for zero.",
+      },
+      {
+        question: "Are Roman numerals case-sensitive?",
+        answer: "No, the tool accepts both uppercase (XIV) and lowercase (xiv) input.",
+      },
+    ],
+    features: [
+      "Number to Roman numeral conversion",
+      "Roman numeral to number conversion",
+      "Supports full range (1–3999)",
+      "Case-insensitive Roman input",
+      "Instant bidirectional conversion",
+    ],
+    tips: [
+      "Use for book chapter numbering in documents",
+      "Great for clock face design and decorative typography",
+      "Test edge cases: 4 = IV, 9 = IX, 40 = XL, 90 = XC",
+    ],
+  },
+  {
+    slug: "time-duration-calculator",
+    name: "Time Duration Calculator",
+    category: "Number",
+    shortDescription: "Add, subtract, and convert time durations in hours, minutes, and seconds.",
+    heroTitle: "Calculate time durations easily",
+    heroDescription:
+      "Add or subtract multiple time durations and convert between hours, minutes, and seconds.",
+    about:
+      "Time Duration Calculator helps project managers, video editors, developers, and students sum up work logs, track elapsed time, or convert durations into different units.",
+    howToUse: [
+      "Enter one or more time durations in HH:MM:SS format.",
+      "Choose to add or subtract them.",
+      "View the total in multiple time unit formats.",
+    ],
+    whyUse: [
+      "Accurately sum up work logs or video clip durations.",
+      "No spreadsheet needed for simple time math.",
+      "Converts result into total seconds, minutes, and hours.",
+    ],
+    faqs: [
+      {
+        question: "What format should I use for durations?",
+        answer: "Enter durations as HH:MM:SS, MM:SS, or just seconds. The tool is flexible.",
+      },
+      {
+        question: "Can I subtract durations?",
+        answer: "Yes, you can mix addition and subtraction in a list of durations.",
+      },
+    ],
+    features: [
+      "Add multiple time durations",
+      "Subtract durations",
+      "Result shown in HH:MM:SS",
+      "Result also in total seconds and minutes",
+      "Simple HH:MM:SS or MM:SS input",
+    ],
+    tips: [
+      "Sum up daily work hour logs at the end of the week",
+      "Add video clip durations to calculate total video length",
+      "Convert a result in seconds to hours by dividing by 3600",
+    ],
+  },
+  {
+    slug: "gcd-lcm-calculator",
+    name: "GCD & LCM Calculator",
+    category: "Number",
+    shortDescription: "Calculate the Greatest Common Divisor and Least Common Multiple.",
+    heroTitle: "Find GCD and LCM instantly",
+    heroDescription:
+      "Compute the Greatest Common Divisor (GCD) and Least Common Multiple (LCM) of two or more numbers.",
+    about:
+      "GCD & LCM Calculator is essential for simplifying fractions, scheduling problems, and solving number theory exercises in math, engineering, and computer science.",
+    howToUse: [
+      "Enter two or more numbers separated by commas.",
+      "The tool computes GCD and LCM instantly.",
+      "Use the results for fraction simplification or scheduling problems.",
+    ],
+    whyUse: [
+      "Handles more than two numbers simultaneously.",
+      "Shows the step-by-step Euclidean algorithm for GCD.",
+      "Instant results, no server required.",
+    ],
+    faqs: [
+      {
+        question: "What is GCD used for?",
+        answer: "GCD is used to simplify fractions — divide numerator and denominator by their GCD.",
+      },
+      {
+        question: "What is LCM used for?",
+        answer: "LCM is used to find a common denominator when adding fractions with different denominators.",
+      },
+      {
+        question: "Can I input more than two numbers?",
+        answer: "Yes, enter any count of numbers separated by commas.",
+      },
+    ],
+    features: [
+      "GCD of two or more numbers",
+      "LCM of two or more numbers",
+      "Supports comma-separated input",
+      "Uses efficient Euclidean algorithm",
+      "Instant real-time calculation",
+    ],
+    tips: [
+      "Use GCD to simplify fractions before adding or subtracting them",
+      "LCM helps find the ideal meeting interval for two recurring events",
+      "GCD of 1 means two numbers are coprime (no common factors)",
+    ],
+  },
+  {
+    slug: "factorial-calculator",
+    name: "Factorial Calculator",
+    category: "Number",
+    shortDescription: "Compute factorials, combinations (nCr), and permutations (nPr).",
+    heroTitle: "Calculate factorials and combinations",
+    heroDescription:
+      "Instantly compute n! (factorial), nCr (combinations), and nPr (permutations) for any valid integers.",
+    about:
+      "Factorial Calculator is useful for statistics, probability problems, and combinatorics exercises in math courses and competitive programming.",
+    howToUse: [
+      "Enter n for a factorial.",
+      "Enter n and r for combinations (nCr) or permutations (nPr).",
+      "Results appear instantly.",
+    ],
+    whyUse: [
+      "Covers factorial, nCr, and nPr in a single tool.",
+      "No calculator app needed for combinatorics problems.",
+      "Handles n up to 20 (maximum safe factorial in JavaScript).",
+    ],
+    faqs: [
+      {
+        question: "What is n! (factorial)?",
+        answer: "n! is the product of all positive integers from 1 to n. For example, 5! = 5 × 4 × 3 × 2 × 1 = 120.",
+      },
+      {
+        question: "What is the difference between nCr and nPr?",
+        answer: "nCr counts combinations where order does NOT matter. nPr counts permutations where order DOES matter.",
+      },
+      {
+        question: "Why is there a limit on n?",
+        answer: "JavaScript numbers lose precision past 2^53. Factorials above 20! exceed that range.",
+      },
+    ],
+    features: [
+      "Factorial (n!) calculation",
+      "Combinations (nCr) calculation",
+      "Permutations (nPr) calculation",
+      "Supports n up to 20",
+      "Instant client-side results",
+    ],
+    tips: [
+      "Use nCr to calculate lottery odds",
+      "Use nPr when order matters (e.g. race standings)",
+      "0! = 1 by mathematical convention",
+    ],
+  },
+  {
+    slug: "number-to-words",
+    name: "Number to Words",
+    category: "Number",
+    shortDescription: "Convert numeric figures into written English words.",
+    heroTitle: "Convert numbers to English words",
+    heroDescription:
+      "Instantly spell out any number in English — useful for writing checks, legal documents, and formal writing.",
+    about:
+      "Number to Words converts any integer up to one trillion into its English word form, helping writers and developers avoid errors when transcribing numbers in formal contexts.",
+    howToUse: [
+      "Type or paste a number into the input field.",
+      "The English word form appears instantly.",
+      "Copy it for use in documents or code.",
+    ],
+    whyUse: [
+      "Essential for check-writing and legal document drafting.",
+      "Useful for generating test data with number labels.",
+      "Handles numbers up to one trillion.",
+    ],
+    faqs: [
+      {
+        question: "Does it support negative numbers?",
+        answer: "Yes, negative numbers are prefixed with 'negative' in the output.",
+      },
+      {
+        question: "What is the maximum supported number?",
+        answer: "The tool supports integers up to 999 trillion (999,999,999,999,999).",
+      },
+      {
+        question: "Does it handle decimals?",
+        answer: "No, this tool converts integers only. Decimal support may be added in a future update.",
+      },
+    ],
+    features: [
+      "Converts integers to English words",
+      "Supports negative numbers",
+      "Handles up to hundreds of trillions",
+      "Handles special cases: 0, 11-19",
+      "One-click copy to clipboard",
+    ],
+    tips: [
+      "Use for filling out cheque amount fields",
+      "Great for legal contracts that require numeric amounts spelled out",
+      "Zero is spelled 'zero', not 'nil' or 'nought'",
+    ],
+  },
+  {
+    slug: "aspect-ratio-calculator",
+    name: "Aspect Ratio Calculator",
+    category: "Number",
+    shortDescription: "Calculate missing width or height from an aspect ratio.",
+    heroTitle: "Calculate aspect ratios for any size",
+    heroDescription:
+      "Find missing dimensions for images, videos, and UI elements based on standard or custom aspect ratios.",
+    about:
+      "Aspect Ratio Calculator is essential for designers and developers who need to maintain correct proportions when resizing images, videos, or responsive UI containers.",
+    howToUse: [
+      "Select a preset ratio (e.g. 16:9) or enter a custom ratio.",
+      "Enter either the width or height.",
+      "The missing dimension is calculated instantly.",
+    ],
+    whyUse: [
+      "Prevents distorted images when resizing for different screens.",
+      "Covers common video, photo, and social media aspect ratios.",
+      "Works completely offline in the browser.",
+    ],
+    faqs: [
+      {
+        question: "What is aspect ratio?",
+        answer: "Aspect ratio is the proportional relationship between width and height, e.g. 16:9 means for every 16 units of width, there are 9 units of height.",
+      },
+      {
+        question: "Can I enter a custom ratio?",
+        answer: "Yes, you can enter any W:H ratio in the custom ratio fields.",
+      },
+      {
+        question: "What units are used?",
+        answer: "The tool is unit-agnostic. You can use pixels, centimetres, inches — just be consistent.",
+      },
+    ],
+    features: [
+      "Common presets: 16:9, 4:3, 1:1, 3:2, 9:16",
+      "Custom ratio input",
+      "Solve for width or height",
+      "Pixel-perfect results",
+      "Instant real-time calculation",
+    ],
+    tips: [
+      "Use 16:9 for YouTube thumbnails and video embeds",
+      "Use 1:1 for Instagram post images",
+      "Use 9:16 for mobile stories and TikTok-style vertical video",
+    ],
   }
 ];
 
