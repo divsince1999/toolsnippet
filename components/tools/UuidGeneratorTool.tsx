@@ -7,7 +7,7 @@ import TextArea from "@/components/ui/TextArea";
 import ToolContainer from "@/components/ui/ToolContainer";
 
 export default function UuidGeneratorTool() {
-  const { output, setOutput, copyToClipboard, isCopied, clearAll } = useTool();
+  const { output, setOutput, clearAll } = useTool();
   const [count, setCount] = useState(1);
 
   const generateUuids = () => {

@@ -68,7 +68,7 @@ export default function TextSorterTool() {
           <label className="block text-sm font-medium mb-1">Sorting Method</label>
           <select
             value={sortMethod}
-            onChange={(e) => setSortMethod(e.target.value as any)}
+            onChange={(e) => setSortMethod(e.target.value as "a-z" | "z-a" | "length-asc" | "length-desc" | "numeric")}
             className="w-full rounded-md border border-black/20 dark:border-white/20 bg-transparent px-3 py-1.5 text-sm outline-none focus:border-primary"
           >
             <option value="a-z">Alphabetical (A-Z)</option>

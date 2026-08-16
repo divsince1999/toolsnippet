@@ -15,12 +15,12 @@ export default function JsonToTypescriptTool() {
       const interfaces = generateInterfaces(parsed, "RootObject");
       setOutput(interfaces);
       setError("");
-    } catch (err) {
+    } catch {
       setError("Invalid JSON input");
     }
   };
 
-  const generateInterfaces = (obj: any, interfaceName: string): string => {
+  const generateInterfaces = (obj: Record<string, unknown>, interfaceName: string): string => {
     let result = `export interface ${interfaceName} {\n`;
     const nested: string[] = [];
 
@@ -34,14 +34,14 @@ export default function JsonToTypescriptTool() {
         if (itemType === "object" && firstItem !== null) {
           const subName = key.charAt(0).toUpperCase() + key.slice(1) + "Item";
           result += `  ${key}: ${subName}[];\n`;
-          nested.push(generateInterfaces(firstItem, subName));
+          nested.push(generateInterfaces(firstItem as Record<string, unknown>, subName));
         } else {
           result += `  ${key}: ${itemType}[];\n`;
         }
-      } else if (type === "object") {
+      } else if (type === "object" && value !== null) {
         const subName = key.charAt(0).toUpperCase() + key.slice(1);
         result += `  ${key}: ${subName};\n`;
-        nested.push(generateInterfaces(value, subName));
+        nested.push(generateInterfaces(value as Record<string, unknown>, subName));
       } else {
         result += `  ${key}: ${type};\n`;
       }

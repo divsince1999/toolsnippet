@@ -16,7 +16,7 @@ export default function QrCodeGeneratorTool() {
 
   const generate = () => {
     try {
-      const { size, errorCorrection, margin } = options;
+      const { size } = options;
       
       // Simple QR code generation (simplified - in production would use a proper QR library)
       // This is a mock implementation that creates a placeholder QR code

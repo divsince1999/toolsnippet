@@ -6,7 +6,7 @@ import TextArea from "@/components/ui/TextArea";
 import ToolContainer from "@/components/ui/ToolContainer";
 
 export default function UrlEncoderDecoderTool() {
-  const { input, setInput, output, setOutput, error, setError, clearAll, copyToClipboard, isCopied } = useTool();
+  const { input, setInput, output, setOutput, error, setError, clearAll } = useTool();
 
   function encodeValue() {
     setOutput(encodeURIComponent(input));

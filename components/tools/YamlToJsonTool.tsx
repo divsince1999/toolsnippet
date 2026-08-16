@@ -16,8 +16,8 @@ export default function YamlToJsonTool() {
       const parsed = load(input);
       setOutput(JSON.stringify(parsed, null, 2));
       setError("");
-    } catch (err: any) {
-      setError(err.message || "Failed to parse YAML. Please check your input.");
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Failed to parse YAML. Please check your input.");
     }
   };
 

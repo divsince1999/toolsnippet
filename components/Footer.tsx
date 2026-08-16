@@ -82,7 +82,7 @@ export default function Footer() {
       <div className="mt-12 border-t border-black/5 py-8 text-center text-xs text-gray-500 dark:border-white/5 dark:text-gray-400">
         <div className="mx-auto max-w-6xl">
           <p>
-            © {currentYear} ToolBox. All rights reserved. |{" "}
+            © {currentYear} ToolSnippet. All rights reserved. |{" "}
             <Link href="/privacy" className="hover:underline">
               Privacy Policy
             </Link>

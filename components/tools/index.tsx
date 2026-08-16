@@ -8,7 +8,7 @@ const ToolSkeleton = () => (
 );
 
 
-export const ToolRegistry: Record<string, any> = {
+export const ToolRegistry: Record<string, React.ComponentType> = {
   "text-case": dynamic(() => import("./TextCaseTool"), { loading: ToolSkeleton }),
   "json-formatter": dynamic(() => import("./JsonFormatterTool"), { loading: ToolSkeleton }),
   "base64-encoder-decoder": dynamic(() => import("./Base64Tool"), { loading: ToolSkeleton }),
@@ -81,4 +81,24 @@ export const ToolRegistry: Record<string, any> = {
   "factorial-calculator": dynamic(() => import("./FactorialCalculatorTool"), { loading: ToolSkeleton }),
   "number-to-words": dynamic(() => import("./NumberToWordsTool"), { loading: ToolSkeleton }),
   "aspect-ratio-calculator": dynamic(() => import("./AspectRatioCalculatorTool"), { loading: ToolSkeleton }),
+  "curl-to-fetch": dynamic(() => import("./CurlToFetchTool"), { loading: ToolSkeleton }),
+  "html-table-to-json": dynamic(() => import("./HtmlTableToJsonTool"), { loading: ToolSkeleton }),
+  "markdown-to-html": dynamic(() => import("./MarkdownToHtmlTool"), { loading: ToolSkeleton }),
+  "html-to-markdown": dynamic(() => import("./HtmlToMarkdownTool"), { loading: ToolSkeleton }),
+  "case-converter-camel-snake-kebab": dynamic(() => import("./CaseConverterCamelSnakeKebabTool"), { loading: ToolSkeleton }),
+  "utm-builder": dynamic(() => import("./UtmBuilderTool"), { loading: ToolSkeleton }),
+  "meta-tag-generator": dynamic(() => import("./MetaTagGeneratorTool"), { loading: ToolSkeleton }),
+  "robots-txt-generator": dynamic(() => import("./RobotsTxtGeneratorTool"), { loading: ToolSkeleton }),
+  "color-shades-generator": dynamic(() => import("./ColorShadesGeneratorTool"), { loading: ToolSkeleton }),
+  "json-size-analyzer": dynamic(() => import("./JsonSizeAnalyzerTool"), { loading: ToolSkeleton }),
+  "timestamp-to-iso": dynamic(() => import("./TimestampToIsoTool"), { loading: ToolSkeleton }),
+  "hex-to-ascii": dynamic(() => import("./HexToAsciiTool"), { loading: ToolSkeleton }),
+  "tsv-to-csv": dynamic(() => import("./TsvToCsvTool"), { loading: ToolSkeleton }),
+  "email-extractor": dynamic(() => import("./EmailExtractorTool"), { loading: ToolSkeleton }),
+  "url-extractor": dynamic(() => import("./UrlExtractorTool"), { loading: ToolSkeleton }),
+  "read-time-calculator": dynamic(() => import("./ReadTimeCalculatorTool"), { loading: ToolSkeleton }),
+  "json-key-sorter": dynamic(() => import("./JsonKeySorterTool"), { loading: ToolSkeleton }),
+  "punycode-converter": dynamic(() => import("./PunycodeConverterTool"), { loading: ToolSkeleton }),
+  "chmod-calculator": dynamic(() => import("./ChmodCalculatorTool"), { loading: ToolSkeleton }),
+  "base64-to-image": dynamic(() => import("./Base64ToImageTool"), { loading: ToolSkeleton }),
 };

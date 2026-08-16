@@ -33,7 +33,7 @@ export default function XmlFormatterTool() {
 
       setOutput(formatted.trim());
       setError("");
-    } catch (err) {
+    } catch {
       setError("Failed to format XML");
     }
   };

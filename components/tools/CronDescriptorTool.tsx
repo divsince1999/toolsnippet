@@ -18,17 +18,6 @@ export default function CronDescriptorTool() {
 
     const [m, h, d, mo, dw] = parts;
     
-    const describePart = (val: string, unit: string, all: string = "every") => {
-      if (val === "*") return all + " " + unit;
-      if (val.includes("/")) {
-        const [start, step] = val.split("/");
-        return `every ${step} ${unit}s starting from ${start === "*" ? "0" : start}`;
-      }
-      if (val.includes(",")) return `on ${unit}s ${val}`;
-      if (val.includes("-")) return `between ${unit}s ${val.replace("-", " and ")}`;
-      return `at ${unit} ${val}`;
-    };
-
     const months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 

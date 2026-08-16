@@ -32,6 +32,7 @@ export default function ImageToBase64Tool() {
         {output && (
           <div className="grid gap-4">
             <div className="flex min-h-40 items-center justify-center overflow-hidden rounded-lg border border-black/10 bg-black/[0.02] dark:border-white/10 dark:bg-white/[0.02]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={output}
                 alt="Uploaded image preview"

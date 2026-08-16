@@ -2525,6 +2525,791 @@ export const tools: ToolInfo[] = [
       "Use 1:1 for Instagram post images",
       "Use 9:16 for mobile stories and TikTok-style vertical video",
     ],
+  },
+  {
+    slug: "curl-to-fetch",
+    name: "cURL to Fetch & Axios Converter",
+    category: "Data",
+    shortDescription: "Convert cURL commands to modern JavaScript fetch() and axios code.",
+    heroTitle: "Convert cURL to JavaScript Fetch and Axios code",
+    heroDescription: "Instantly turn raw cURL terminal commands into ready-to-run fetch or axios API calls.",
+    about: "cURL to Fetch converter allows developers to seamlessly migrate API examples from terminal commands and Postman directly into modern JavaScript and TypeScript frontends.",
+    howToUse: [
+      "Paste any valid cURL command into the input area.",
+      "Select Fetch API or Axios as your target syntax.",
+      "Click Convert to Code and copy the generated JavaScript.",
+    ],
+    whyUse: [
+      "Saves time manually translating headers, methods, and request bodies.",
+      "Supports modern async/await syntax with JSON parsing.",
+      "Runs 100% locally in your browser with zero network requests.",
+    ],
+    faqs: [
+      {
+        question: "Does it support custom headers and POST bodies?",
+        answer: "Yes, it parses -H headers, -d/--data JSON and raw bodies, and -X HTTP methods.",
+      },
+      {
+        question: "Is multi-line cURL syntax supported?",
+        answer: "Yes, backslash line continuations are automatically normalized and parsed.",
+      },
+    ],
+    features: [
+      "Supports Fetch and Axios syntax",
+      "Auto-formats request bodies and headers",
+      "Async/await ready code generation",
+      "One-click copy to clipboard",
+    ],
+    tips: [
+      "Ensure double quotes in JSON bodies are properly escaped in your cURL command",
+      "Use Axios mode if you are working with older Node.js versions without native fetch",
+    ],
+  },
+  {
+    slug: "html-table-to-json",
+    name: "HTML Table to JSON Converter",
+    category: "Data",
+    shortDescription: "Extract and convert HTML table data into clean structured JSON.",
+    heroTitle: "Convert HTML tables to JSON arrays instantly",
+    heroDescription: "Paste any HTML table code and extract structured JSON objects with custom column keys.",
+    about: "HTML Table to JSON Converter parses HTML <table> structures and extracts all table headers and table rows into clean, structured JSON arrays.",
+    howToUse: [
+      "Paste your raw HTML <table> markup in the input editor.",
+      "Click Convert Table to JSON.",
+      "Copy or export the structured JSON array for your app or database.",
+    ],
+    whyUse: [
+      "Quickly scrape or extract data from web pages into API payloads.",
+      "Accurately maps thead th headers to JSON object keys.",
+      "Browser-based parsing with zero server transmission.",
+    ],
+    faqs: [
+      {
+        question: "What happens if a table has no <th> headers?",
+        answer: "The tool automatically generates column keys like column_1, column_2 for every cell.",
+      },
+      {
+        question: "Can I convert large tables?",
+        answer: "Yes, modern browser DOM parsing handles tables with thousands of rows smoothly.",
+      },
+    ],
+    features: [
+      "Automatic thead header detection",
+      "Formatted 2-space indented JSON output",
+      "Handles nested cell text and whitespace cleaning",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Clean up empty rows in the HTML before converting for the cleanest output",
+      "Inspect the generated JSON keys to ensure column headers were parsed accurately",
+    ],
+  },
+  {
+    slug: "markdown-to-html",
+    name: "Markdown to HTML Converter",
+    category: "Text",
+    shortDescription: "Convert GitHub Flavored Markdown into clean, exportable HTML code.",
+    heroTitle: "Convert Markdown to clean HTML markup",
+    heroDescription: "Transform Markdown headers, lists, code blocks, and links into semantic HTML tags.",
+    about: "Markdown to HTML Converter transforms standard Markdown into valid, semantic HTML tags suitable for embedding in blog posts, email templates, and websites.",
+    howToUse: [
+      "Type or paste your Markdown content in the editor.",
+      "Click Convert to HTML.",
+      "Copy the generated HTML code directly to your clipboard.",
+    ],
+    whyUse: [
+      "Fast conversion without installing CLI dependencies.",
+      "Outputs clean semantic HTML without unnecessary wrapper bloat.",
+      "Runs completely in the browser for maximum privacy.",
+    ],
+    faqs: [
+      {
+        question: "Does this tool support fenced code blocks?",
+        answer: "Yes, it converts ```language blocks into pre and code elements with syntax classes.",
+      },
+      {
+        question: "Are images and hyperlinks converted?",
+        answer: "Yes, standard Markdown image and link syntax are converted to img and a tags.",
+      },
+    ],
+    features: [
+      "Supports headers H1 through H6",
+      "Ordered and unordered list conversion",
+      "Fenced code blocks with language detection",
+      "Blockquote and table conversion",
+    ],
+    tips: [
+      "Use double line breaks for paragraph separation",
+      "Check that your URLs are complete with https:// for link tags",
+    ],
+  },
+  {
+    slug: "html-to-markdown",
+    name: "HTML to Markdown Converter",
+    category: "Text",
+    shortDescription: "Convert HTML source code and articles into clean Markdown syntax.",
+    heroTitle: "Convert HTML code to clean Markdown",
+    heroDescription: "Strip complex HTML tags and turn web pages and articles into clean Markdown documents.",
+    about: "HTML to Markdown Converter transforms HTML markup into lightweight, clean Markdown syntax ideal for documentation, GitHub READMEs, and static site generators.",
+    howToUse: [
+      "Paste your HTML source code in the input area.",
+      "Click Convert to Markdown.",
+      "Copy the formatted Markdown for documentation or content publishing.",
+    ],
+    whyUse: [
+      "Quickly convert HTML documentation into Markdown for GitHub or Notion.",
+      "Strips unnecessary style tags and scripts while preserving text structure.",
+      "Zero latency and 100% private.",
+    ],
+    faqs: [
+      {
+        question: "Will inline formatting like bold and italic be preserved?",
+        answer: "Yes, strong, b, em, and i tags are properly mapped to **bold** and *italic* syntax.",
+      },
+      {
+        question: "How are headings handled?",
+        answer: "H1 through H6 elements are converted into corresponding # through ###### Markdown headings.",
+      },
+    ],
+    features: [
+      "Preserves link and image targets",
+      "Converts code blocks and pre elements",
+      "Cleans up excessive whitespace",
+      "Handles HTML entity decoding",
+    ],
+    tips: [
+      "Remove wrapper navigation or footer HTML before converting for best results",
+      "Use the preview to verify list nesting and heading levels",
+    ],
+  },
+  {
+    slug: "case-converter-camel-snake-kebab",
+    name: "Code Variable Case Converter",
+    category: "Text",
+    shortDescription: "Convert identifiers between camelCase, snake_case, kebab-case, and PascalCase.",
+    heroTitle: "Convert variable names across code case conventions",
+    heroDescription: "Simultaneously generate camelCase, snake_case, kebab-case, PascalCase, CONSTANT_CASE, and dot.case.",
+    about: "Code Variable Case Converter helps software engineers convert variable names, function identifiers, database column names, and API keys across all major programming case styles.",
+    howToUse: [
+      "Enter one or more variable names (one per line).",
+      "View all case transformations rendered in real-time.",
+      "Click Copy next to your desired naming style.",
+    ],
+    whyUse: [
+      "Standardize naming conventions when switching between frontend (camelCase) and backend/database (snake_case).",
+      "Batch convert multi-line variable lists in seconds.",
+      "Instant copy with zero page reload.",
+    ],
+    faqs: [
+      {
+        question: "Can I convert multiple lines at once?",
+        answer: "Yes, you can paste dozens of variable names and every case style will transform all lines simultaneously.",
+      },
+      {
+        question: "How does it handle existing delimiters like dashes or underscores?",
+        answer: "The parser intelligently splits words on dashes, underscores, dots, and camelCase boundaries.",
+      },
+    ],
+    features: [
+      "camelCase, snake_case, kebab-case",
+      "PascalCase, CONSTANT_CASE, dot.case, path/case",
+      "Multi-line batch support",
+      "Individual one-click copy buttons",
+    ],
+    tips: [
+      "Use CONSTANT_CASE for environment variables and constants",
+      "Use kebab-case for URL slugs, CSS class names, and filenames",
+    ],
+  },
+  {
+    slug: "utm-builder",
+    name: "UTM Campaign URL Builder",
+    category: "Data",
+    shortDescription: "Create trackable marketing URLs for Google Analytics with UTM parameters.",
+    heroTitle: "Build trackable UTM campaign URLs for Google Analytics",
+    heroDescription: "Generate clean, validated Google Analytics campaign URLs with utm_source, utm_medium, and utm_campaign.",
+    about: "UTM Campaign URL Builder helps marketers, developers, and creators build standardized trackable URLs to accurately measure campaign performance in Google Analytics (GA4).",
+    howToUse: [
+      "Enter your destination Website URL.",
+      "Fill in Campaign Source (e.g. newsletter), Medium (e.g. email), and Name (e.g. launch).",
+      "Optionally specify Campaign Term and Campaign Content.",
+      "Copy your generated trackable campaign URL.",
+    ],
+    whyUse: [
+      "Ensures zero typos and valid URL encoding in marketing campaigns.",
+      "Helps keep tracking naming conventions consistent across marketing channels.",
+      "Runs locally in your browser with zero data collection.",
+    ],
+    faqs: [
+      {
+        question: "Which UTM parameters are required?",
+        answer: "Website URL, utm_source, utm_medium, and utm_campaign are standard requirements for GA4 attribution.",
+      },
+      {
+        question: "Does it work with URLs that already have query parameters?",
+        answer: "Yes, parameters are properly appended with & if query parameters already exist.",
+      },
+    ],
+    features: [
+      "Live real-time URL preview",
+      "Standard GA4 UTM parameter validation",
+      "One-click copy to clipboard",
+      "Automatic URL encoding",
+    ],
+    tips: [
+      "Use lowercase letters and underscores for consistent analytics aggregation",
+      "Avoid spaces in UTM parameters to keep links clean and reliable",
+    ],
+  },
+  {
+    slug: "meta-tag-generator",
+    name: "Open Graph & Meta Tag Generator",
+    category: "Validation",
+    shortDescription: "Generate HTML meta tags, OpenGraph (Facebook/LinkedIn), and Twitter Cards.",
+    heroTitle: "Generate complete HTML Meta Tags and Social Cards",
+    heroDescription: "Create SEO-friendly meta tags, Open Graph properties, and Twitter summary cards for your website.",
+    about: "Open Graph & Meta Tag Generator creates standard HTML head tags, Open Graph meta tags for Facebook and LinkedIn, and Twitter Card specifications to optimize social sharing and search indexing.",
+    howToUse: [
+      "Enter your page title, description, and canonical URL.",
+      "Provide an image URL for social media share previews.",
+      "Optionally enter author name and Twitter handle.",
+      "Copy the generated HTML snippet into your website <head> tag.",
+    ],
+    whyUse: [
+      "Maximizes click-through rates on social media with rich preview cards.",
+      "Includes character count guides to avoid search engine snippet truncation.",
+      "Generates modern, standard-compliant metadata.",
+    ],
+    faqs: [
+      {
+        question: "What is the recommended Open Graph image size?",
+        answer: "The recommended resolution for og:image is 1200x630 pixels with a 1.91:1 aspect ratio.",
+      },
+      {
+        question: "What is the ideal title and description length for SEO?",
+        answer: "Titles should be 50–60 characters, and descriptions should be 150–160 characters for optimal search display.",
+      },
+    ],
+    features: [
+      "Live character counter for title and description",
+      "Open Graph (og:) and Twitter Card markup",
+      "Canonical URL and author tagging",
+      "Clean, copyable HTML code block",
+    ],
+    tips: [
+      "Always use absolute URLs (https://...) for og:image and canonical links",
+      "Ensure your image is publicly accessible so social crawlers can scrape it",
+    ],
+  },
+  {
+    slug: "robots-txt-generator",
+    name: "Robots.txt Generator",
+    category: "Validation",
+    shortDescription: "Visual builder for search engine crawler directives and sitemap declarations.",
+    heroTitle: "Create optimized robots.txt files in seconds",
+    heroDescription: "Configure search engine crawler rules, disallow private directories, and add sitemap links.",
+    about: "Robots.txt Generator gives webmasters and developers an interactive interface to build robots.txt files that guide Googlebot, Bingbot, and AI crawlers on what pages to index.",
+    howToUse: [
+      "Select your default crawler policy (Allow or Disallow).",
+      "Enter paths you wish to disallow or allow specifically.",
+      "Add your sitemap URL and optional crawl delay.",
+      "Toggle AI bot blocking if desired and copy the generated robots.txt.",
+    ],
+    whyUse: [
+      "Prevents indexing of private staging directories, admin pages, and APIs.",
+      "Includes one-click blocking of common AI scraping bots.",
+      "Valid syntax guaranteed according to standard Robots Exclusion Protocol.",
+    ],
+    faqs: [
+      {
+        question: "Where should the robots.txt file be placed?",
+        answer: "Upload the generated file to the root directory of your domain (e.g. https://example.com/robots.txt).",
+      },
+      {
+        question: "Can robots.txt hide sensitive pages from users?",
+        answer: "No. Robots.txt is publicly readable. Sensitive pages should always be protected by authentication.",
+      },
+    ],
+    features: [
+      "AI bot blocking toggle (GPTBot, CCBot, ClaudeBot)",
+      "Multi-path allow/disallow configuration",
+      "Sitemap and crawl-delay directives",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Always test your robots.txt file in Google Search Console after uploading",
+      "Remember that robots.txt paths are case-sensitive",
+    ],
+  },
+  {
+    slug: "color-shades-generator",
+    name: "Color Shades & Tint Generator",
+    category: "Design",
+    shortDescription: "Generate a full 50-950 Tailwind/CSS palette of tints and shades from any base color.",
+    heroTitle: "Generate 50–950 color shades and Tailwind palettes",
+    heroDescription: "Create harmonious lighter tints and darker shades from any HEX or RGB color code.",
+    about: "Color Shades & Tint Generator allows UI/UX designers and frontend developers to create a full 50-950 color scale compatible with Tailwind CSS and modern design systems.",
+    howToUse: [
+      "Pick a color with the color picker or enter a HEX code.",
+      "Explore the generated 50 through 950 color swatches.",
+      "Click any swatch to copy its HEX code or copy the full Tailwind config.",
+    ],
+    whyUse: [
+      "Quickly generate accessible color palettes for buttons, borders, and backgrounds.",
+      "Generates ready-to-paste Tailwind CSS theme configuration JSON.",
+      "Smooth mathematical tint and shade blending algorithms.",
+    ],
+    faqs: [
+      {
+        question: "How are the 50 to 950 shades calculated?",
+        answer: "Lighter tints (50-400) blend toward pure white, while darker shades (600-950) blend mathematically toward black.",
+      },
+      {
+        question: "Can I use this with Tailwind CSS v3 and v4?",
+        answer: "Yes, the exported JSON format works seamlessly with Tailwind theme color extensions.",
+      },
+    ],
+    features: [
+      "Interactive visual color picker and hex input",
+      "Full 11-step 50 to 950 palette",
+      "Exportable Tailwind CSS configuration",
+      "One-click copy for individual hex codes",
+    ],
+    tips: [
+      "Use 500 for primary buttons and 50/100 for subtle card backgrounds",
+      "Use 700 to 900 for dark mode accents and accessible text on light backgrounds",
+    ],
+  },
+  {
+    slug: "json-size-analyzer",
+    name: "JSON Size & Depth Analyzer",
+    category: "Data",
+    shortDescription: "Inspect byte size, minified size, gzip estimate, key counts, and nesting depth.",
+    heroTitle: "Analyze JSON payload size, gzip estimate, and depth",
+    heroDescription: "Measure byte weight, estimated gzip size, total key counts, and object nesting levels.",
+    about: "JSON Size & Depth Analyzer helps backend and frontend engineers analyze the payload weight, compression savings, and structural complexity of API responses.",
+    howToUse: [
+      "Paste any JSON string or payload into the input box.",
+      "View instant metrics on raw size, minified size, and estimated gzip transfer weight.",
+      "Review nesting depth and total object/array counts to optimize API performance.",
+    ],
+    whyUse: [
+      "Catch bloated API responses before shipping code to production.",
+      "Calculate realistic over-the-wire data transfer metrics for mobile users.",
+      "100% private analysis with zero data leaving your browser.",
+    ],
+    faqs: [
+      {
+        question: "How is the gzip size estimated?",
+        answer: "Gzip size is calculated based on standard DEFLATE compression ratios for JSON structures (~65% reduction).",
+      },
+      {
+        question: "What is nesting depth?",
+        answer: "Nesting depth measures how many layers of nested objects and arrays exist inside the JSON payload.",
+      },
+    ],
+    features: [
+      "Raw bytes and human-readable KB/MB sizes",
+      "Minification savings percentage",
+      "Total key, object, and array counters",
+      "Maximum nesting depth measurement",
+    ],
+    tips: [
+      "Keep API response depth under 6-8 levels to ensure high frontend parsing performance",
+      "Minifying JSON before transmission saves noticeable bandwidth on high-throughput endpoints",
+    ],
+  },
+  {
+    slug: "timestamp-to-iso",
+    name: "Timestamp to ISO 8601 Converter",
+    category: "Number",
+    shortDescription: "Convert Unix timestamps (seconds/ms) to ISO 8601 UTC and local date formats.",
+    heroTitle: "Convert Unix timestamps to ISO 8601 UTC dates",
+    heroDescription: "Convert epoch seconds and milliseconds into standard ISO 8601, RFC 2822, and local timestamps.",
+    about: "Timestamp to ISO 8601 Converter translates Unix epoch timestamps into standardized UTC ISO 8601 strings (YYYY-MM-DDTHH:mm:ss.sssZ) and readable local dates.",
+    howToUse: [
+      "Enter a Unix timestamp (10-digit seconds or 13-digit milliseconds) or an ISO date string.",
+      "Click Set to Current Time to inspect the present moment.",
+      "Copy your desired date format with one click.",
+    ],
+    whyUse: [
+      "Quickly debug timestamps in server logs and database records.",
+      "Automatically detects seconds vs milliseconds based on digit length.",
+      "Provides both UTC and local timezone breakdowns.",
+    ],
+    faqs: [
+      {
+        question: "How does it detect seconds versus milliseconds?",
+        answer: "Timestamps with 10 digits are treated as seconds; 13 digits or more are parsed as milliseconds.",
+      },
+      {
+        question: "Can I enter a date string to get an ISO timestamp?",
+        answer: "Yes, you can enter readable date strings (e.g. 2026-03-16) to convert them to epoch milliseconds and ISO UTC.",
+      },
+    ],
+    features: [
+      "ISO 8601 UTC string generation",
+      "RFC 2822 and local time formats",
+      "Epoch seconds and milliseconds display",
+      "Current timestamp generator button",
+    ],
+    tips: [
+      "Always store and transmit dates in ISO 8601 UTC format in REST and GraphQL APIs",
+      "Remember that JavaScript Date.now() returns milliseconds, while Unix standard uses seconds",
+    ],
+  },
+  {
+    slug: "hex-to-ascii",
+    name: "Hex to ASCII Converter",
+    category: "Encoding",
+    shortDescription: "Convert Hexadecimal strings to plain ASCII text and encode text into Hex dumps.",
+    heroTitle: "Convert Hex to ASCII text and text to Hexadecimal",
+    heroDescription: "Decode hex byte dumps into readable text and encode strings into space-separated or prefixed Hex.",
+    about: "Hex to ASCII Converter converts hexadecimal numbers and byte sequences into readable ASCII characters, and encodes plain text into clean hexadecimal values.",
+    howToUse: [
+      "Enter a Hexadecimal string (e.g. 48 65 6c 6c 6f) or plain text.",
+      "Choose your preferred Hex formatting (space-separated, continuous, or 0x prefixed).",
+      "Click Hex to ASCII or ASCII to Hex to transform.",
+    ],
+    whyUse: [
+      "Decode network packet dumps, binary streams, and memory hex values.",
+      "Cleanly handles spaces, 0x prefixes, and continuous hex strings.",
+      "100% client-side decoding with zero external services.",
+    ],
+    faqs: [
+      {
+        question: "Does it matter if hex characters are uppercase or lowercase?",
+        answer: "No, the decoder supports both uppercase (4A) and lowercase (4a) hexadecimal characters.",
+      },
+      {
+        question: "What happens if the hex string has an odd length?",
+        answer: "Hex strings must have an even number of digits (2 hex digits per ASCII byte). An error will be shown if invalid.",
+      },
+    ],
+    features: [
+      "Bidirectional conversion (Hex <-> ASCII)",
+      "Space, continuous, and 0x prefix formatting",
+      "Handles arbitrary text length",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Use 0x prefix mode when exporting hex constants for C, C++, or Solidity smart contracts",
+      "Ensure non-hex characters like punctuation are stripped before decoding",
+    ],
+  },
+  {
+    slug: "tsv-to-csv",
+    name: "TSV to CSV Converter",
+    category: "Data",
+    shortDescription: "Convert Tab-Separated Values (TSV) to Comma-Separated Values (CSV) and vice-versa.",
+    heroTitle: "Convert TSV to CSV and CSV to TSV fast",
+    heroDescription: "Seamlessly convert tab-delimited spreadsheet data into comma-separated files with proper quote escaping.",
+    about: "TSV to CSV Converter allows data analysts, researchers, and developers to convert between Tab-Separated Values and Comma-Separated Values while maintaining proper quote and delimiter escaping.",
+    howToUse: [
+      "Paste your TSV or CSV data into the input box.",
+      "Click TSV to CSV or CSV to TSV.",
+      "Copy the converted tabular output for Excel, Google Sheets, or database imports.",
+    ],
+    whyUse: [
+      "Effortlessly migrate data copied from Excel into CSV files.",
+      "Properly handles embedded commas, newlines, and double quotes.",
+      "Runs completely offline in your browser session.",
+    ],
+    faqs: [
+      {
+        question: "How are cells with embedded commas handled when converting to CSV?",
+        answer: "Any cell containing commas, quotes, or newlines is safely enclosed in double quotes according to RFC 4180.",
+      },
+      {
+        question: "Can I paste directly from Excel or Google Sheets?",
+        answer: "Yes! When you copy cells from a spreadsheet, clipboard data is formatted as TSV, which converts instantly to CSV.",
+      },
+    ],
+    features: [
+      "Bidirectional TSV <-> CSV transformation",
+      "RFC 4180 compliant quotation escaping",
+      "Multi-row batch processing",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Copying rows from Google Sheets or Excel pastes as TSV by default",
+      "Use CSV format for broad compatibility with database importing tools",
+    ],
+  },
+  {
+    slug: "email-extractor",
+    name: "Email Extractor from Text",
+    category: "Text",
+    shortDescription: "Scan and extract all valid unique email addresses from unstructured text.",
+    heroTitle: "Extract and deduplicate email addresses from text",
+    heroDescription: "Extract all email addresses from documents, code, logs, and websites with sorting and deduplication.",
+    about: "Email Extractor from Text scans unstructured text, source code, and documents to extract, deduplicate, and organize all valid email addresses.",
+    howToUse: [
+      "Paste text, logs, or HTML containing email addresses into the editor.",
+      "Choose output format (one per line, comma-separated, or JSON array).",
+      "Optionally enable alphabetical sorting and lowercase normalization.",
+      "Click Extract Emails and copy the results.",
+    ],
+    whyUse: [
+      "Quickly harvest contact lists from newsletters, meeting notes, or source code.",
+      "Automatically deduplicates repeated email addresses.",
+      "100% private: no emails are ever sent to or stored on a server.",
+    ],
+    faqs: [
+      {
+        question: "Does it filter out duplicate emails?",
+        answer: "Yes, all duplicate email addresses are automatically merged into a single unique entry.",
+      },
+      {
+        question: "Is my text or email list stored anywhere?",
+        answer: "No. Extraction runs entirely in your browser RAM and is immediately discarded when you close the tab.",
+      },
+    ],
+    features: [
+      "Standard RFC 5322 regex extraction",
+      "Automatic deduplication and counter",
+      "Multiple export formats (Newline, Comma, JSON)",
+      "Alphabetical sorting and lowercase conversion",
+    ],
+    tips: [
+      "Use comma-separated mode when pasting directly into email client BCC fields",
+      "Use JSON array mode when importing emails into database seed scripts",
+    ],
+  },
+  {
+    slug: "url-extractor",
+    name: "URL & Link Extractor",
+    category: "Text",
+    shortDescription: "Extract and filter all HTTP/HTTPS links from raw text or source code.",
+    heroTitle: "Extract and filter URLs from raw text and HTML",
+    heroDescription: "Pull all web links and HTTP/HTTPS URLs from articles, source code, and documents.",
+    about: "URL & Link Extractor scans text, HTML source code, and logs to extract all valid web links with optional domain filtering and deduplication.",
+    howToUse: [
+      "Paste text containing web links into the input box.",
+      "Optionally enter a domain filter (e.g. github.com) to isolate specific links.",
+      "Click Extract URLs and copy the clean link list.",
+    ],
+    whyUse: [
+      "Quickly collect references and resource links from research documents.",
+      "Filters out trailing punctuation like periods and brackets automatically.",
+      "Client-side processing ensures fast performance.",
+    ],
+    faqs: [
+      {
+        question: "Does it support both HTTP and HTTPS links?",
+        answer: "Yes, it extracts all links starting with http:// or https://.",
+      },
+      {
+        question: "How does domain filtering work?",
+        answer: "Entering a domain like example.com keeps only URLs containing that domain in the output.",
+      },
+    ],
+    features: [
+      "Robust URL regex extraction",
+      "Domain keyword filtering",
+      "Automatic URL deduplication",
+      "Live extracted link counter",
+    ],
+    tips: [
+      "Use domain filtering to isolate API endpoints from third-party links",
+      "Clean link lists can be pasted into bulk URL checkers or sitemaps",
+    ],
+  },
+  {
+    slug: "read-time-calculator",
+    name: "Reading & Speaking Time Calculator",
+    category: "Text",
+    shortDescription: "Estimate reading time, speech duration, and text readability metrics.",
+    heroTitle: "Calculate reading time and speaking duration for articles",
+    heroDescription: "Estimate silent reading time, speech duration, word counts, and sentence metrics.",
+    about: "Reading & Speaking Time Calculator calculates accurate reading duration and speech time based on words per minute (WPM), helping bloggers, speakers, and copywriters pace their content.",
+    howToUse: [
+      "Paste your article, speech draft, or script into the editor.",
+      "Adjust Reading Speed (default 225 WPM) or Speaking Speed (default 130 WPM) if needed.",
+      "View instant metrics on duration, word counts, and sentence complexity.",
+    ],
+    whyUse: [
+      "Add accurate '5 min read' badges to your blog posts and articles.",
+      "Time speeches and presentations accurately before rehearsing.",
+      "Provides character, word, sentence, and paragraph statistics.",
+    ],
+    faqs: [
+      {
+        question: "What is the average reading speed for adults?",
+        answer: "The average adult reads silently at approximately 200 to 250 words per minute (WPM).",
+      },
+      {
+        question: "What is the standard speaking rate for presentations?",
+        answer: "A comfortable, engaging presentation speech rate is between 120 and 150 words per minute.",
+      },
+    ],
+    features: [
+      "Customizable reading WPM and speaking WPM",
+      "Minutes and seconds precision",
+      "Character counters with and without whitespace",
+      "Average word length and sentence structure stats",
+    ],
+    tips: [
+      "Aim for 3 to 7 minute reading times for optimal blog engagement",
+      "For keynotes and presentations, budget 1 minute per 130 words of script",
+    ],
+  },
+  {
+    slug: "json-key-sorter",
+    name: "JSON Key Alphabetical Sorter",
+    category: "Data",
+    shortDescription: "Recursively sort all JSON keys alphabetically (A-Z or Z-A) for clean git diffs.",
+    heroTitle: "Sort JSON keys alphabetically for clean diffs",
+    heroDescription: "Recursively sort all object keys in JSON structures in ascending or descending alphabetical order.",
+    about: "JSON Key Alphabetical Sorter organizes JSON object keys alphabetically at every nesting level, making configuration files and API snapshots easy to compare and version control in Git.",
+    howToUse: [
+      "Paste your JSON document in the input editor.",
+      "Choose Ascending (A-Z) or Descending (Z-A) order.",
+      "Select 2 spaces or 4 spaces indentation.",
+      "Click Sort JSON Keys and copy the formatted result.",
+    ],
+    whyUse: [
+      "Eliminates noisy git diffs caused by disordered object keys.",
+      "Maintains clean and predictable schema configurations.",
+      "Recursively sorts nested objects and arrays of objects.",
+    ],
+    faqs: [
+      {
+        question: "Are nested objects inside arrays also sorted?",
+        answer: "Yes, the sorter traverses all nested objects, arrays, and sub-objects recursively.",
+      },
+      {
+        question: "Are array item orders modified?",
+        answer: "Array element order is preserved; only key/value pairs within objects are sorted alphabetically.",
+      },
+    ],
+    features: [
+      "Deep recursive key sorting",
+      "A-Z and Z-A sorting order options",
+      "Customizable JSON formatting indentation",
+      "Instant syntax validation and copy",
+    ],
+    tips: [
+      "Run your package.json or i18n translation files through this tool to maintain clean alphabetical keys",
+      "Sorted keys make comparing two JSON API payloads significantly faster",
+    ],
+  },
+  {
+    slug: "punycode-converter",
+    name: "Punycode (IDN) Converter",
+    category: "Encoding",
+    shortDescription: "Convert Internationalized Domain Names (IDNs) to Punycode (xn--) and back.",
+    heroTitle: "Convert Internationalized Domain Names to Punycode",
+    heroDescription: "Encode non-ASCII domain names and emojis into DNS-compatible Punycode and decode xn-- domains to text.",
+    about: "Punycode (IDN) Converter translates Internationalized Domain Names containing accents, umlauts, non-Latin alphabets, and emojis into ASCII-compatible Punycode (xn--...) and vice versa.",
+    howToUse: [
+      "Enter one or more domain names (one per line).",
+      "Click To Punycode (xn--) to convert to DNS ASCII format.",
+      "Click To Unicode (Text) to decode Punycode into readable native characters.",
+    ],
+    whyUse: [
+      "Essential for configuring DNS records and SSL certificates for international domains.",
+      "Batch convert multiple domains in one click.",
+      "Uses modern browser-native URL encoding standards.",
+    ],
+    faqs: [
+      {
+        question: "What is Punycode?",
+        answer: "Punycode is a special encoding syntax used by the Domain Name System (DNS) to represent non-ASCII Unicode characters using limited ASCII letters, digits, and hyphens.",
+      },
+      {
+        question: "Why do Punycode domains start with xn--?",
+        answer: "The xn-- prefix is the standardized Internationalizing Domain Names in Applications (IDNA) indicator for Punycode strings.",
+      },
+    ],
+    features: [
+      "Bidirectional conversion (Unicode <-> Punycode)",
+      "Multi-domain batch conversion support",
+      "Emoji and non-Latin character support",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Use Punycode format when adding DNS records at your domain registrar",
+      "Punycode ensures international domain names resolve reliably across all email and web servers",
+    ],
+  },
+  {
+    slug: "chmod-calculator",
+    name: "Linux Chmod Permissions Calculator",
+    category: "Data",
+    shortDescription: "Calculate Linux/Unix file permissions visually with octal numbers and symbolic notation.",
+    heroTitle: "Visual Linux Chmod Permissions Calculator",
+    heroDescription: "Calculate Unix file permissions visually with read, write, execute checkboxes and octal codes.",
+    about: "Linux Chmod Permissions Calculator helps system administrators and developers calculate and understand Unix/Linux file permissions with octal numbers (e.g. 755), symbolic strings (rwxr-xr-x), and executable commands.",
+    howToUse: [
+      "Check or uncheck Read, Write, and Execute boxes for Owner, Group, and Public.",
+      "Or click a quick preset like 755, 644, or 600.",
+      "Enter your target filename and copy the generated chmod command.",
+    ],
+    whyUse: [
+      "Eliminates guesswork when configuring server and script permissions.",
+      "Provides instant octal and symbolic permission representations.",
+      "Includes standard secure server presets (644 web files, 600 SSH keys).",
+    ],
+    faqs: [
+      {
+        question: "What does chmod 755 mean?",
+        answer: "755 gives the Owner full read/write/execute permissions (7), while Group and Public have read and execute permissions (5).",
+      },
+      {
+        question: "What permission should SSH private keys have?",
+        answer: "SSH private keys must be set to 600 (read/write for Owner only) or 400 (read-only for Owner).",
+      },
+    ],
+    features: [
+      "Interactive 3x3 permission matrix",
+      "One-click standard presets (755, 644, 777, 600, 700, 400)",
+      "Instant octal (755) and symbolic (-rwxr-xr-x) calculation",
+      "Customizable copyable terminal command",
+    ],
+    tips: [
+      "Never use 777 in production environments as it allows anyone to modify and execute your files",
+      "Use 644 for static web files and 755 for directories and executable scripts",
+    ],
+  },
+  {
+    slug: "base64-to-image",
+    name: "Base64 to Image Decoder & Downloader",
+    category: "Design",
+    shortDescription: "Convert Base64 data strings into viewable and downloadable PNG, JPEG, SVG, or WEBP images.",
+    heroTitle: "Decode Base64 strings to downloadable images",
+    heroDescription: "Paste Base64 data URIs or raw base64 strings to instantly preview and download the image file.",
+    about: "Base64 to Image Decoder transforms base64 data strings and Data URIs into rendered image previews with format detection and one-click file downloads.",
+    howToUse: [
+      "Paste your Base64 string or data:image/... Data URI into the editor.",
+      "View the live image preview, format, and estimated file size.",
+      "Enter an optional filename and click Download Image.",
+    ],
+    whyUse: [
+      "Quickly inspect and save images embedded in JSON payloads, CSS, or HTML.",
+      "Auto-detects PNG, JPEG, WEBP, and SVG image formats.",
+      "100% private: image decoding is performed entirely on your device.",
+    ],
+    faqs: [
+      {
+        question: "Does the tool accept raw base64 without data:image prefix?",
+        answer: "Yes, it automatically detects and prefixes raw base64 strings if the data URI header is missing.",
+      },
+      {
+        question: "Can I download the decoded image directly?",
+        answer: "Yes, clicking the Download button saves the image directly to your device with the correct file extension.",
+      },
+    ],
+    features: [
+      "Automatic MIME type and extension detection",
+      "Live visual image preview",
+      "Custom filename output downloader",
+      "Instant client-side decoding",
+    ],
+    tips: [
+      "Verify the base64 string is complete to prevent image decoding artifacts",
+      "Use this tool to extract logo assets and favicons embedded in inline CSS or HTML",
+    ],
   }
 ];
 

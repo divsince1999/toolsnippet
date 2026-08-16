@@ -35,7 +35,7 @@ export default function HtmlFormatterTool() {
 
       setOutput(formatted.trim());
       setError("");
-    } catch (err) {
+    } catch {
       setError("Failed to format HTML");
     }
   };

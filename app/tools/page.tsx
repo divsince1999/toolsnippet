@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   },
 };
 
-const categoryOrder = ["Text", "Data", "Encoding", "Auth", "Validation"] as const;
-
 export default function ToolsPage() {
+  const categories = Array.from(new Set(tools.map((t) => t.category)));
+
   return (
     <main className="mx-auto w-full max-w-6xl px-4 py-25">
       <section>
@@ -24,7 +24,7 @@ export default function ToolsPage() {
       </section>
 
       <section className="mt-10 space-y-10">
-        {categoryOrder.map((category) => {
+        {categories.map((category) => {
           const items = tools.filter((tool) => tool.category === category);
           if (items.length === 0) {
             return null;

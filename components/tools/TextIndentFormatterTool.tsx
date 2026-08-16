@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { useTool } from "@/hooks/useTool";
 import Button from "@/components/ui/Button";
 import TextArea from "@/components/ui/TextArea";
@@ -50,7 +50,7 @@ export default function TextIndentFormatterTool() {
           <label className="block text-sm font-medium mb-1">Indent Type</label>
           <select
             value={indentType}
-            onChange={(e) => setIndentType(e.target.value as any)}
+            onChange={(e) => setIndentType(e.target.value as "tabs" | "spaces")}
             className="w-full rounded-md border border-black/20 dark:border-white/20 bg-transparent px-3 py-1.5 text-sm outline-none focus:border-primary"
           >
             <option value="spaces">Spaces</option>

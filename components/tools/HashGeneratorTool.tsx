@@ -38,7 +38,7 @@ export default function HashGeneratorTool() {
             <label className="text-sm font-medium">Algorithm</label>
             <select
               value={algorithm}
-              onChange={(e) => setAlgorithm(e.target.value as any)}
+              onChange={(e) => setAlgorithm(e.target.value as "SHA-256" | "SHA-1" | "SHA-512")}
               className="w-40 rounded-lg border border-black/15 bg-transparent p-3 text-sm outline-none transition focus:ring-2 focus:ring-primary dark:border-white/20"
             >
               <option value="SHA-256">SHA-256</option>

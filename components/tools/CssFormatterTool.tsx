@@ -22,7 +22,7 @@ export default function CssFormatterTool() {
         .trim();
       setOutput(formatted);
       setError("");
-    } catch (err) {
+    } catch {
       setError("Failed to format CSS");
     }
   };
@@ -30,7 +30,7 @@ export default function CssFormatterTool() {
   return (
     <ToolContainer title="CSS Formatter" description="Beautify and indent your CSS code.">
       <div className="grid gap-6">
-        <TextArea label="Input CSS" value={input} onChange={(e) => setInput(e.target.value)} rows={10} />
+        <TextArea label="Input CSS" value={input} onChange={(e) => setInput(e.target.value)} rows={10} error={error} />
         <div className="flex gap-2">
           <Button onClick={handleFormat}>Format CSS</Button>
           <Button variant="ghost" onClick={clearAll} disabled={!input}>Clear</Button>

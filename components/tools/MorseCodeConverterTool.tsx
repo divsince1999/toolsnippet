@@ -20,7 +20,7 @@ export default function MorseCodeConverterTool() {
     if (!input) return;
     const isMorse = input.includes(".") || input.includes("-");
     if (isMorse) {
-      const reverseMap = Object.entries(MORSE_MAP).reduce((acc, [k, v]) => ({ ...acc, [v]: k }), {} as any);
+      const reverseMap = Object.entries(MORSE_MAP).reduce((acc, [k, v]) => ({ ...acc, [v]: k }), {} as Record<string, string>);
       const text = input.trim().split(" ").map(code => reverseMap[code] || "?").join("");
       setOutput(text.toUpperCase());
     } else {

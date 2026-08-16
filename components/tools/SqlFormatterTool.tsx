@@ -13,7 +13,7 @@ export default function SqlFormatterTool() {
       if (!input) return;
       
       // Very basic SQL formatter logic
-      let formatted = input
+      const formatted = input
         .replace(/\s+/g, " ")
         .replace(/\s*,\s*/g, ", ")
         .replace(/\s*\(\s*/g, " (")
@@ -24,7 +24,7 @@ export default function SqlFormatterTool() {
 
       setOutput(formatted);
       setError("");
-    } catch (err) {
+    } catch {
       setError("Failed to format SQL");
     }
   };

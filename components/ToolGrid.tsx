@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { tools } from "@/lib/tools";
 
 export default function ToolGrid() {
@@ -12,15 +12,12 @@ export default function ToolGrid() {
   const [activeCategory, setActiveCategory] = useState<(typeof categories)[number]>(
     "All"
   );
-  const [searchQuery, setSearchQuery] = useState("");
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const query = params.get("q");
-    if (query) {
-      setSearchQuery(query);
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window !== "undefined") {
+      return new URLSearchParams(window.location.search).get("q") || "";
     }
-  }, []);
+    return "";
+  });
 
   const filteredTools = useMemo(() => {
     return tools.filter((tool) => {
@@ -115,7 +112,7 @@ export default function ToolGrid() {
           ) : (
             <div className="col-span-full py-20 text-center">
               <p className="text-gray-500 dark:text-gray-400">
-                No tools found matching "{searchQuery}" in {activeCategory} category.
+                No tools found matching &quot;{searchQuery}&quot; in {activeCategory} category.
               </p>
               <button
                 onClick={() => {

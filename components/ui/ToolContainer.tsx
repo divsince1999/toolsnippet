@@ -23,7 +23,7 @@ export default function ToolContainer({
     <section className={`mx-auto w-full ${maxWidthClasses[maxWidth]} px-4`}>
       <div className="rounded-xl border border-black/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-white/[0.02]">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h1>
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">{title}</h2>
           {description && (
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               {description}

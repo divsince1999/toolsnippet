@@ -8,7 +8,7 @@ import ToolContainer from "@/components/ui/ToolContainer";
 export default function JsonToYamlTool() {
   const { input, setInput, output, setOutput, error, setError, clearAll } = useTool();
 
-  const jsonToYaml = (obj: any, indent = 0): string => {
+  const jsonToYaml = (obj: unknown, indent = 0): string => {
     const spaces = "  ".repeat(indent);
     if (obj === null) return "null";
     if (typeof obj !== "object") return String(obj);
@@ -18,7 +18,7 @@ export default function JsonToYamlTool() {
       return obj.map(item => `\n${spaces}- ${jsonToYaml(item, indent + 1)}`).join("");
     }
 
-    return Object.entries(obj)
+    return Object.entries(obj as Record<string, unknown>)
       .map(([key, value]) => {
         const valStr = typeof value === "object" && value !== null 
           ? jsonToYaml(value, indent + 1)
@@ -35,7 +35,7 @@ export default function JsonToYamlTool() {
       const yaml = jsonToYaml(parsed).trim();
       setOutput(yaml);
       setError("");
-    } catch (err) {
+    } catch {
       setError("Invalid JSON input");
     }
   };

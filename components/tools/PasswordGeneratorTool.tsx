@@ -7,7 +7,7 @@ import TextArea from "@/components/ui/TextArea";
 import ToolContainer from "@/components/ui/ToolContainer";
 
 export default function PasswordGeneratorTool() {
-  const { input, setInput, output, setOutput, clearAll } = useTool();
+  const { output, setOutput, clearAll } = useTool();
   const [options, setOptions] = useState({
     length: 12,
     includeUppercase: true,

@@ -7,7 +7,7 @@ import ToolContainer from "@/components/ui/ToolContainer";
 import { useState } from "react";
 
 export default function LoremIpsumGeneratorTool() {
-  const { input, setInput, output, setOutput, clearAll } = useTool();
+  const { output, setOutput, clearAll } = useTool();
   const [options, setOptions] = useState({
     paragraphs: 3,
     sentencesPerParagraph: 4,
@@ -33,7 +33,7 @@ export default function LoremIpsumGeneratorTool() {
       const capitalizeFirst = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
       
       const generateSentence = (isFirst: boolean = false) => {
-        let sentence = [];
+        const sentence: string[] = [];
         
         if (isFirst && startWithLorem) {
           sentence.push('Lorem');
@@ -52,7 +52,7 @@ export default function LoremIpsumGeneratorTool() {
       };
       
       const generateParagraph = (paragraphIndex: number) => {
-        let paragraphSentences = [];
+        const paragraphSentences: string[] = [];
         
         for (let i = 0; i < sentencesPerParagraph; i++) {
           const isFirst = paragraphIndex === 0 && i === 0;
@@ -62,7 +62,7 @@ export default function LoremIpsumGeneratorTool() {
         return paragraphSentences.join(' ');
       };
       
-      let result = [];
+      const result: string[] = [];
       for (let i = 0; i < paragraphs; i++) {
         result.push(generateParagraph(i));
       }
@@ -125,7 +125,7 @@ export default function LoremIpsumGeneratorTool() {
                 onChange={(e) => updateOption("startWithLorem", e.target.checked)}
                 className="mr-2"
               />
-              <span className="text-sm font-medium">Start with "Lorem ipsum"</span>
+              <span className="text-sm font-medium">Start with &quot;Lorem ipsum&quot;</span>
             </label>
           </div>
         </div>

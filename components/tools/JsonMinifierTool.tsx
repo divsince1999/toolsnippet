@@ -14,7 +14,7 @@ export default function JsonMinifierTool() {
       const parsed = JSON.parse(input);
       setOutput(JSON.stringify(parsed));
       setError("");
-    } catch (err) {
+    } catch {
       setError("Invalid JSON input");
     }
   };

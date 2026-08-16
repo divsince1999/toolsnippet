@@ -53,7 +53,7 @@ export default function CsvColumnExtractorTool() {
             placeholder="e.g. 1, 3"
             className="w-full rounded-md border border-black/20 dark:border-white/20 bg-transparent px-3 py-1.5 text-sm outline-none focus:border-primary font-mono"
           />
-          <div className="text-xs text-gray-500 mt-1">Separate with commas. E.g. "1, 3"</div>
+          <div className="text-xs text-gray-500 mt-1">Separate with commas. E.g. &quot;1, 3&quot;</div>
         </div>
         <div>
           <label className="block text-sm font-medium mb-1">Separator</label>

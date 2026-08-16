@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import type { ToolInfo } from "@/lib/tools";
-import StructuredData from "@/components/StructuredData";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AddToRecentTools from "@/components/AddToRecentTools";
 
@@ -159,7 +158,6 @@ export default function ToolPageShell({
           ))}
         </div>
       </section>
-      <StructuredData tool={tool} />
     </main>
   );
 }

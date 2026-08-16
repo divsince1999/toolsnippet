@@ -73,7 +73,7 @@ export default function FactorialCalculatorTool() {
 
           {result.comb !== null && (
             <div className="rounded-xl border border-black/10 dark:border-white/10 p-5">
-              <div className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Combinations nCr (order doesn't matter)</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Combinations nCr (order doesn&apos;t matter)</div>
               <div className="flex items-center justify-between">
                 <div>
                   <span className="text-sm text-gray-500">C({result.nv},{result.rv}) = </span>

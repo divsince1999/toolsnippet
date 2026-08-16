@@ -28,7 +28,7 @@ export default function FindAndReplaceTool() {
     try {
       const regex = new RegExp(escapedFind, flags);
       return input.replace(regex, replaceText);
-    } catch (e) {
+    } catch {
       // Fallback in case of regex error
       return input;
     }

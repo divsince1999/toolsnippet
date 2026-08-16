@@ -1,8 +1,8 @@
 import { useState, useCallback, useMemo } from "react";
 
-export function useTool<T = any>() {
+export function useTool<T = string>() {
   const [input, setInput] = useState("");
-  const [output, setOutput] = useState<T | any>(null);
+  const [output, setOutput] = useState<T | string | null>(null);
   const [error, setError] = useState("");
   const [isCopied, setIsCopied] = useState(false);
 

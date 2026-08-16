@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run validate && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "validate": "node scripts/validate-registry.mjs",
+    "test:logic": "node scripts/test-tools-logic.mjs",
+    "create-tool": "node scripts/create-tool.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.10",

@@ -15,14 +15,14 @@ export default function CsvToJsonTool() {
       const headers = lines[0].split(",").map(h => h.trim());
       const result = lines.slice(1).map(line => {
         const values = line.split(",");
-        return headers.reduce((obj: any, header, i) => {
+        return headers.reduce((obj: Record<string, string | undefined>, header, i) => {
           obj[header] = values[i]?.trim();
           return obj;
         }, {});
       });
       setOutput(JSON.stringify(result, null, 2));
       setError("");
-    } catch (err) {
+    } catch {
       setError("Failed to convert CSV to JSON");
     }
   };

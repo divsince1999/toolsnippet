@@ -49,9 +49,9 @@ export default function PrivacyPage() {
             desc: "No sign-up, login, or account is required. We intentionally have no user identity system to protect.",
           },
           {
-            icon: "🚫",
-            title: "No Tracking",
-            desc: "We do not use Google Analytics, Facebook Pixel, or any third-party tracking scripts that collect user behavior.",
+            icon: "📊",
+            title: "Anonymous Telemetry",
+            desc: "We use anonymous, privacy-friendly analytics to track pageviews and improve tool performance. No input content is ever recorded.",
           },
         ].map((pillar) => (
           <div
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
             ToolSnippet is a <span className="font-semibold">static, client-side web application</span>. Every tool — from the Word Counter to the Password Generator — runs entirely using JavaScript executed inside your web browser. When you type text into a ToolSnippet tool:
           </p>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-600 dark:text-gray-400">
-            <li>The text is stored in your browser's memory (RAM) only while the tab is open.</li>
+            <li>The text is stored in your browser&apos;s memory (RAM) only while the tab is open.</li>
             <li>No network requests are made with your input data.</li>
             <li>When you close the tab, all data is immediately discarded.</li>
             <li>We have no server-side endpoint to receive data even if we wanted to.</li>
@@ -98,20 +98,34 @@ export default function PrivacyPage() {
           <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-600 dark:text-gray-400">
             <li>Any text you enter into our tools</li>
             <li>Files you upload or process</li>
-            <li>Your IP address (no server-side logging)</li>
-            <li>Browser fingerprinting data</li>
-            <li>Session or user-behavior data</li>
+            <li>Passwords, tokens, or cryptographic keys generated or formatted</li>
+            <li>Browser fingerprinting or profiling data</li>
+            <li>Personal identifiably linked data</li>
           </ul>
+        </section>
+
+        {/* Analytics & Telemetry */}
+        <section className="rounded-2xl border border-black/10 bg-white p-8 dark:border-white/5 dark:bg-white/[0.02]">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+            Analytics & Aggregated Metrics
+          </h2>
+          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+            To understand which tools are most useful and optimize platform performance, we use industry-standard web analytics services (Google Analytics and Microsoft Clarity). These tools collect aggregated metrics such as page visits, referral sources, and browser types. None of these analytics scripts have access to or transmit the content of your tool inputs.
+          </p>
         </section>
 
         {/* Cookies & Local Storage */}
         <section className="rounded-2xl border border-black/10 bg-white p-8 dark:border-white/5 dark:bg-white/[0.02]">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-            Cookies & Local Storage
+            Local Storage & Preferences
           </h2>
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            ToolSnippet does not set any cookies. We do not use browser localStorage or sessionStorage to persist your input data between sessions. Any state managed by the application lives only in memory and is cleared when you navigate away.
+            ToolSnippet does not use tracking cookies. We utilize client-side browser <code>localStorage</code> strictly for convenience features stored directly on your own device:
           </p>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-600 dark:text-gray-400">
+            <li><strong>Theme Preference:</strong> Remembering whether you selected Light or Dark mode.</li>
+            <li><strong>Recent Tools:</strong> Maintaining a list of your last visited tools for fast navigation.</li>
+          </ul>
         </section>
 
         {/* Hosting & Infrastructure */}
@@ -136,7 +150,7 @@ export default function PrivacyPage() {
             To further signal and enforce a secure environment, every page on this platform includes a strict <span className="font-semibold">Content-Security-Policy (CSP)</span> meta tag. This technical header prevents any unauthorized external scripts from executing on our pages, protecting you from third-party injection attacks.
           </p>
           <div className="mt-4 rounded-lg bg-black/5 p-4 font-mono text-[10px] text-gray-600 dark:bg-white/5 dark:text-gray-400">
-            default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;
+            {"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"}
           </div>
         </section>
 

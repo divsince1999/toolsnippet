@@ -28,7 +28,7 @@ export default function UrlParserTool() {
         hash: url.hash,
         params,
       };
-    } catch (e) {
+    } catch {
       return null;
     }
   }, [input]);
