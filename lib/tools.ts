@@ -3310,6 +3310,1485 @@ export const tools: ToolInfo[] = [
       "Verify the base64 string is complete to prevent image decoding artifacts",
       "Use this tool to extract logo assets and favicons embedded in inline CSS or HTML",
     ],
+  },
+  {
+    slug: "css-box-shadow-generator",
+    name: "CSS Box Shadow Generator",
+    category: "Design",
+    shortDescription: "Create custom CSS box shadows with live visual preview, opacity, spread, and inset controls.",
+    heroTitle: "Interactive CSS Box Shadow Generator & Preview",
+    heroDescription: "Design multi-layer CSS box shadows with live visual feedback, blur, spread radius, color, and inset controls.",
+    about: "CSS Box Shadow Generator allows web developers and designers to craft smooth, modern drop shadows and inset shadows visually without guessing CSS pixel values.",
+    howToUse: [
+      "Adjust horizontal and vertical offset sliders.",
+      "Fine-tune blur radius and spread radius.",
+      "Pick your shadow color, box background, and opacity.",
+      "Toggle Inset Shadow for inner shadow effects.",
+      "Click Copy CSS Code to paste directly into your stylesheet.",
+    ],
+    whyUse: [
+      "Visual real-time shadow manipulation eliminates trial-and-error in CSS.",
+      "Supports modern multi-vendor prefixes for cross-browser compatibility.",
+      "Includes instant color opacity and inset controls.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between blur and spread in CSS box-shadow?",
+        answer: "Blur softens the edges of the shadow, while spread expands or contracts the shadow footprint before blurring.",
+      },
+      {
+        question: "How do I create an inner shadow?",
+        answer: "Check the 'Inset Shadow' option, which places the shadow inside the container frame instead of behind it.",
+      },
+    ],
+    features: [
+      "Interactive X and Y offset controls",
+      "Blur and spread radius sliders",
+      "Hex and RGBA color opacity picker",
+      "Inset shadow toggle",
+      "One-click CSS code copy",
+    ],
+    tips: [
+      "Use negative spread radius with large blur to create soft, modern elevated cards",
+      "Lower shadow opacity (10-20%) creates much cleaner, more realistic lighting",
+    ],
+  },
+  {
+    slug: "css-glassmorphism-generator",
+    name: "CSS Glassmorphism Generator",
+    category: "Design",
+    shortDescription: "Create modern frosted glass UI cards with backdrop blur, transparency, and glossy borders.",
+    heroTitle: "CSS Glassmorphism & Frosted Glass Generator",
+    heroDescription: "Generate frosted glass UI effects with backdrop-filter blur, opacity, gloss highlights, and Tailwind CSS classes.",
+    about: "CSS Glassmorphism Generator creates modern frosted glass cards and modal dialogs with backdrop-filter blur, background opacity, saturation, and subtle translucent borders.",
+    howToUse: [
+      "Adjust backdrop blur slider to control frosting intensity.",
+      "Adjust background opacity to balance translucency and readability.",
+      "Fine-tune border opacity to create crisp glossy edge highlights.",
+      "Copy either the pure CSS code or Tailwind CSS utility classes.",
+    ],
+    whyUse: [
+      "Modern UI aesthetic used in Apple macOS, Windows Fluent, and cutting-edge web apps.",
+      "Generates both pure CSS and Tailwind CSS classes.",
+      "Includes vendor prefixes (-webkit-backdrop-filter) for Safari compatibility.",
+    ],
+    faqs: [
+      {
+        question: "Why does backdrop-filter require a vendor prefix?",
+        answer: "Safari requires -webkit-backdrop-filter for hardware-accelerated blur rendering.",
+      },
+      {
+        question: "Does glassmorphism work on plain white backgrounds?",
+        answer: "Glassmorphism looks best over vibrant gradients, patterns, or images where the blur refraction is visible.",
+      },
+    ],
+    features: [
+      "Backdrop blur and saturation controls",
+      "Background and border opacity sliders",
+      "Live vibrant gradient card preview",
+      "Instant pure CSS and Tailwind CSS export",
+    ],
+    tips: [
+      "Keep text contrast high by using pure white or black text with subtle text-shadow",
+      "Add a 1px semi-transparent white border to give the illusion of physical glass edges",
+    ],
+  },
+  {
+    slug: "css-gradient-generator",
+    name: "CSS Gradient Generator",
+    category: "Design",
+    shortDescription: "Create beautiful linear and radial CSS gradients with multi-color stops and angles.",
+    heroTitle: "CSS Linear & Radial Gradient Generator",
+    heroDescription: "Build smooth CSS gradients with multi-color stops, 360-degree angle controls, and curated color presets.",
+    about: "CSS Gradient Generator lets frontend engineers and UI designers create vibrant linear and radial gradients with customizable color stops, angles, and one-click CSS copy.",
+    howToUse: [
+      "Select Linear or Radial gradient mode.",
+      "Adjust the gradient angle dial or slider.",
+      "Pick your color stops (supports 2 or 3 colors).",
+      "Click one of the curated presets for instant inspiration.",
+      "Copy the CSS code.",
+    ],
+    whyUse: [
+      "Fast visual color blending with real-time gradient preview.",
+      "Supports 360-degree orientation angles.",
+      "Includes popular design system presets (Hyper, Sunset, Ocean, Emerald).",
+    ],
+    faqs: [
+      {
+        question: "What is the standard angle for diagonal gradients?",
+        answer: "135 degrees (top-left to bottom-right) is the most popular angle in modern web design.",
+      },
+      {
+        question: "Is there a fallback color in the generated CSS?",
+        answer: "Yes, the code includes a solid background fallback for legacy browsers that do not support CSS gradients.",
+      },
+    ],
+    features: [
+      "Linear and Radial gradient modes",
+      "360-degree angle slider",
+      "Multi-stop color picker with hex inputs",
+      "Curated gradient preset library",
+      "Copyable CSS code with fallback",
+    ],
+    tips: [
+      "Pair adjacent color hues (e.g. indigo to purple to pink) for smooth, non-muddy gradients",
+      "Use radial gradients as ambient background glow under hero sections",
+    ],
+  },
+  {
+    slug: "css-border-radius-generator",
+    name: "CSS Border Radius & Blob Generator",
+    category: "Design",
+    shortDescription: "Create unique organic shapes, blobs, and fancy border-radius styling with 8-point controls.",
+    heroTitle: "8-Point CSS Border Radius & Organic Blob Generator",
+    heroDescription: "Craft organic blob shapes and asymmetric border radii using 8-value CSS border-radius notation.",
+    about: "CSS Border Radius & Blob Generator gives you full 8-point control over horizontal and vertical radii, enabling organic floating blobs and asymmetric shape styling.",
+    howToUse: [
+      "Adjust horizontal radius sliders for all four corners.",
+      "Adjust vertical radius sliders for all four corners.",
+      "Or pick from organic presets like Blob, Egg, Leaf, Water Drop, or Pebble.",
+      "Copy the generated border-radius CSS property.",
+    ],
+    whyUse: [
+      "Creates organic, fluid shapes without needing external SVG or vector files.",
+      "Provides granular control over the 8-value border-radius slash syntax.",
+      "Lightweight, 100% pure CSS solution.",
+    ],
+    faqs: [
+      {
+        question: "How does the 8-value border-radius syntax work?",
+        answer: "The format 'h1 h2 h3 h4 / v1 v2 v3 v4' defines individual horizontal (h) and vertical (v) radii for top-left, top-right, bottom-right, and bottom-left corners.",
+      },
+      {
+        question: "Can I animate border-radius blobs in CSS?",
+        answer: "Yes, you can transition or keyframe-animate border-radius values smoothly to create morphing blobs.",
+      },
+    ],
+    features: [
+      "8-point independent corner sliders",
+      "Live morphing shape preview",
+      "Curated organic shape presets",
+      "Instant copy to clipboard",
+    ],
+    tips: [
+      "Combine an organic blob border-radius with a subtle CSS gradient for modern hero illustrations",
+      "Animate border-radius between two blob states for a living background effect",
+    ],
+  },
+  {
+    slug: "svg-to-css-data-uri",
+    name: "SVG to CSS Data URI Generator",
+    category: "Design",
+    shortDescription: "Convert SVG code into optimized, URL-encoded CSS background-image Data URIs.",
+    heroTitle: "Convert SVG to URL-Encoded CSS Data URI",
+    heroDescription: "Transform raw SVG markup into lightweight, URL-encoded CSS background-image data without base64 overhead.",
+    about: "SVG to CSS Data URI Generator encodes raw SVG code into UTF-8 URL-encoded CSS data URIs. Unlike Base64 encoding, URL-encoded SVGs are smaller, compressible via Gzip, and remain human-readable.",
+    howToUse: [
+      "Paste your raw <svg> markup into the input editor.",
+      "Click Generate CSS Data URI.",
+      "Copy the background-image CSS rule and test in the live background preview.",
+    ],
+    whyUse: [
+      "Up to 30% smaller payload than Base64 encoding.",
+      "Eliminates extra HTTP requests for small UI icons and background patterns.",
+      "Automatically injects required XML namespaces and cleans special characters.",
+    ],
+    faqs: [
+      {
+        question: "Why is URL encoding better than Base64 for SVG?",
+        answer: "Base64 increases file size by ~33%, whereas UTF-8 URL encoding only escapes necessary characters, resulting in a much lighter footprint that compresses well with Gzip/Brotli.",
+      },
+      {
+        question: "Does this require an xmlns attribute?",
+        answer: "Yes, CSS data URIs require xmlns='http://www.w3.org/2000/svg', which our tool automatically injects if missing.",
+      },
+    ],
+    features: [
+      "RFC 3986 compliant URL encoding",
+      "Automatic xmlns validation and injection",
+      "Live repeating CSS background preview",
+      "Smaller than Base64 encoding",
+    ],
+    tips: [
+      "Use SVG data URIs for custom form select dropdown arrows and subtle grid backgrounds",
+      "Ensure color hex values (#000) are URL-encoded (%23000) to render properly across all browsers",
+    ],
+  },
+  {
+    slug: "css-clamp-calculator",
+    name: "CSS Clamp() Typography Calculator",
+    category: "Design",
+    shortDescription: "Generate fluid responsive font-size and spacing values using modern CSS clamp() formulas.",
+    heroTitle: "Fluid CSS Clamp() Typography & Spacing Calculator",
+    heroDescription: "Calculate mathematical CSS clamp(min, preferred, max) formulas for responsive fluid typography without media queries.",
+    about: "CSS Clamp() Typography Calculator computes the exact linear equation and viewport-width (vw) slope needed for fluid typography that scales smoothly between minimum and maximum screen sizes.",
+    howToUse: [
+      "Enter your minimum and maximum viewport widths (e.g., 375px and 1440px).",
+      "Enter your minimum and maximum font sizes (e.g., 16px and 36px).",
+      "Adjust the preview viewport slider to verify responsive scaling.",
+      "Copy the clamp() formula.",
+    ],
+    whyUse: [
+      "Eliminates dozens of breakpoint media queries across your CSS.",
+      "Guarantees pixel-perfect typography across all mobile, tablet, and desktop screens.",
+      "Converts px to rem automatically based on your root font size.",
+    ],
+    faqs: [
+      {
+        question: "How does CSS clamp() work?",
+        answer: "clamp(MIN, PREFERRED, MAX) keeps a value between MIN and MAX, scaling dynamically with the PREFERRED formula.",
+      },
+      {
+        question: "Can I use clamp() for padding and margins?",
+        answer: "Yes, clamp() works on any CSS length property including font-size, padding, margin, width, and gap.",
+      },
+    ],
+    features: [
+      "Linear interpolation slope calculation",
+      "Automatic rem conversion",
+      "Configurable root font size",
+      "Interactive viewport width preview slider",
+      "Live font-size readout in pixels",
+    ],
+    tips: [
+      "Use clamp() on heading h1-h3 tags to prevent awkward line breaks on mobile screens",
+      "Set your minimum viewport to 375px (iPhone standard) and maximum to 1440px or 1920px",
+    ],
+  },
+  {
+    slug: "css-flexbox-playground",
+    name: "CSS Flexbox Generator & Playground",
+    category: "Design",
+    shortDescription: "Visual interactive builder for CSS Flexbox layouts with direction, alignment, and gap controls.",
+    heroTitle: "Interactive CSS Flexbox Generator & Visual Playground",
+    heroDescription: "Experiment with flex-direction, justify-content, align-items, flex-wrap, and gap with real-time visual cards.",
+    about: "CSS Flexbox Generator & Playground provides an interactive canvas to visually test and generate CSS flexbox container code.",
+    howToUse: [
+      "Select flex-direction (row, column, row-reverse, column-reverse).",
+      "Choose justify-content and align-items alignments.",
+      "Adjust gap and flex-wrap properties.",
+      "Add or remove items to test responsive wrapping.",
+      "Copy the CSS code.",
+    ],
+    whyUse: [
+      "Master CSS flexbox alignment rules visually without guessing.",
+      "Instant copyable CSS container rules.",
+      "Interactive item count testing.",
+    ],
+    faqs: [
+      {
+        question: "What is the difference between justify-content and align-items?",
+        answer: "justify-content aligns items along the primary axis (horizontal in row mode), while align-items aligns along the cross axis (vertical in row mode).",
+      },
+      {
+        question: "What does flex-wrap: wrap do?",
+        answer: "It allows flex items to wrap onto multiple lines when there is not enough room in the container.",
+      },
+    ],
+    features: [
+      "Full primary and cross axis controls",
+      "Live interactive flex container preview",
+      "Adjustable gap and item counters",
+      "One-click CSS code copy",
+    ],
+    tips: [
+      "Use 'justify-content: space-between' with 'align-items: center' for navigation headers",
+      "Use modern 'gap' property instead of adding margins to child elements",
+    ],
+  },
+  {
+    slug: "css-grid-generator",
+    name: "CSS Grid Layout Generator",
+    category: "Design",
+    shortDescription: "Create multi-column and multi-row CSS grid layouts with interactive column and gap controls.",
+    heroTitle: "CSS Grid Layout Generator & Code Builder",
+    heroDescription: "Build responsive CSS grid layouts with customizable column/row matrices, fractional units, and Tailwind classes.",
+    about: "CSS Grid Layout Generator lets you visually construct grid structures with custom column counts, row counts, and independent row/column gaps, generating both standard CSS and Tailwind CSS classes.",
+    howToUse: [
+      "Set desired number of columns (1 to 6) and rows (1 to 6).",
+      "Adjust column gap and row gap sliders.",
+      "Review the live interactive grid matrix.",
+      "Copy pure CSS or Tailwind CSS utility classes.",
+    ],
+    whyUse: [
+      "Simplifies two-dimensional layout creation in CSS.",
+      "Provides both CSS Grid syntax and Tailwind CSS classes.",
+      "Instant visual matrix feedback.",
+    ],
+    faqs: [
+      {
+        question: "When should I use CSS Grid instead of Flexbox?",
+        answer: "Use CSS Grid for 2D layouts (rows AND columns simultaneously) and Flexbox for 1D layouts (single row OR single column).",
+      },
+      {
+        question: "What does '1fr' mean in CSS grid?",
+        answer: "1fr represents one fraction of the available space inside the grid container.",
+      },
+    ],
+    features: [
+      "Interactive column and row sliders",
+      "Independent column and row gap controls",
+      "Live cell grid preview",
+      "Tailwind CSS class generator",
+    ],
+    tips: [
+      "Use 'repeat(auto-fit, minmax(250px, 1fr))' in production for auto-responsive card grids",
+      "Set distinct row and column gaps to improve layout hierarchy",
+    ],
+  },
+  {
+    slug: "svg-to-jsx",
+    name: "SVG to React JSX Converter",
+    category: "Design",
+    shortDescription: "Convert SVG code into clean React and React Native JSX components with camelCase attributes.",
+    heroTitle: "Convert SVG to React & Next.js JSX Components",
+    heroDescription: "Transform raw SVG files into production-ready React JSX components with camelCase properties and TypeScript support.",
+    about: "SVG to React JSX Converter cleans and transforms raw SVG markup into standard React and Next.js functional components, converting kebab-case SVG attributes (e.g. stroke-width -> strokeWidth) and stripping XML boilerplate.",
+    howToUse: [
+      "Paste raw SVG code into the editor.",
+      "Enter a custom component name (e.g., UserIcon).",
+      "Toggle TypeScript SVGProps support if desired.",
+      "Click Convert to JSX Component and copy your component code.",
+    ],
+    whyUse: [
+      "Eliminates manual attribute renaming in React.",
+      "Removes XML DOCTYPE and comment bloat.",
+      "Generates clean TypeScript or JavaScript components ready to import.",
+    ],
+    faqs: [
+      {
+        question: "Why do SVG attributes need to be camelCase in React?",
+        answer: "React JSX maps HTML and SVG attributes to DOM properties, requiring camelCase naming like strokeWidth, fillRule, and clipPath.",
+      },
+      {
+        question: "Does it support spreading props onto the SVG?",
+        answer: "Yes, the generated component accepts and spreads props (like className, onClick, and size) onto the root <svg> element.",
+      },
+    ],
+    features: [
+      "Converts all kebab-case SVG attributes to camelCase",
+      "Strips XML headers, DOCTYPE, and comments",
+      "Custom component naming",
+      "TypeScript SVGProps support",
+      "One-click copy",
+    ],
+    tips: [
+      "Pass 'props' to your SVG component so you can easily override width, height, and colors in Tailwind",
+      "Set 'stroke=\"currentColor\"' to allow the icon color to inherit from parent CSS text colors",
+    ],
+  },
+  {
+    slug: "svg-optimizer",
+    name: "SVG Code Minifier & Optimizer",
+    category: "Design",
+    shortDescription: "Minify and clean SVG code by stripping XML headers, editor metadata, and redundant tags.",
+    heroTitle: "Minify & Clean SVG Code Online",
+    heroDescription: "Strip bloated editor metadata from Figma, Illustrator, and Inkscape, compress whitespace, and reduce SVG file size.",
+    about: "SVG Code Minifier & Optimizer cleans export bloat from vector editors (Adobe Illustrator, Sketch, Figma, Inkscape), removing unused namespaces, metadata, and redundant whitespace.",
+    howToUse: [
+      "Paste your uncompressed SVG code into the input field.",
+      "Click Minify & Optimize SVG.",
+      "View total bytes saved and inspect the rendered preview.",
+      "Copy the cleaned, minified SVG markup.",
+    ],
+    whyUse: [
+      "Reduces SVG file weight by up to 50% for faster web page loading.",
+      "Strips unnecessary editor tags and private metadata.",
+      "Includes live visual verification to ensure no graphics are corrupted.",
+    ],
+    faqs: [
+      {
+        question: "What metadata does this tool remove?",
+        answer: "It removes XML declarations, DOCTYPE headers, Adobe/Figma/Sketch namespace definitions, empty defs, and whitespace.",
+      },
+      {
+        question: "Will optimization alter the visual appearance of my SVG?",
+        answer: "No, only non-rendering metadata and whitespace are removed; all paths, fills, and strokes remain intact.",
+      },
+    ],
+    features: [
+      "Strips XML headers, DOCTYPE, and metadata",
+      "Removes Illustrator, Figma, and Inkscape tags",
+      "Calculates exact byte savings and percentage",
+      "Live SVG render preview",
+    ],
+    tips: [
+      "Minify SVGs before embedding them inline into HTML or CSS to reduce DOM size",
+      "Ensure paths have clean viewBox coordinates before minification",
+    ],
+  },
+  {
+    slug: "css-triangle-generator",
+    name: "CSS Triangle Generator",
+    category: "Design",
+    shortDescription: "Create pure CSS triangles pointing in any direction with custom dimensions and colors.",
+    heroTitle: "Pure CSS Triangle Generator & Code Builder",
+    heroDescription: "Generate lightweight CSS border triangles pointing top, bottom, left, right, or diagonally with custom colors.",
+    about: "CSS Triangle Generator uses the classic CSS border geometry technique to create pure vector triangles without images or SVGs, perfect for tooltips, popover arrows, and dropdown indicators.",
+    howToUse: [
+      "Select your triangle direction (Top, Bottom, Left, Right, or Diagonals).",
+      "Adjust width and height sliders.",
+      "Pick your triangle color.",
+      "Copy the pure CSS code.",
+    ],
+    whyUse: [
+      "Zero HTTP requests or extra asset dependencies.",
+      "Works in all browsers back to IE6.",
+      "Ideal for tooltip pointers, breadcrumbs, and accordion arrows.",
+    ],
+    faqs: [
+      {
+        question: "How do CSS border triangles work?",
+        answer: "By setting width and height to 0 and applying colored borders opposite to transparent borders, the browser renders triangular border miters.",
+      },
+      {
+        question: "Can I use CSS triangles in pseudo-elements?",
+        answer: "Yes, CSS triangles are commonly placed inside ::before and ::after pseudo-elements with 'content: \"\"'.",
+      },
+    ],
+    features: [
+      "8 triangle directions (cardinal and diagonal)",
+      "Custom width and height sliders",
+      "Hex and RGB color picker",
+      "Clean CSS code generator",
+    ],
+    tips: [
+      "Attach your triangle to a tooltip box using 'position: absolute' on the ::after pseudo-element",
+      "For diagonal triangles, set the adjacent borders to transparent",
+    ],
+  },
+  {
+    slug: "css-clip-path-generator",
+    name: "CSS Clip-Path Shape Generator",
+    category: "Design",
+    shortDescription: "Create polygon, star, geometric, and banner shapes using CSS clip-path.",
+    heroTitle: "CSS Clip-Path Shape & Polygon Generator",
+    heroDescription: "Create custom geometric shapes, banners, hexagons, chevrons, and stars using modern CSS clip-path.",
+    about: "CSS Clip-Path Shape Generator allows designers and developers to create complex vector mask shapes in pure CSS, including polygons, stars, chevrons, arrows, and speech bubbles.",
+    howToUse: [
+      "Choose a shape from the preset shape matrix (Hexagon, Star, Chevron, Arrow, Message, etc.).",
+      "Review the live clipped card preview.",
+      "Copy the clip-path and -webkit-clip-path CSS rules.",
+    ],
+    whyUse: [
+      "Creates stunning geometric UI masks without image masks or SVG clipping.",
+      "Responsive and scales automatically with container dimensions.",
+      "Hardware-accelerated rendering in modern browsers.",
+    ],
+    faqs: [
+      {
+        question: "What is CSS clip-path?",
+        answer: "clip-path creates a clipping region that sets what part of an element should be visible, hiding everything outside the path.",
+      },
+      {
+        question: "Can clip-path shapes be animated?",
+        answer: "Yes, you can transition clip-path polygon points smoothly as long as both states have the same number of vertices.",
+      },
+    ],
+    features: [
+      "12+ geometric and UI shape presets",
+      "Live visual gradient mask preview",
+      "Includes -webkit-clip-path prefix",
+      "One-click copy",
+    ],
+    tips: [
+      "Use chevron or slant clip-paths on hero section bottom dividers for dynamic page transitions",
+      "Use hexagon and circle clip-paths for modern profile avatars",
+    ],
+  },
+  {
+    slug: "css-animation-keyframes-generator",
+    name: "CSS Keyframe Animation Generator",
+    category: "Design",
+    shortDescription: "Create customizable CSS @keyframes animations with duration, easing curves, and live preview.",
+    heroTitle: "CSS Keyframe Animation Generator & Playground",
+    heroDescription: "Build smooth CSS @keyframes animations for pulse, bounce, spin, float, shake, and flip with custom timing curves.",
+    about: "CSS Keyframe Animation Generator lets you create, customize, and preview pure CSS animations with fine-tuned duration, easing curves, iteration counts, and live animated previews.",
+    howToUse: [
+      "Select an animation type (Pulse, Bounce, Spin, Shake, Float, Flip).",
+      "Set duration in seconds and animation timing function (easing).",
+      "Choose iteration count (infinite, 1, or 2 times).",
+      "Watch the live animated preview and copy the @keyframes CSS code.",
+    ],
+    whyUse: [
+      "No heavy JavaScript animation libraries required.",
+      "Hardware-accelerated 60fps CSS transitions.",
+      "Complete @keyframes rules and class selectors ready to copy.",
+    ],
+    faqs: [
+      {
+        question: "Why use CSS animations instead of JavaScript animations?",
+        answer: "CSS animations run on the browser's compositor thread, delivering smoother 60fps performance without blocking the main JavaScript thread.",
+      },
+      {
+        question: "What is cubic-bezier easing?",
+        answer: "Cubic-bezier curves allow custom acceleration and deceleration curves for more natural, springy motion.",
+      },
+    ],
+    features: [
+      "6 core animation archetypes (Pulse, Bounce, Spin, Shake, Float, Flip)",
+      "Duration and timing curve selectors",
+      "Iteration count controls",
+      "Live 60fps preview canvas",
+    ],
+    tips: [
+      "Use 'cubic-bezier(0.4, 0, 0.2, 1)' for smooth Google Material-style transitions",
+      "Keep UI notification badge animations subtle (pulse duration ~1.5s) to avoid distracting users",
+    ],
+  },
+  {
+    slug: "css-filter-generator",
+    name: "CSS Filter Effects Playground",
+    category: "Design",
+    shortDescription: "Apply and adjust visual CSS image filters including blur, grayscale, contrast, hue-rotate, and sepia.",
+    heroTitle: "CSS Filter Effects Generator & Playground",
+    heroDescription: "Adjust visual CSS image filters in real time with sliders for blur, contrast, brightness, grayscale, and hue rotation.",
+    about: "CSS Filter Effects Playground lets you graphically tweak and combine multiple CSS filter functions to create vintage, duotone, blurred, or high-contrast image effects.",
+    howToUse: [
+      "Adjust sliders for blur, brightness, contrast, grayscale, hue-rotate, invert, opacity, saturate, and sepia.",
+      "Observe the live visual effect on the preview card.",
+      "Click Reset to restore default values or Copy Filter CSS to export.",
+    ],
+    whyUse: [
+      "Eliminates the need for Photoshop or photo editing software for web image styling.",
+      "Non-destructive image styling directly in the browser.",
+      "Combines multiple filter functions into a single clean CSS property.",
+    ],
+    faqs: [
+      {
+        question: "Can multiple CSS filters be combined?",
+        answer: "Yes, CSS allows chaining multiple filter functions like 'filter: contrast(120%) brightness(110%) blur(2px)'.",
+      },
+      {
+        question: "Are CSS filters performant on mobile devices?",
+        answer: "Yes, modern mobile browsers hardware-accelerate CSS filters via the GPU.",
+      },
+    ],
+    features: [
+      "9 independent filter sliders",
+      "Real-time visual preview image",
+      "One-click filter reset",
+      "Copyable CSS with vendor prefix",
+    ],
+    tips: [
+      "Combine 'grayscale(100%)' with a hover 'grayscale(0%)' transition for client logo showcases",
+      "Use 'blur(10px)' on low-res placeholder images to create progressive image loading effects",
+    ],
+  },
+  {
+    slug: "color-contrast-checker",
+    name: "WCAG Color Contrast Checker",
+    category: "Design",
+    shortDescription: "Check color contrast compliance for text and UI elements against WCAG 2.1 AA and AAA accessibility standards.",
+    heroTitle: "WCAG 2.1 Color Contrast Ratio Checker (AA & AAA)",
+    heroDescription: "Calculate exact color contrast ratios and verify accessibility compliance for normal text, large text, and UI components.",
+    about: "WCAG Color Contrast Checker computes the exact mathematical contrast ratio between foreground and background colors using relative luminance, providing instant pass/fail ratings for WCAG 2.1 Level AA and AAA standards.",
+    howToUse: [
+      "Pick or enter text/foreground color and background color.",
+      "View the calculated contrast ratio (e.g. 7.42 : 1).",
+      "Check compliance badges for WCAG AA and AAA ratings.",
+      "Use Swap Colors to test reversed contrast.",
+    ],
+    whyUse: [
+      "Essential for building accessible, ADA-compliant, and SEO-friendly websites.",
+      "Instant compliance grading for both normal body text and large headings.",
+      "Includes quick one-click contrast presets.",
+    ],
+    faqs: [
+      {
+        question: "What is the minimum WCAG contrast ratio for regular text?",
+        answer: "WCAG Level AA requires a minimum contrast ratio of 4.5:1 for normal text (under 18pt / 24px) and 3:1 for large text.",
+      },
+      {
+        question: "What is the requirement for WCAG AAA?",
+        answer: "WCAG Level AAA requires an enhanced contrast ratio of 7:1 for normal text and 4.5:1 for large text.",
+      },
+    ],
+    features: [
+      "Relative luminance mathematical ratio calculation",
+      "WCAG 2.1 AA and AAA pass/fail compliance ratings",
+      "Live sample text preview card",
+      "Color swapping button and curated presets",
+    ],
+    tips: [
+      "Aim for at least 4.5:1 for all essential text to pass Google Lighthouse accessibility audits",
+      "Large text is defined as 18pt (24px) regular or 14pt (18.66px) bold",
+    ],
+  },
+  {
+    slug: "css-text-shadow-generator",
+    name: "CSS Text Shadow Generator",
+    category: "Design",
+    shortDescription: "Create custom CSS text shadows, neon glow effects, and 3D typography styling.",
+    heroTitle: "CSS Text Shadow Generator & 3D Text Styler",
+    heroDescription: "Design glowing neon, vintage 3D, and soft drop text shadows with real-time typography previews.",
+    about: "CSS Text Shadow Generator lets designers create stunning text effects including neon glow, retro 3D extrusions, and soft readability shadows with copyable CSS code.",
+    howToUse: [
+      "Type your custom preview text.",
+      "Adjust horizontal offset, vertical offset, and blur radius.",
+      "Select shadow color, text color, and background color.",
+      "Or choose from presets like Neon Glow, Retro 3D, or Fire Glow.",
+      "Copy the text-shadow CSS property.",
+    ],
+    whyUse: [
+      "Make text readable over complex image or video backgrounds.",
+      "Create stylized 80s neon, cyberpunk, or gaming typography.",
+      "Visual real-time preview on custom text.",
+    ],
+    faqs: [
+      {
+        question: "How does text-shadow differ from box-shadow in CSS?",
+        answer: "text-shadow applies directly to the glyph contours of text characters and does not accept a 'spread' radius.",
+      },
+      {
+        question: "How do I create a neon text glow effect?",
+        answer: "Set X and Y offsets to 0, use a bright saturated shadow color, and increase the blur radius to 15-25px.",
+      },
+    ],
+    features: [
+      "X and Y offset and blur sliders",
+      "Color pickers for text, shadow, and background",
+      "Curated style presets (Neon, Retro 3D, Subtle Drop)",
+      "Live typographic preview canvas",
+    ],
+    tips: [
+      "Use '0 1px 2px rgba(0,0,0,0.6)' on white text over hero background images to improve readability",
+      "Use neon glow on dark backgrounds for gaming or tech landing pages",
+    ],
+  },
+  {
+    slug: "px-to-rem-converter",
+    name: "PX to REM & REM to PX Converter",
+    category: "Design",
+    shortDescription: "Convert pixels (px) to rem/em units and back with customizable base root font sizes.",
+    heroTitle: "Bidirectional PX to REM & REM to PX Converter",
+    heroDescription: "Convert pixels to rem and rem to pixels instantly with custom root font size (16px / 10px) and standard Tailwind reference table.",
+    about: "PX to REM Converter helps developers convert pixel values into relative REM units for accessible, scalable web layouts, featuring customizable root font sizes and a full Tailwind CSS conversion reference table.",
+    howToUse: [
+      "Enter a pixel value or a rem value in either input box.",
+      "Choose your root font size (default 16px, or 10px 62.5% trick).",
+      "Conversion updates bidirectionally in real time.",
+      "Click any item in the reference table to load standard sizes.",
+    ],
+    whyUse: [
+      "REM units respect user browser font size preferences for accessibility.",
+      "Bidirectional: calculate px from rem or rem from px instantly.",
+      "Includes complete conversion reference table matching Tailwind CSS spacing scales.",
+    ],
+    faqs: [
+      {
+        question: "Why should I use REM instead of PX in CSS?",
+        answer: "REM units scale proportionally when users change their default browser font size, improving web accessibility.",
+      },
+      {
+        question: "What is the 62.5% CSS font-size trick?",
+        answer: "Setting 'html { font-size: 62.5%; }' makes 1rem equal to exactly 10px (e.g. 1.6rem = 16px), simplifying mental math.",
+      },
+    ],
+    features: [
+      "Real-time bidirectional conversion (PX <-> REM)",
+      "Customizable root base font size (16px, 10px, or custom)",
+      "Interactive Tailwind CSS size reference table",
+      "One-click values loading",
+    ],
+    tips: [
+      "Use REM for font sizes, margins, and padding, and PX for 1px borders",
+      "Standard browser default root font size is 16px (1rem = 16px)",
+    ],
+  },
+  {
+    slug: "css-neumorphism-generator",
+    name: "CSS Neumorphism (Soft UI) Generator",
+    category: "Design",
+    shortDescription: "Create modern Soft UI extruded and pressed neumorphic shadows with customized lighting.",
+    heroTitle: "CSS Neumorphism & Soft UI Generator",
+    heroDescription: "Generate soft extruded and pressed neumorphic cards with light/dark shadow contrasts and shape styles.",
+    about: "CSS Neumorphism Generator calculates the dual light and dark shadow pairs required to produce tactile Soft UI (Neumorphic) surfaces, supporting flat, concave, convex, and inset pressed states.",
+    howToUse: [
+      "Pick your base background color.",
+      "Choose shape type: Flat, Concave, Convex, or Inset.",
+      "Adjust shadow distance, blur radius, and corner radius.",
+      "Copy the generated Soft UI CSS code.",
+    ],
+    whyUse: [
+      "Calculates mathematically paired light and dark highlight shadows automatically.",
+      "Supports 4 distinct tactile surface shapes.",
+      "Live interactive canvas preview.",
+    ],
+    faqs: [
+      {
+        question: "What is Neumorphism / Soft UI?",
+        answer: "Neumorphism is a design trend that uses dual soft shadows (one dark, one light) to make UI elements appear extruded directly from the background.",
+      },
+      {
+        question: "Why does the background color need to match the element color in Neumorphism?",
+        answer: "Neumorphic effects rely on the illusion that the element is molded from the same physical surface as the background.",
+      },
+    ],
+    features: [
+      "Automatic light and dark highlight shadow calculation",
+      "4 surface modes: Flat, Concave, Convex, and Inset",
+      "Distance, blur, and corner radius sliders",
+      "One-click CSS code copy",
+    ],
+    tips: [
+      "Soft off-white (#e0e5ec) and light slate backgrounds yield the most realistic neumorphic lighting",
+      "Use inset pressed shadows for active button states and checkboxes",
+    ],
+  },
+  {
+    slug: "palette-generator",
+    name: "Harmonious Color Palette Generator",
+    category: "Design",
+    shortDescription: "Generate complementary, analogous, triadic, and monochromatic color palettes from any base color.",
+    heroTitle: "Harmonious Color Palette Generator",
+    heroDescription: "Generate color palettes based on color theory harmonies (Complementary, Analogous, Triadic, Monochromatic).",
+    about: "Harmonious Color Palette Generator creates balanced color schemes from any seed color using mathematical HSL color wheel harmony rules, providing instant one-click hex copying.",
+    howToUse: [
+      "Pick a seed color with the color picker or enter a hex code.",
+      "Review generated Complementary, Analogous, Triadic, and Monochromatic palettes.",
+      "Click any color swatch to copy its HEX code.",
+    ],
+    whyUse: [
+      "Guarantees visually balanced, mathematically harmonious color pairings.",
+      "Covers all 4 core color theory harmony models.",
+      "One-click clipboard copying for rapid UI design prototyping.",
+    ],
+    faqs: [
+      {
+        question: "What is a Triadic color harmony?",
+        answer: "A triadic harmony uses three colors evenly spaced by 120 degrees around the color wheel, creating vibrant yet balanced contrast.",
+      },
+      {
+        question: "What are Analogous colors?",
+        answer: "Analogous colors are located adjacent to each other on the color wheel, creating serene and comfortable color schemes.",
+      },
+    ],
+    features: [
+      "HSL mathematical color wheel algorithms",
+      "4 harmony models (Complementary, Analogous, Triadic, Monochromatic)",
+      "Interactive color swatches with one-click copy",
+      "Live HEX code display",
+    ],
+    tips: [
+      "Use Analogous colors for subtle background gradients and accents",
+      "Use Complementary colors for call-to-action buttons against primary brand backgrounds",
+    ],
+  },
+  {
+    slug: "svg-path-visualizer",
+    name: "SVG Path Visualizer & Scaler",
+    category: "Design",
+    shortDescription: "Inspect, render, and convert raw SVG path d-strings into complete scalable SVG elements.",
+    heroTitle: "SVG Path (d attribute) Visualizer & Scaler",
+    heroDescription: "Paste any SVG <path d=\"...\"> coordinate string to render, inspect, customize stroke/fill, and export full SVG code.",
+    about: "SVG Path Visualizer renders raw path coordinate strings (the 'd' attribute) found in vector icons and charts, enabling developers to inspect geometry, adjust fill and stroke colors, and wrap coordinates in a full SVG element.",
+    howToUse: [
+      "Paste your SVG path 'd' string or entire <path> element.",
+      "Set viewBox dimensions (e.g. 24, 100).",
+      "Toggle and customize fill color, stroke color, and stroke width.",
+      "Click Generate SVG Markup and copy the complete SVG code.",
+    ],
+    whyUse: [
+      "Inspect path coordinates extracted from icon libraries or font files.",
+      "Turn raw coordinate snippets into valid, copyable SVG tags.",
+      "Customize stroke and fill colors visually before adding to code.",
+    ],
+    faqs: [
+      {
+        question: "What does the SVG 'd' attribute stand for?",
+        answer: "The 'd' attribute stands for 'data' and contains a sequence of path drawing commands like M (moveto), L (lineto), C (curveto), and Z (closepath).",
+      },
+      {
+        question: "Can I paste an entire <path ...> tag?",
+        answer: "Yes, the tool automatically extracts the 'd' coordinate attribute if you paste an entire <path> or d=\"...\" tag.",
+      },
+    ],
+    features: [
+      "Auto-extracts d-coordinates from raw path strings or tags",
+      "Customizable fill, stroke color, and stroke width",
+      "Scalable viewBox dimensions",
+      "Full SVG element code generator",
+    ],
+    tips: [
+      "Use this tool to verify SVG icon paths copied from GitHub or icon packs before embedding in React",
+      "Set fill to none and stroke to currentColor for clean outline icons",
+    ],
+  },
+  {
+    slug: "hmac-generator",
+    name: "HMAC Generator & Verifier",
+    category: "Auth",
+    shortDescription: "Generate and verify Hash-based Message Authentication Codes (HMAC) with SHA-256, SHA-512, and secret keys.",
+    heroTitle: "Generate Secure HMAC Authentication Codes",
+    heroDescription: "Compute cryptographically verified HMAC codes using SHA-256, SHA-512, SHA-384, or SHA-1 with secret signing keys.",
+    about: "HMAC Generator & Verifier calculates Hash-based Message Authentication Codes used for API request signing, webhook authentication (GitHub, Stripe, Shopify), and tamper-proof message verification.",
+    howToUse: [
+      "Enter the message or webhook payload in the input field.",
+      "Provide your secret API key or signing secret.",
+      "Select your hashing algorithm (HMAC-SHA256, HMAC-SHA512) and output encoding (Hex or Base64).",
+      "Click 'Generate HMAC Code' and copy the resulting signature.",
+    ],
+    whyUse: [
+      "Essential for verifying and testing Webhook signatures from Stripe, GitHub, and Shopify.",
+      "Runs 100% in your browser using the native Web Crypto API for zero latency and privacy.",
+      "Supports uppercase and lowercase hexadecimal output.",
+    ],
+    faqs: [
+      {
+        question: "What is an HMAC?",
+        answer: "HMAC stands for Hash-based Message Authentication Code. It is a cryptographic mechanism that combines a secret key with a message to verify both data integrity and authentication.",
+      },
+      {
+        question: "Is my secret key sent to any server?",
+        answer: "No. The entire HMAC signature is calculated locally in your browser using window.crypto.subtle.",
+      },
+    ],
+    features: [
+      "Supports HMAC-SHA256, HMAC-SHA512, HMAC-SHA384, HMAC-SHA1",
+      "Hexadecimal and Base64 output encodings",
+      "Uppercase and lowercase hex options",
+      "100% client-side Web Crypto API",
+    ],
+    tips: [
+      "Use HMAC-SHA256 for standard modern webhook verification (GitHub, Stripe, AWS)",
+      "Always keep your secret key confidential",
+    ],
+  },
+  {
+    slug: "sha512-hash-generator",
+    name: "SHA-512 Hash Generator",
+    category: "Encoding",
+    shortDescription: "Compute secure 512-bit SHA-512 cryptographic checksums with client-side Web Crypto.",
+    heroTitle: "Generate Secure 512-bit SHA-512 Hashes",
+    heroDescription: "Instantly calculate 128-hex-character SHA-512 cryptographic hashes and checksums directly in your browser.",
+    about: "SHA-512 Hash Generator produces a 512-bit (64-byte) cryptographic digest formatted as a 128-character hexadecimal string, widely used for password hashing, file integrity verification, and digital signatures.",
+    howToUse: [
+      "Type or paste your text into the input area.",
+      "Toggle Uppercase HEX if required.",
+      "Click 'Generate SHA-512 Hash' to compute the 128-character checksum.",
+      "Copy the result with one click.",
+    ],
+    whyUse: [
+      "Provides significantly higher collision resistance than SHA-256.",
+      "Ideal for verifying high-security file downloads and cryptographic proofs.",
+      "Calculated client-side with native browser Web Crypto performance.",
+    ],
+    faqs: [
+      {
+        question: "How long is a SHA-512 hash?",
+        answer: "A SHA-512 hash is 512 bits long, which renders as exactly 128 hexadecimal characters.",
+      },
+      {
+        question: "Can a SHA-512 hash be decrypted?",
+        answer: "No. SHA-512 is a one-way cryptographic hash function and cannot be reversed or decrypted back into the original input.",
+      },
+    ],
+    features: [
+      "512-bit cryptographic digest",
+      "128 hexadecimal character output",
+      "Uppercase and lowercase toggles",
+      "Client-side Web Crypto execution",
+    ],
+    tips: [
+      "Use SHA-512 when building high-security signature systems or file integrity manifests",
+    ],
+  },
+  {
+    slug: "sha3-hash-generator",
+    name: "SHA-3 (Keccak) Hash Generator",
+    category: "Encoding",
+    shortDescription: "Generate FIPS 202 compliant SHA-3 (Keccak) cryptographic hashes (SHA3-256, SHA3-512, SHA3-384, SHA3-224).",
+    heroTitle: "SHA-3 / Keccak Cryptographic Hash Generator",
+    heroDescription: "Compute official FIPS 202 SHA-3 and Keccak sponge cryptographic hashes for blockchain, Ethereum, and modern security.",
+    about: "SHA-3 (Secure Hash Algorithm 3) is the latest cryptographic hash standard released by NIST based on the Keccak sponge function. It provides a fundamentally different mathematical structure from SHA-2.",
+    howToUse: [
+      "Paste your text string into the input area.",
+      "Select your SHA-3 variant: SHA3-256, SHA3-512, SHA3-384, or SHA3-224.",
+      "Click 'Generate SHA-3 Hash' to view the output.",
+    ],
+    whyUse: [
+      "Immune to length-extension attacks that affect older hash algorithms.",
+      "Widely used across Web3, Ethereum, and next-generation security standards.",
+      "Pure client-side implementation with zero server transmission.",
+    ],
+    faqs: [
+      {
+        question: "How does SHA-3 differ from SHA-2?",
+        answer: "While SHA-2 uses the Merkle–Damgård construction, SHA-3 uses the innovative Keccak sponge construction, making it completely immune to length extension attacks.",
+      },
+    ],
+    features: [
+      "Supports SHA3-256, SHA3-512, SHA3-384, SHA3-224",
+      "FIPS 202 compliant Keccak implementation",
+      "Uppercase / lowercase hexadecimal output",
+      "One-click copy",
+    ],
+    tips: [
+      "Use SHA3-256 for modern cryptographic projects requiring non-SHA-2 diversity",
+    ],
+  },
+  {
+    slug: "md5-hash-generator",
+    name: "MD5 Hash & Checksum Generator",
+    category: "Encoding",
+    shortDescription: "Compute standard 128-bit (32 hex characters) MD5 cryptographic checksums instantly.",
+    heroTitle: "Fast MD5 Hash & Checksum Generator",
+    heroDescription: "Calculate standard 32-character hexadecimal MD5 checksums for file verification, database keys, and legacy hashes.",
+    about: "MD5 Hash & Checksum Generator calculates 128-bit MD5 hashes commonly used for caching keys, Gravatar email hashes, and legacy data integrity validation.",
+    howToUse: [
+      "Enter your text or data into the input field.",
+      "Toggle uppercase output if needed.",
+      "Click 'Generate MD5 Checksum' to calculate the 32-character hash.",
+    ],
+    whyUse: [
+      "Fast and ubiquitous for generating Gravatar hashes and cache keys.",
+      "Useful for verifying file checksums from legacy downloads.",
+    ],
+    faqs: [
+      {
+        question: "Is MD5 safe for password hashing?",
+        answer: "No. MD5 is not collision-resistant and should never be used for storing passwords. Use Bcrypt, Argon2, or PBKDF2 instead.",
+      },
+    ],
+    features: [
+      "Standard 128-bit MD5 calculation",
+      "32-character hex output",
+      "Uppercase/lowercase switcher",
+      "Instant client-side calculation",
+    ],
+    tips: [
+      "To generate a Gravatar URL, trim your email, convert to lowercase, and generate the MD5 hash",
+    ],
+  },
+  {
+    slug: "ripemd160-generator",
+    name: "RIPEMD-160 Hash Generator",
+    category: "Encoding",
+    shortDescription: "Compute 160-bit (40 hex characters) RIPEMD-160 cryptographic hashes used in Bitcoin address generation and PGP.",
+    heroTitle: "Generate RIPEMD-160 Cryptographic Hashes",
+    heroDescription: "Calculate 160-bit RIPEMD-160 hashes used in Bitcoin (BTC) address derivation, PGP, and European cryptographic standards.",
+    about: "RIPEMD-160 (RACE Integrity Primitives Evaluation Message Digest) is a 160-bit cryptographic hash function widely recognized for its use in Bitcoin's address generation algorithm (SHA-256 followed by RIPEMD-160).",
+    howToUse: [
+      "Paste your text or hex data in the input box.",
+      "Click 'Generate RIPEMD-160 Hash'.",
+      "Copy the resulting 40-character hex hash.",
+    ],
+    whyUse: [
+      "Essential for developers building Bitcoin, cryptocurrency, and blockchain address tools.",
+      "High-speed 160-bit hash calculation running locally in the browser.",
+    ],
+    faqs: [
+      {
+        question: "Why does Bitcoin use RIPEMD-160?",
+        answer: "Bitcoin uses RIPEMD-160 to produce shorter (20-byte / 160-bit) address hashes from 256-bit public keys, reducing blockchain transaction data sizes.",
+      },
+    ],
+    features: [
+      "160-bit digest (40 hex chars)",
+      "Standard Bitcoin & PGP algorithm",
+      "Uppercase / lowercase toggle",
+      "100% private in-browser computation",
+    ],
+    tips: [
+      "Combine with SHA-256 for Bitcoin Hash160 simulation",
+    ],
+  },
+  {
+    slug: "bcrypt-generator",
+    name: "Bcrypt Hash Generator & Verifier",
+    category: "Auth",
+    shortDescription: "Generate salted Bcrypt password hashes ($2a$ / $2b$) with custom cost factors (rounds 4–14) and verify passwords.",
+    heroTitle: "Generate & Verify Bcrypt Password Hashes",
+    heroDescription: "Create industry-standard salted Bcrypt hashes with adjustable cost factors (4-14) and verify plain passwords against hashes.",
+    about: "Bcrypt is an adaptive password-hashing function based on the Blowfish cipher. It incorporates a random salt to protect against rainbow table attacks and an adjustable work factor to stay secure against hardware scaling.",
+    howToUse: [
+      "To generate: Enter a password, choose your cost factor (rounds 4–14), and click 'Generate Bcrypt Hash'.",
+      "To verify: Switch to the 'Verify' tab, paste the plain password and the $2a$ or $2b$ hash, and check the match status.",
+    ],
+    whyUse: [
+      "Standard password hashing format for Node.js (bcryptjs), Rails, Django, and Laravel.",
+      "Allows testing and validating hash format compatibility ($2a$, $2b$, $2y$).",
+    ],
+    faqs: [
+      {
+        question: "What cost factor should I use for Bcrypt?",
+        answer: "Cost 10 or 12 is currently recommended for standard web applications, providing a healthy balance between security and server response time.",
+      },
+    ],
+    features: [
+      "Standard $2a$ / $2b$ Bcrypt hash format",
+      "Adjustable cost factor (4 to 14 rounds)",
+      "Built-in password vs hash verifier",
+      "Client-side security and privacy",
+    ],
+    tips: [
+      "Bcrypt hashes are always exactly 60 characters long and begin with $2a$, $2b$, or $2y$",
+    ],
+  },
+  {
+    slug: "argon2-hasher",
+    name: "PBKDF2 / Password Key Hasher",
+    category: "Auth",
+    shortDescription: "Derive secure cryptographic password hashes using PBKDF2 with custom iterations, salt, and SHA-512.",
+    heroTitle: "Derive Cryptographic Keys & Hashes with PBKDF2",
+    heroDescription: "Compute memory-hard key derivations using PBKDF2 with up to 600,000 iterations, custom salts, and SHA-512.",
+    about: "PBKDF2 (Password-Based Key Derivation Function 2) applies a pseudorandom function to input passwords along with a cryptographic salt, repeating the process hundreds of thousands of times to thwart brute-force attacks.",
+    howToUse: [
+      "Enter the password to derive.",
+      "Set your custom salt or click 'Random Salt'.",
+      "Choose iteration count (100,000+ recommended) and key length (256 or 512 bits).",
+      "Click 'Derive Cryptographic Key' to view the output in Hex or Base64.",
+    ],
+    whyUse: [
+      "Complies with OWASP Password Storage Guidelines (100,000+ iterations for SHA-512).",
+      "Used in password managers (Bitwarden, 1Password) and encrypted storage systems.",
+    ],
+    faqs: [
+      {
+        question: "What is PBKDF2 used for?",
+        answer: "PBKDF2 is used to turn weak human passwords into strong, cryptographically secure keys for AES encryption and password storage.",
+      },
+    ],
+    features: [
+      "Configurable iterations (10k to 600k)",
+      "Supports SHA-512 and SHA-256",
+      "256-bit and 512-bit key lengths",
+      "Hexadecimal and Base64 export",
+    ],
+    tips: [
+      "OWASP recommends at least 100,000 iterations of PBKDF2-SHA512 for modern applications",
+    ],
+  },
+  {
+    slug: "crc32-checksum",
+    name: "CRC32 Checksum Calculator",
+    category: "Validation",
+    shortDescription: "Compute standard 32-bit CRC32 checksums (IEEE 802.3) in Hexadecimal, Decimal, and Binary.",
+    heroTitle: "Calculate 32-bit CRC32 Checksums",
+    heroDescription: "Compute IEEE 802.3 cyclic redundancy checks (CRC-32) in hexadecimal (0x...), unsigned decimal, and binary formats.",
+    about: "CRC32 (Cyclic Redundancy Check) is an error-detecting code commonly used in network protocols (Ethernet), archive formats (ZIP, PNG, GZIP), and data storage to detect accidental data corruption.",
+    howToUse: [
+      "Paste text or code into the input area.",
+      "Click 'Calculate CRC32'.",
+      "View the checksum in Hex (0x...), Unsigned Decimal, Signed Integer, and 32-bit Binary.",
+    ],
+    whyUse: [
+      "Useful for verifying ZIP archive integrity, PNG chunk checksums, and Ethernet packets.",
+      "Instant client-side calculation using precomputed IEEE 802.3 polynomial tables.",
+    ],
+    faqs: [
+      {
+        question: "Is CRC32 suitable for cryptographic security?",
+        answer: "No. CRC32 is designed for detecting accidental errors (noise, bit flips), not for cryptographic security. For security, use SHA-256.",
+      },
+    ],
+    features: [
+      "Standard IEEE 802.3 polynomial",
+      "Hexadecimal, Decimal, and Binary outputs",
+      "Fast lookup table implementation",
+      "100% client-side execution",
+    ],
+    tips: [
+      "PNG files store a 4-byte CRC32 checksum after every chunk to verify image data integrity",
+    ],
+  },
+  {
+    slug: "aes-encryption-decryption",
+    name: "AES-GCM Text Encryptor & Decryptor",
+    category: "Auth",
+    shortDescription: "Military-grade 256-bit AES-GCM client-side text encryption with PBKDF2 salt derivation.",
+    heroTitle: "256-bit AES-GCM Text Encryptor & Decryptor",
+    heroDescription: "Encrypt and decrypt confidential messages using authenticated 256-bit AES-GCM and PBKDF2 passphrase key derivation.",
+    about: "AES-GCM (Advanced Encryption Standard in Galois/Counter Mode) provides both confidentiality and cryptographic integrity verification. This tool runs 100% in your browser using the native Web Crypto API.",
+    howToUse: [
+      "To Encrypt: Enter your text, choose a secret passphrase, and click 'Encrypt with AES-256-GCM'.",
+      "To Decrypt: Paste the Base64 ciphertext, enter the exact passphrase, and click 'Decrypt Ciphertext'.",
+    ],
+    whyUse: [
+      "Complete end-to-end security: your passphrase and messages never leave your browser.",
+      "Uses 256-bit keys, unique 16-byte random salts, and 12-byte initialization vectors (IV).",
+    ],
+    faqs: [
+      {
+        question: "What makes AES-GCM superior to AES-CBC?",
+        answer: "AES-GCM includes authenticated data validation, which immediately detects if the ciphertext was tampered with or modified.",
+      },
+    ],
+    features: [
+      "256-bit AES-GCM authenticated encryption",
+      "PBKDF2 key derivation (100,000 iterations)",
+      "Random 16-byte salt and 12-byte IV per encryption",
+      "100% private in-browser Web Crypto API",
+    ],
+    tips: [
+      "Always use a strong, complex passphrase for reliable encryption strength",
+    ],
+  },
+  {
+    slug: "rsa-key-generator",
+    name: "RSA Public & Private Key Pair Generator",
+    category: "Auth",
+    shortDescription: "Generate cryptographically secure 2048-bit and 4096-bit RSA key pairs in standard PEM format.",
+    heroTitle: "Generate RSA 2048-bit & 4096-bit Key Pairs",
+    heroDescription: "Create asymmetric RSA public and private key pairs formatted in standard SPKI and PKCS#8 PEM formats.",
+    about: "RSA (Rivest–Shamir–Adleman) is an asymmetric cryptographic algorithm used for secure data transmission, SSH keys, digital signatures, and SSL/TLS certificates.",
+    howToUse: [
+      "Select your key size: 2048-bit (Standard) or 4096-bit (Maximum Security).",
+      "Click 'Generate RSA Key Pair'.",
+      "Copy your Public Key (SPKI PEM) and Private Key (PKCS#8 PEM).",
+    ],
+    whyUse: [
+      "Generates standard PEM blocks (-----BEGIN PUBLIC KEY-----, -----BEGIN PRIVATE KEY-----).",
+      "Generated securely inside your browser's crypto sandbox with zero network requests.",
+    ],
+    faqs: [
+      {
+        question: "Should I use 2048-bit or 4096-bit RSA?",
+        answer: "2048-bit is the industry standard and offers high security with fast operations. 4096-bit offers future-proof security but takes slightly longer to compute.",
+      },
+    ],
+    features: [
+      "2048-bit and 4096-bit key generation",
+      "Standard PEM export format",
+      "Web Crypto RSA-OAEP engine",
+      "One-click copyable cards",
+    ],
+    tips: [
+      "Never share your private key with anyone; only distribute your public key",
+    ],
+  },
+  {
+    slug: "jwt-generator",
+    name: "JWT Token Generator & Signer",
+    category: "Auth",
+    shortDescription: "Create, customize claims, and cryptographically sign JSON Web Tokens with HMAC-SHA256.",
+    heroTitle: "Create & Sign JSON Web Tokens (JWT)",
+    heroDescription: "Build custom JWT headers and payload claims, set expiration timestamps, and sign tokens with secret keys.",
+    about: "JWT Token Generator & Signer allows developers to create standard RFC 7519 JSON Web Tokens (header.payload.signature) with custom claims (sub, name, admin, iat, exp) and HMAC-SHA256 signatures.",
+    howToUse: [
+      "Edit the Header JSON and Payload Claims JSON.",
+      "Use the quick expiration buttons (+1h, +24h, +7d) to set valid exp timestamps.",
+      "Enter your HMAC secret key.",
+      "Click 'Sign & Generate JWT Token' to copy the signed token string.",
+    ],
+    whyUse: [
+      "Ideal for mocking authentication tokens, testing API endpoints, and debugging microservices.",
+      "Provides color-coded visual breakdowns of the header, payload, and signature.",
+    ],
+    faqs: [
+      {
+        question: "What algorithm is used to sign the token?",
+        answer: "This tool uses HMAC-SHA256 (HS256) running via the browser's native Web Crypto API.",
+      },
+    ],
+    features: [
+      "Customizable JSON header and payload claims",
+      "Quick expiration presets (+1h, +24h, +7d)",
+      "HMAC-SHA256 cryptographic signing",
+      "Color-coded 3-part token breakdown",
+    ],
+    tips: [
+      "Standard JWT tokens consist of three Base64URL parts separated by dots: header.payload.signature",
+    ],
+  },
+  {
+    slug: "ulid-generator",
+    name: "ULID Generator & Timestamp Decoder",
+    category: "Data",
+    shortDescription: "Generate 128-bit lexicographically sortable Crockford Base32 ULIDs and decode embedded timestamps.",
+    heroTitle: "Generate & Decode Universally Unique ULIDs",
+    heroDescription: "Create 128-bit lexicographically sortable Crockford Base32 ULIDs and decode millisecond timestamps from any ULID.",
+    about: "ULID (Universally Unique Lexicographically Sortable Identifier) is a 26-character, 128-bit identifier compatible with UUIDs. Unlike UUIDv4, ULIDs are time-ordered and sort naturally in databases, indexing significantly faster in B-trees.",
+    howToUse: [
+      "Set batch quantity (1 to 50) and toggle lowercase if desired.",
+      "Click 'Generate ULIDs' to create a list of sortable identifiers.",
+      "Paste any existing ULID into the Inspector to decode its exact creation date and UTC timestamp.",
+    ],
+    whyUse: [
+      "Provides millisecond timestamp precision combined with 80 bits of cryptographic randomness.",
+      "Superior database indexing performance compared to random UUIDs.",
+    ],
+    faqs: [
+      {
+        question: "Why choose ULID over UUIDv4?",
+        answer: "ULIDs are 128-bit like UUIDs, but because the first 48 bits encode the timestamp, they sort in chronological order, preventing database index fragmentation.",
+      },
+    ],
+    features: [
+      "Standard 26-character Crockford Base32 encoding",
+      "Batch generation (up to 50 ULIDs)",
+      "Built-in timestamp decoder and inspector",
+      "Uppercase and lowercase formatting",
+    ],
+    tips: [
+      "ULIDs use Crockford's Base32 alphabet which eliminates ambiguous characters like I, L, O, and U",
+    ],
+  },
+  {
+    slug: "nanoid-generator",
+    name: "Nano ID Generator",
+    category: "Data",
+    shortDescription: "Generate cryptographically secure, URL-safe compact unique IDs with customizable length and alphabets.",
+    heroTitle: "Generate Compact & Secure Nano IDs",
+    heroDescription: "Create URL-safe, compact unique string IDs with custom lengths (5-64) and alphabet presets (Numbers, Hex, Custom).",
+    about: "Nano ID is a tiny, secure, URL-friendly unique string ID generator. It uses cryptographically strong hardware random values and is twice as compact as UUIDs with equal collision resistance.",
+    howToUse: [
+      "Select your ID length (default 21 characters) and batch count.",
+      "Choose an alphabet preset (URL-Safe, Numbers Only, Hexadecimal, or Custom).",
+      "Click 'Generate Nano IDs' to copy your generated IDs.",
+    ],
+    whyUse: [
+      "Significantly shorter and more URL-friendly than standard 36-character UUIDs.",
+      "Customizable alphabet allows generating numeric OTPs, short URLs, or alphanumeric codes.",
+    ],
+    faqs: [
+      {
+        question: "How collision-resistant is a 21-character Nano ID?",
+        answer: "With a 21-character URL-safe alphabet, generating 1,000 IDs per second would take roughly 4,000 years for a single collision to occur.",
+      },
+    ],
+    features: [
+      "Customizable length from 5 to 64 characters",
+      "Presets for URL-safe, Numbers, Hex, and Custom alphabets",
+      "Batch generation up to 50 IDs",
+      "Cryptographically secure randomness",
+    ],
+    tips: [
+      "Use standard 21-character Nano IDs for modern database primary keys and public slug URLs",
+    ],
+  },
+  {
+    slug: "cuid-generator",
+    name: "CUID2 & KSUID Generator",
+    category: "Data",
+    shortDescription: "Generate collision-resistant, horizontal-scaling database primary key identifiers (CUID2 & KSUID).",
+    heroTitle: "Generate CUID2 & KSUID Database Identifiers",
+    heroDescription: "Create collision-resistant horizontal database keys using CUID2 and Segment K-Sortable KSUIDs.",
+    about: "CUID2 and KSUID are modern identification standards designed for distributed databases, horizontal scalability, and high-concurrency systems where sequential auto-increment IDs cause security leaks or bottlenecks.",
+    howToUse: [
+      "Choose your identifier type: CUID2 (24-char) or KSUID (27-char).",
+      "Select batch quantity and length controls.",
+      "Click 'Generate' to export clean primary keys for your database models.",
+    ],
+    whyUse: [
+      "Designed specifically for modern ORMs like Prisma, Drizzle, and TypeORM.",
+      "Prevents enumeration attacks while maintaining high insertion performance.",
+    ],
+    faqs: [
+      {
+        question: "What is KSUID?",
+        answer: "KSUID (K-Sortable Unique Identifier) is a 27-character identifier developed by Segment that combines a 32-bit timestamp with 128 bits of randomness.",
+      },
+    ],
+    features: [
+      "CUID2 and KSUID generation",
+      "Collision-resistant horizontal design",
+      "Batch generation support",
+      "Ideal for Prisma and PostgreSQL",
+    ],
+    tips: [
+      "CUID2 is the recommended default ID format for Prisma ORM",
+    ],
+  },
+  {
+    slug: "password-strength-checker",
+    name: "Password Strength & Entropy Analyzer",
+    category: "Auth",
+    shortDescription: "Calculate Shannon entropy bits, estimated GPU crack time, and audit password security.",
+    heroTitle: "Audit Password Strength & Shannon Entropy",
+    heroDescription: "Analyze password security with exact Shannon entropy bits, GPU cluster crack time estimates, and character diversity audits.",
+    about: "Password Strength & Entropy Analyzer evaluates passwords using mathematical Shannon entropy formulas, auditing character pool diversity (uppercase, lowercase, numbers, symbols) and estimating brute-force resistance against 100-Billion-hash/sec GPU clusters.",
+    howToUse: [
+      "Type a password in the input field.",
+      "Toggle password visibility using 'Show Password' if needed.",
+      "Review the entropy score, strength meter, estimated crack time, and diversity checklist.",
+    ],
+    whyUse: [
+      "Evaluates real mathematical entropy rather than arbitrary complexity rules.",
+      "100% private and offline: passwords are never sent across any network.",
+    ],
+    faqs: [
+      {
+        question: "What is Shannon entropy in passwords?",
+        answer: "Shannon entropy measures the information density and randomness of a password in bits. Passwords with 60+ bits of entropy are considered strong.",
+      },
+    ],
+    features: [
+      "Shannon entropy calculation in bits",
+      "GPU cluster crack time estimation",
+      "5-level visual strength indicator",
+      "Character diversity audit checklist",
+    ],
+    tips: [
+      "Aim for at least 60 bits of entropy and 14+ characters for sensitive master passwords",
+    ],
+  },
+  {
+    slug: "htpasswd-generator",
+    name: "Apache & Nginx .htpasswd Generator",
+    category: "Auth",
+    shortDescription: "Generate secure HTTP Basic Authentication .htpasswd entries in Bcrypt, SHA-1, and MD5-APR1 formats.",
+    heroTitle: "Generate .htpasswd Entries for Apache & Nginx",
+    heroDescription: "Create HTTP Basic Authentication password lines in Bcrypt ($2y$), SHA-1 ({SHA}), and MD5-APR1 ($apr1$) formats.",
+    about: "Apache & Nginx .htpasswd Generator produces password hash entries for .htpasswd files used in web server directory protection and HTTP Basic Authentication.",
+    howToUse: [
+      "Enter the username and password.",
+      "Choose your hash algorithm: Bcrypt ($2y$), SHA-1 ({SHA}), or MD5-APR1 ($apr1$).",
+      "Click 'Generate .htpasswd Entry' and copy the resulting string into your .htpasswd file.",
+    ],
+    whyUse: [
+      "Protects staging websites, admin panels, and internal documentation.",
+      "Supports modern Bcrypt format for Nginx and Apache 2.4+.",
+    ],
+    faqs: [
+      {
+        question: "Where do I put the generated line?",
+        answer: "Copy the line into a file named .htpasswd on your web server, and reference it inside your Apache .htaccess or Nginx configuration.",
+      },
+    ],
+    features: [
+      "Bcrypt ($2y$) format",
+      "Apache MD5-APR1 ($apr1$) format",
+      "Legacy SHA-1 ({SHA}) format",
+      "Instant one-click copy",
+    ],
+    tips: [
+      "For modern Nginx and Apache servers, always choose Bcrypt for maximum brute-force resistance",
+    ],
+  },
+  {
+    slug: "cert-inspector",
+    name: "SSL / X.509 Certificate Inspector",
+    category: "Validation",
+    shortDescription: "Inspect and decode PEM / CRT SSL certificates to view Common Name, Issuer, SANs, and Expiry.",
+    heroTitle: "Decode & Inspect SSL / X.509 Certificates",
+    heroDescription: "Parse PEM/CRT SSL certificates to view Common Name (CN), Issuer, Subject Alternative Names (SAN), and Expiration.",
+    about: "SSL / X.509 Certificate Inspector decodes raw PEM certificate blocks (-----BEGIN CERTIFICATE-----) to reveal certificate metadata, issuer authority, validity dates, days remaining, and SAN domains without requiring OpenSSL CLI.",
+    howToUse: [
+      "Paste your PEM-formatted certificate block or click 'Load Sample Cert'.",
+      "Click 'Inspect Certificate' to extract details.",
+      "Review the Common Name, Issuer, Expiry status pill, and SAN domains.",
+    ],
+    whyUse: [
+      "Quickly check certificate expiration and domain coverage without installing OpenSSL.",
+      "Works entirely in the browser with zero certificate transmission.",
+    ],
+    faqs: [
+      {
+        question: "What is an X.509 certificate?",
+        answer: "X.509 is the standard format for public key certificates used in TLS/SSL to bind public keys to domains and organizations.",
+      },
+    ],
+    features: [
+      "Decodes Common Name (CN) and Issuer",
+      "Displays validity start and expiration dates",
+      "Calculates days remaining with status badge",
+      "Lists Subject Alternative Names (SAN)",
+    ],
+    tips: [
+      "Use this tool to verify SSL certificates before deploying them to production web servers",
+    ],
+  },
+  {
+    slug: "base58-converter",
+    name: "Base58 Encoder & Decoder",
+    category: "Encoding",
+    shortDescription: "Encode and decode text strings using Bitcoin, IPFS, and Solana Base58 format.",
+    heroTitle: "Base58 (Bitcoin & IPFS) Encoder & Decoder",
+    heroDescription: "Convert text and hexadecimal data to and from Bitcoin Base58 encoding without ambiguous characters.",
+    about: "Base58 is a binary-to-text encoding scheme used in Bitcoin, IPFS, and Solana. It is designed specifically for humans by removing easily confused characters: 0 (zero), O (capital o), I (capital i), and l (lower L).",
+    howToUse: [
+      "Select 'Encode to Base58' or 'Decode from Base58'.",
+      "Enter your input text or Base58 string.",
+      "Click the convert button to view the result.",
+    ],
+    whyUse: [
+      "Standard encoding for Bitcoin wallet addresses and IPFS content identifiers (CIDs).",
+      "Eliminates typographic errors caused by visually ambiguous letters.",
+    ],
+    faqs: [
+      {
+        question: "How does Base58 differ from Base64?",
+        answer: "Base58 removes non-alphanumeric symbols (+, /, =) and ambiguous characters (0, O, I, l) to make strings easier to copy and read on mobile devices.",
+      },
+    ],
+    features: [
+      "Bitcoin & IPFS Base58 alphabet",
+      "Bidirectional encode and decode modes",
+      "Preserves leading zero bytes as '1's",
+      "Client-side execution",
+    ],
+    tips: [
+      "Base58 is widely used across Solana public keys and Bitcoin legacy address formats",
+    ],
+  },
+  {
+    slug: "csr-generator",
+    name: "CSR (Certificate Signing Request) Builder",
+    category: "Auth",
+    shortDescription: "Generate standard PKCS#10 SSL Certificate Signing Requests (CSR) and 2048-bit RSA Private Keys.",
+    heroTitle: "Generate SSL Certificate Signing Requests (CSR)",
+    heroDescription: "Create standard PKCS#10 Certificate Signing Requests (CSR) and 2048-bit RSA Private Keys for SSL/TLS certificates.",
+    about: "CSR Builder creates standard PEM-formatted Certificate Signing Requests containing your domain name, organization, country, and public key needed to order SSL certificates from Certificate Authorities.",
+    howToUse: [
+      "Enter your Domain / Common Name (e.g. toolsnippet.com).",
+      "Fill in your Organization, 2-letter Country code, and State.",
+      "Click 'Generate CSR & Private Key'.",
+      "Submit the CSR to your SSL provider and save the Private Key securely.",
+    ],
+    whyUse: [
+      "Generates both the CSR and RSA Private Key in one step.",
+      "Client-side generation guarantees your private key is never transmitted over the internet.",
+    ],
+    faqs: [
+      {
+        question: "What is a CSR?",
+        answer: "A CSR (Certificate Signing Request) is an encrypted message sent to a Certificate Authority containing your public key and domain information to request an SSL certificate.",
+      },
+    ],
+    features: [
+      "Standard PKCS#10 CSR PEM output",
+      "2048-bit RSA Private Key generation",
+      "Custom organization and country fields",
+      "100% private in-browser generation",
+    ],
+    tips: [
+      "Always store your RSA Private Key safely; Certificate Authorities do not have a copy of it",
+    ],
+  },
+  {
+    slug: "hash-comparator",
+    name: "Hash & Checksum Comparator",
+    category: "Validation",
+    shortDescription: "Compare two cryptographic hashes or file checksums with instant character-by-character integrity verification.",
+    heroTitle: "Compare & Verify Cryptographic Checksums",
+    heroDescription: "Compare downloaded file hashes against official checksums with instant character-matching diagnostics.",
+    about: "Hash & Checksum Comparator eliminates human error when verifying file integrity, comparing two cryptographic hashes (SHA-256, MD5, SHA-512) and providing visual confirmation of exact matches.",
+    howToUse: [
+      "Paste your calculated file hash into Hash 1.",
+      "Paste the vendor's official checksum into Hash 2.",
+      "View the instant Match / Mismatch status banner.",
+    ],
+    whyUse: [
+      "Prevents malware and corrupted file execution by ensuring downloaded binaries match vendor checksums.",
+      "Includes case-insensitive normalization and automatic whitespace trimming.",
+    ],
+    faqs: [
+      {
+        question: "Why should I compare checksums?",
+        answer: "Comparing checksums ensures that downloaded software or files have not been corrupted during download or tampered with by malicious third parties.",
+      },
+    ],
+    features: [
+      "Case-insensitive comparison toggle",
+      "Automatic whitespace trimming",
+      "Instant visual match / mismatch banner",
+      "Character length diagnostic report",
+    ],
+    tips: [
+      "Always verify checksums when downloading OS disk images, cryptographic software, or developer binaries",
+    ],
   }
 ];
 

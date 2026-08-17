@@ -46,7 +46,7 @@ export default function MarkdownPreviewerTool() {
         <div className="flex flex-col gap-2">
           <label className="text-sm font-medium">Live Preview</label>
           <div 
-            className="min-h-[300px] flex-1 overflow-auto rounded-lg border border-black/15 bg-white p-4 text-sm prose dark:prose-invert dark:border-white/20 dark:bg-black/20"
+            className="min-h-[300px] max-h-[600px] flex-1 overflow-auto break-words max-w-full rounded-lg border border-black/15 bg-white p-4 text-sm prose dark:prose-invert dark:border-white/20 dark:bg-black/20"
             dangerouslySetInnerHTML={{ __html: previewHtml || '<p class="text-gray-400 italic">Preview will appear here...</p>' }}
           />
         </div>

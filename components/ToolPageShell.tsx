@@ -24,7 +24,7 @@ export default function ToolPageShell({
   return (
     <main>
       <AddToRecentTools tool={tool} />
-      <div className="mx-auto w-full max-w-6xl px-4 pt-25">
+      <div className="mx-auto w-full max-w-6xl px-4 pt-10 mb-20">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
       <section className="mx-auto w-full max-w-6xl px-4 pb-15 text-center">

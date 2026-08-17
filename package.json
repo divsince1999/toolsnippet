@@ -9,6 +9,8 @@
     "lint": "eslint",
     "validate": "node scripts/validate-registry.mjs",
     "test:logic": "node scripts/test-tools-logic.mjs",
+    "test:dom": "node scripts/test-dom-and-css-containment.mjs",
+    "test": "npm run test:logic && npm run test:dom",
     "create-tool": "node scripts/create-tool.mjs"
   },
   "dependencies": {
