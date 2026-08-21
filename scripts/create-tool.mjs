@@ -22,23 +22,68 @@ const shortDescription = args[3] ? args[3].trim() : `Free online ${name} tool. F
 // Convert slug to PascalCase
 const pascalName = slug
   .split("-")
-  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
   .join("");
 
 const componentName = `${pascalName}Tool`;
-const componentFileName = `${componentName}.tsx`;
-const componentFilePath = path.join(rootDir, "components", "tools", componentFileName);
+const toolDir = path.join(rootDir, "tools", slug);
 
-// 1. Check if slug already exists
-const toolsFilePath = path.join(rootDir, "lib", "tools.ts");
-let toolsContent = fs.readFileSync(toolsFilePath, "utf8");
-
-if (toolsContent.includes(`slug: "${slug}"`)) {
-  console.error(`❌ Error: Tool with slug "${slug}" already exists in lib/tools.ts!`);
+// 1. Check if tool directory already exists
+if (fs.existsSync(toolDir)) {
+  console.error(`❌ Error: Tool directory "tools/${slug}" already exists!`);
   process.exit(1);
 }
 
-// 2. Create Component File
+fs.mkdirSync(toolDir, { recursive: true });
+
+// 2. Create tools/<slug>/definition.ts
+const definitionTemplate = `import type { ToolDefinition } from "@/lib/tools/types";
+
+export const definition: ToolDefinition = {
+  slug: "${slug}",
+  name: "${name}",
+  category: "${category}",
+  shortDescription: "${shortDescription}",
+  heroTitle: "Free Online ${name}",
+  heroDescription: "${shortDescription}",
+  about: "${name} allows developers and writers to quickly process, transform, and clean data in real-time with zero latency.",
+  howToUse: [
+    "Enter or paste your text into the input area.",
+    "Click Process to execute the transformation.",
+    "Copy your formatted output with one click.",
+  ],
+  whyUse: [
+    "100% client-side: zero data leaves your browser.",
+    "Fast, private, and responsive performance.",
+    "Free to use with no account or installation required.",
+  ],
+  faqs: [
+    {
+      question: "Is my data safe when using ${name}?",
+      answer: "Yes, all processing is performed entirely in your browser memory. Nothing is transmitted over the network.",
+    },
+    {
+      question: "Can I process large inputs?",
+      answer: "Yes, ${name} handles inputs of any typical text size directly on your device.",
+    },
+  ],
+  features: [
+    "Instant client-side processing",
+    "One-click copy to clipboard",
+    "Clean, modern responsive UI",
+    "No account or sign-up required",
+  ],
+  tips: [
+    "Verify input formatting before processing",
+    "Use the Copy button to quickly export your result",
+  ],
+};
+`;
+
+fs.writeFileSync(path.join(toolDir, "definition.ts"), definitionTemplate, "utf8");
+console.log(`✅ Created: tools/${slug}/definition.ts`);
+
+// 3. Create tools/<slug>/component.tsx
 const componentTemplate = `"use client";
 
 import { useTool } from "@/hooks/useTool";
@@ -52,7 +97,7 @@ export default function ${componentName}() {
   const handleProcess = () => {
     try {
       if (!input.trim()) return;
-      // TODO: Implement transformation logic for ${name}
+      // Transformation logic for ${name}
       setOutput(input);
       setError("");
     } catch (err: unknown) {
@@ -97,69 +142,25 @@ export default function ${componentName}() {
 }
 `;
 
-fs.writeFileSync(componentFilePath, componentTemplate, "utf8");
-console.log(`✅ Created component file: components/tools/${componentFileName}`);
+fs.writeFileSync(path.join(toolDir, "component.tsx"), componentTemplate, "utf8");
+console.log(`✅ Created: tools/${slug}/component.tsx`);
 
-// 3. Register in components/tools/index.tsx
-const registryPath = path.join(rootDir, "components", "tools", "index.tsx");
-let registryContent = fs.readFileSync(registryPath, "utf8");
+// 4. Create tools/<slug>/index.ts
+const indexTemplate = `export { default as Component } from "./component";
+export { definition } from "./definition";
+`;
 
-const registryEntry = `  "${slug}": dynamic(() => import("./${componentName}"), { loading: ToolSkeleton }),\n};`;
-registryContent = registryContent.replace(/\s*\};\s*$/, `\n${registryEntry}\n`);
-fs.writeFileSync(registryPath, registryContent, "utf8");
-console.log(`✅ Registered in components/tools/index.tsx`);
+fs.writeFileSync(path.join(toolDir, "index.ts"), indexTemplate, "utf8");
+console.log(`✅ Created: tools/${slug}/index.ts`);
 
-// 4. Add metadata to lib/tools.ts
-const toolMetadataStub = `  {
-    slug: "${slug}",
-    name: "${name}",
-    category: "${category}",
-    shortDescription: "${shortDescription}",
-    heroTitle: "Free Online ${name}",
-    heroDescription: "${shortDescription}",
-    about: "${name} allows developers and writers to quickly process, transform, and clean data in real-time with zero latency.",
-    howToUse: [
-      "Enter or paste your text into the input area.",
-      "Click Process to execute the transformation.",
-      "Copy your formatted output with one click.",
-    ],
-    whyUse: [
-      "100% client-side: zero data leaves your browser.",
-      "Fast, private, and responsive performance.",
-      "Free to use with no account or installation required.",
-    ],
-    faqs: [
-      {
-        question: "Is my data safe when using ${name}?",
-        answer: "Yes, all processing is performed entirely in your browser memory. Nothing is transmitted over the network.",
-      },
-      {
-        question: "Can I process large inputs?",
-        answer: "Yes, ${name} handles inputs of any typical text size directly on your device.",
-      },
-    ],
-    features: [
-      "Instant client-side processing",
-      "One-click copy to clipboard",
-      "Clean, modern responsive UI",
-      "No account or sign-up required",
-    ],
-    tips: [
-      "Verify input formatting before processing",
-      "Use the Copy button to quickly export your result",
-    ],
-  },
-];`;
-
-toolsContent = toolsContent.replace(/\s*\];\s*\n\s*export function getToolBySlug/, `\n${toolMetadataStub}\n\nexport function getToolBySlug`);
-fs.writeFileSync(toolsFilePath, toolsContent, "utf8");
-console.log(`✅ Added metadata to lib/tools.ts`);
-
-// 5. Run validator
-console.log("\nRunning registry verification...");
+// 5. Auto-run build-registry and validate-registry
+console.log("\n🔄 Regenerating registry and manifest...");
 try {
+  execSync("node scripts/build-registry.mjs", { stdio: "inherit" });
+  console.log("\n🔍 Running registry validation...");
   execSync("node scripts/validate-registry.mjs", { stdio: "inherit" });
   console.log(`\n🎉 Successfully scaffolded "${name}" (/tools/${slug})!`);
-} catch {
-  console.error("❌ Registry validation failed after scaffolding.");
+} catch (err) {
+  console.error("❌ Error during registry build or validation:", err);
+  process.exit(1);
 }

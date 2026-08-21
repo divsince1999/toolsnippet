@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 import { useRecentTools } from "@/hooks/useRecentTools";
-import type { ToolInfo } from "@/lib/tools";
+import type { ToolManifestEntry } from "@/lib/tools/types";
 
 type AddToRecentToolsProps = {
-  tool: ToolInfo;
+  tool: { slug: string } & Partial<ToolManifestEntry>;
 };
 
 /**

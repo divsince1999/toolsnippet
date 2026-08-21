@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-registry.mjs",
+    "build:registry": "node scripts/build-registry.mjs",
     "build": "npm run validate && next build",
     "start": "next start",
     "lint": "eslint",

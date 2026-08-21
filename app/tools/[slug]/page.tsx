@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import ToolPageShell from "@/components/ToolPageShell";
 import { buildToolMetadata, getRelatedTools, getToolBySlug, tools } from "@/lib/tools";
-import { ToolRegistry } from "@/components/tools";
+import { ToolRegistry } from "@/lib/tools/registry";
 import { buildAllSchemas } from "@/lib/seo/schema";
 
 type Props = {

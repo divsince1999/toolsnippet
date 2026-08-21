@@ -1,0 +1,1394 @@
+[
+  {
+    "slug": "ad-copy-character-counter",
+    "name": "Ad Copy Character & Limit Validator",
+    "category": "Text",
+    "shortDescription": "Validate character limits and guidelines for Google Ads, Meta/Facebook, LinkedIn, and X/Twitter Ads."
+  },
+  {
+    "slug": "advanced-case-converter",
+    "name": "Advanced Case Converter",
+    "category": "Text",
+    "shortDescription": "Convert between snake_case, camelCase, PascalCase, etc."
+  },
+  {
+    "slug": "aes-encryption-decryption",
+    "name": "AES-GCM Text Encryptor & Decryptor",
+    "category": "Auth",
+    "shortDescription": "Military-grade 256-bit AES-GCM client-side text encryption with PBKDF2 salt derivation."
+  },
+  {
+    "slug": "amortization-loan-calculator",
+    "name": "Loan & Mortgage EMI Amortization Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate monthly EMI repayments, total interest payable, loan amortization schedules, and principal payoff breakdowns."
+  },
+  {
+    "slug": "anchor-text-optimizer",
+    "name": "Anchor Text Diversity & SEO Optimizer",
+    "category": "Text",
+    "shortDescription": "Classify anchor texts into Exact, Partial, Branded, Generic, and Naked URLs to audit link profile balance."
+  },
+  {
+    "slug": "angle-converter",
+    "name": "Angle & Trigonometry Unit Converter",
+    "category": "Number",
+    "shortDescription": "Convert between Degrees, Radians, Gradians, Arcminutes, Arcseconds, and Turns with live trigonometric values."
+  },
+  {
+    "slug": "api-mock-payload-generator",
+    "name": "API Mock Payload & Fake Data Generator",
+    "category": "Data",
+    "shortDescription": "Generate mock JSON REST API responses for Users, Products, and Paginated datasets."
+  },
+  {
+    "slug": "argon2-hasher",
+    "name": "PBKDF2 / Password Key Hasher",
+    "category": "Auth",
+    "shortDescription": "Derive secure cryptographic password hashes using PBKDF2 with custom iterations, salt, and SHA-512."
+  },
+  {
+    "slug": "aspect-ratio-calculator",
+    "name": "Aspect Ratio Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate missing width or height from an aspect ratio."
+  },
+  {
+    "slug": "bandwidth-transfer-calculator",
+    "name": "Bandwidth & Data Transfer Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate file download/upload times, data transfer rates, and bandwidth consumption across various network speeds."
+  },
+  {
+    "slug": "base-62-converter",
+    "name": "Base62 URL Shortener & Number Encoder",
+    "category": "Encoding",
+    "shortDescription": "Convert base-10 integers into compact alphanumeric Base62 strings [0-9a-zA-Z] for URL shorteners and compact database IDs."
+  },
+  {
+    "slug": "base-href-url-resolver",
+    "name": "Base Href & Relative URL Resolver",
+    "category": "Web",
+    "shortDescription": "Resolve relative links and path references against a base URL according to the RFC 3986 specification."
+  },
+  {
+    "slug": "base58-converter",
+    "name": "Base58 Encoder & Decoder",
+    "category": "Encoding",
+    "shortDescription": "Encode and decode text strings using Bitcoin, IPFS, and Solana Base58 format."
+  },
+  {
+    "slug": "base64-encoder-decoder",
+    "name": "Base64 Encoder/Decoder",
+    "category": "Encoding",
+    "shortDescription": "Encode and decode Base64 text quickly."
+  },
+  {
+    "slug": "base64-to-image",
+    "name": "Base64 to Image Decoder & Downloader",
+    "category": "Design",
+    "shortDescription": "Convert Base64 data strings into viewable and downloadable PNG, JPEG, SVG, or WEBP images."
+  },
+  {
+    "slug": "basic-auth-header-generator",
+    "name": "HTTP Basic Auth Header Builder & Decoder",
+    "category": "Auth",
+    "shortDescription": "Generate standard Authorization: Basic Base64 headers from credentials or decode existing tokens."
+  },
+  {
+    "slug": "bcrypt-generator",
+    "name": "Bcrypt Hash Generator & Verifier",
+    "category": "Auth",
+    "shortDescription": "Generate salted Bcrypt password hashes ($2a$ / $2b$) with custom cost factors (rounds 4–14) and verify passwords."
+  },
+  {
+    "slug": "binary-arithmetic-calculator",
+    "name": "Binary & Hex Arithmetic Calculator",
+    "category": "Number",
+    "shortDescription": "Perform addition, subtraction, multiplication, and division directly on Binary, Hexadecimal, and Octal numbers."
+  },
+  {
+    "slug": "binary-to-text",
+    "name": "Binary to Text Converter",
+    "category": "Encoding",
+    "shortDescription": "Convert binary code into readable text."
+  },
+  {
+    "slug": "bitwise-calculator",
+    "name": "Bitwise Operations & Shift Calculator",
+    "category": "Number",
+    "shortDescription": "Interactive 32-bit and 64-bit calculator for bitwise AND, OR, XOR, NOT, NAND, NOR, Shift Left (<<), and Shift Right (>>)."
+  },
+  {
+    "slug": "bytes-unit-converter",
+    "name": "Data Storage & Byte Unit Converter",
+    "category": "Number",
+    "shortDescription": "Convert between Bytes, KiB, MiB, GiB, TiB (binary base-2) and KB, MB, GB, TB, PB (decimal base-10) with exact precision."
+  },
+  {
+    "slug": "case-converter-camel-snake-kebab",
+    "name": "Code Variable Case Converter",
+    "category": "Text",
+    "shortDescription": "Convert identifiers between camelCase, snake_case, kebab-case, and PascalCase."
+  },
+  {
+    "slug": "cert-inspector",
+    "name": "SSL / X.509 Certificate Inspector",
+    "category": "Validation",
+    "shortDescription": "Inspect and decode PEM / CRT SSL certificates to view Common Name, Issuer, SANs, and Expiry."
+  },
+  {
+    "slug": "character-counter",
+    "name": "Character Counter",
+    "category": "Text",
+    "shortDescription": "Count characters with and without spaces, and calculate byte size."
+  },
+  {
+    "slug": "chmod-calculator",
+    "name": "Linux Chmod Permissions Calculator",
+    "category": "Data",
+    "shortDescription": "Calculate Linux/Unix file permissions visually with octal numbers and symbolic notation."
+  },
+  {
+    "slug": "color-contrast-checker",
+    "name": "WCAG Color Contrast Checker",
+    "category": "Design",
+    "shortDescription": "Check color contrast compliance for text and UI elements against WCAG 2.1 AA and AAA accessibility standards."
+  },
+  {
+    "slug": "color-shades-generator",
+    "name": "Color Shades & Tint Generator",
+    "category": "Design",
+    "shortDescription": "Generate a full 50-950 Tailwind/CSS palette of tints and shades from any base color."
+  },
+  {
+    "slug": "compound-interest-calculator",
+    "name": "Compound Interest & Investment Growth Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate compound interest, future investment balance, monthly contributions, and total interest earned over time."
+  },
+  {
+    "slug": "content-security-policy-generator",
+    "name": "Content Security Policy (CSP) Generator",
+    "category": "Auth",
+    "shortDescription": "Build strict, production-ready Content-Security-Policy HTTP headers to protect against XSS and injection attacks."
+  },
+  {
+    "slug": "cors-header-generator",
+    "name": "CORS Header Generator",
+    "category": "Auth",
+    "shortDescription": "Generate Cross-Origin Resource Sharing (CORS) rules for Raw HTTP, Nginx, Apache, Express, and Next.js."
+  },
+  {
+    "slug": "crc32-checksum",
+    "name": "CRC32 Checksum Calculator",
+    "category": "Validation",
+    "shortDescription": "Compute standard 32-bit CRC32 checksums (IEEE 802.3) in Hexadecimal, Decimal, and Binary."
+  },
+  {
+    "slug": "cron-descriptor",
+    "name": "Cron Expression Descriptor",
+    "category": "Data",
+    "shortDescription": "Convert cron expressions into human-readable text."
+  },
+  {
+    "slug": "cron-job-generator",
+    "name": "Cron Expression Generator & Visual Scheduler",
+    "category": "Dev",
+    "shortDescription": "Build and schedule 5-field crontab expressions with frequency presets, step values, and human-readable descriptions."
+  },
+  {
+    "slug": "csr-generator",
+    "name": "CSR (Certificate Signing Request) Builder",
+    "category": "Auth",
+    "shortDescription": "Generate standard PKCS#10 SSL Certificate Signing Requests (CSR) and 2048-bit RSA Private Keys."
+  },
+  {
+    "slug": "css-animation-keyframes-generator",
+    "name": "CSS Keyframe Animation Generator",
+    "category": "Design",
+    "shortDescription": "Create customizable CSS @keyframes animations with duration, easing curves, and live preview."
+  },
+  {
+    "slug": "css-border-radius-generator",
+    "name": "CSS Border Radius & Blob Generator",
+    "category": "Design",
+    "shortDescription": "Create unique organic shapes, blobs, and fancy border-radius styling with 8-point controls."
+  },
+  {
+    "slug": "css-box-shadow-generator",
+    "name": "CSS Box Shadow Generator",
+    "category": "Design",
+    "shortDescription": "Create custom CSS box shadows with live visual preview, opacity, spread, and inset controls."
+  },
+  {
+    "slug": "css-clamp-calculator",
+    "name": "CSS Clamp() Typography Calculator",
+    "category": "Design",
+    "shortDescription": "Generate fluid responsive font-size and spacing values using modern CSS clamp() formulas."
+  },
+  {
+    "slug": "css-clip-path-generator",
+    "name": "CSS Clip-Path Shape Generator",
+    "category": "Design",
+    "shortDescription": "Create polygon, star, geometric, and banner shapes using CSS clip-path."
+  },
+  {
+    "slug": "css-filter-generator",
+    "name": "CSS Filter Effects Playground",
+    "category": "Design",
+    "shortDescription": "Apply and adjust visual CSS image filters including blur, grayscale, contrast, hue-rotate, and sepia."
+  },
+  {
+    "slug": "css-flexbox-playground",
+    "name": "CSS Flexbox Generator & Playground",
+    "category": "Design",
+    "shortDescription": "Visual interactive builder for CSS Flexbox layouts with direction, alignment, and gap controls."
+  },
+  {
+    "slug": "css-formatter",
+    "name": "CSS Formatter",
+    "category": "Data",
+    "shortDescription": "Beautify and indent your CSS code."
+  },
+  {
+    "slug": "css-glassmorphism-generator",
+    "name": "CSS Glassmorphism Generator",
+    "category": "Design",
+    "shortDescription": "Create modern frosted glass UI cards with backdrop blur, transparency, and glossy borders."
+  },
+  {
+    "slug": "css-gradient-generator",
+    "name": "CSS Gradient Generator",
+    "category": "Design",
+    "shortDescription": "Create beautiful linear and radial CSS gradients with multi-color stops and angles."
+  },
+  {
+    "slug": "css-grid-generator",
+    "name": "CSS Grid Layout Generator",
+    "category": "Design",
+    "shortDescription": "Create multi-column and multi-row CSS grid layouts with interactive column and gap controls."
+  },
+  {
+    "slug": "css-minifier",
+    "name": "CSS Minifier",
+    "category": "Data",
+    "shortDescription": "Compress CSS files for faster website loading."
+  },
+  {
+    "slug": "css-neumorphism-generator",
+    "name": "CSS Neumorphism (Soft UI) Generator",
+    "category": "Design",
+    "shortDescription": "Create modern Soft UI extruded and pressed neumorphic shadows with customized lighting."
+  },
+  {
+    "slug": "css-text-shadow-generator",
+    "name": "CSS Text Shadow Generator",
+    "category": "Design",
+    "shortDescription": "Create custom CSS text shadows, neon glow effects, and 3D typography styling."
+  },
+  {
+    "slug": "css-triangle-generator",
+    "name": "CSS Triangle Generator",
+    "category": "Design",
+    "shortDescription": "Create pure CSS triangles pointing in any direction with custom dimensions and colors."
+  },
+  {
+    "slug": "csv-column-extractor",
+    "name": "CSV Column Extractor",
+    "category": "Text",
+    "shortDescription": "Extract or reorder specific columns from CSV data."
+  },
+  {
+    "slug": "csv-to-json",
+    "name": "CSV to JSON Converter",
+    "category": "Data",
+    "shortDescription": "Convert CSV data to JSON format."
+  },
+  {
+    "slug": "csv-to-markdown-table",
+    "name": "CSV to Markdown Table Converter",
+    "category": "Data",
+    "shortDescription": "Convert CSV and TSV spreadsheet data into clean GitHub-Flavored Markdown tables."
+  },
+  {
+    "slug": "csv-to-sql-inserts",
+    "name": "CSV to SQL INSERT Statements Generator",
+    "category": "Data",
+    "shortDescription": "Convert CSV spreadsheets into batched or single SQL INSERT INTO queries."
+  },
+  {
+    "slug": "cuid-generator",
+    "name": "CUID2 & KSUID Generator",
+    "category": "Data",
+    "shortDescription": "Generate collision-resistant, horizontal-scaling database primary key identifiers (CUID2 & KSUID)."
+  },
+  {
+    "slug": "curl-to-fetch",
+    "name": "cURL to Fetch & Axios Converter",
+    "category": "Data",
+    "shortDescription": "Convert cURL commands to modern JavaScript fetch() and axios code."
+  },
+  {
+    "slug": "curl-to-go-http",
+    "name": "cURL to Go HTTP Client Code Converter",
+    "category": "Dev",
+    "shortDescription": "Convert cURL commands into idiomatic Golang net/http client requests with context and error handling."
+  },
+  {
+    "slug": "curl-to-node-axios",
+    "name": "cURL to Node.js Axios & Fetch Converter",
+    "category": "Data",
+    "shortDescription": "Convert cURL commands into clean async/await Node.js Axios and native Fetch code snippets."
+  },
+  {
+    "slug": "curl-to-php-curl",
+    "name": "cURL to PHP cURL Code Converter",
+    "category": "Dev",
+    "shortDescription": "Convert cURL terminal commands into PHP curl_init and curl_setopt_array scripts with headers and JSON payloads."
+  },
+  {
+    "slug": "curl-to-python-requests",
+    "name": "cURL to Python Requests Converter",
+    "category": "Data",
+    "shortDescription": "Transform cURL commands into clean, idiomatic Python requests or async httpx code blocks."
+  },
+  {
+    "slug": "date-to-unix-timestamp",
+    "name": "Date to Unix Timestamp",
+    "category": "Data",
+    "shortDescription": "Convert human dates to Unix timestamps."
+  },
+  {
+    "slug": "dns-record-generator",
+    "name": "DNS Zone Record Generator (BIND / RFC 1035)",
+    "category": "Data",
+    "shortDescription": "Create formatted A, AAAA, CNAME, MX, TXT (SPF/DMARC), and SRV records for Cloudflare, Route53, and BIND."
+  },
+  {
+    "slug": "dockerfile-generator",
+    "name": "Dockerfile Generator & Multi-Stage Builder",
+    "category": "Dev",
+    "shortDescription": "Generate optimized, production-ready, multi-stage Dockerfiles for Node.js, Python, Go, Rust, PHP, and static web apps."
+  },
+  {
+    "slug": "duplicate-line-remover",
+    "name": "Duplicate Line Remover",
+    "category": "Text",
+    "shortDescription": "Remove duplicate lines from a list or text."
+  },
+  {
+    "slug": "email-extractor",
+    "name": "Email Extractor from Text",
+    "category": "Text",
+    "shortDescription": "Scan and extract all valid unique email addresses from unstructured text."
+  },
+  {
+    "slug": "email-subject-line-tester",
+    "name": "Email Subject Line & Spam Score Tester",
+    "category": "Text",
+    "shortDescription": "Test email subject lines for spam trigger words, character length, mobile preview cutoff, and open-rate factors."
+  },
+  {
+    "slug": "energy-power-converter",
+    "name": "Energy & Power Unit Converter",
+    "category": "Number",
+    "shortDescription": "Convert energy and power units between Joules, Kilocalories, Kilowatt-Hours (kWh), BTUs, Watts, and Horsepower (hp)."
+  },
+  {
+    "slug": "env-to-json-converter",
+    "name": ".env to JSON & Environment Config Converter",
+    "category": "Data",
+    "shortDescription": "Convert .env key-value variables to structured JSON and transform JSON objects into formatted .env files."
+  },
+  {
+    "slug": "factorial-calculator",
+    "name": "Factorial Calculator",
+    "category": "Number",
+    "shortDescription": "Compute factorials, combinations (nCr), and permutations (nPr)."
+  },
+  {
+    "slug": "faq-schema-generator",
+    "name": "FAQ Page JSON-LD Schema Generator",
+    "category": "Validation",
+    "shortDescription": "Build interactive FAQPage JSON-LD structured data for Google Search rich snippets."
+  },
+  {
+    "slug": "find-and-replace",
+    "name": "Find and Replace",
+    "category": "Text",
+    "shortDescription": "Find and replace text with case sensitivity and whole word options."
+  },
+  {
+    "slug": "floating-point-converter",
+    "name": "IEEE 754 Floating-Point Visualizer & Converter",
+    "category": "Number",
+    "shortDescription": "Convert 32-bit single and 64-bit double precision floats into Sign bit, Exponent, Mantissa, and Hexadecimal representations."
+  },
+  {
+    "slug": "fraction-calculator",
+    "name": "Fraction Calculator & Simplifier",
+    "category": "Number",
+    "shortDescription": "Add, subtract, multiply, and divide fractions and mixed numbers, simplify to lowest terms, and convert to decimals."
+  },
+  {
+    "slug": "gcd-lcm-calculator",
+    "name": "GCD & LCM Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate the Greatest Common Divisor and Least Common Multiple."
+  },
+  {
+    "slug": "gitignore-generator",
+    "name": ".gitignore Generator & Rule Builder",
+    "category": "Dev",
+    "shortDescription": "Generate comprehensive, custom .gitignore files combining operating systems, IDEs, programming languages, and frameworks."
+  },
+  {
+    "slug": "graphql-query-prettifier",
+    "name": "GraphQL Query Prettifier & Minifier",
+    "category": "Data",
+    "shortDescription": "Format, indent, or compact single-line GraphQL queries, mutations, and variables."
+  },
+  {
+    "slug": "hash-comparator",
+    "name": "Hash & Checksum Comparator",
+    "category": "Validation",
+    "shortDescription": "Compare two cryptographic hashes or file checksums with instant character-by-character integrity verification."
+  },
+  {
+    "slug": "hash-generator",
+    "name": "Hash Generator",
+    "category": "Auth",
+    "shortDescription": "Generate MD5, SHA-1, and SHA-256 hashes."
+  },
+  {
+    "slug": "headline-analyzer",
+    "name": "Blog & Ad Headline Analyzer",
+    "category": "Text",
+    "shortDescription": "Score headlines based on power words, emotional triggers, character length, sentiment, and clickability."
+  },
+  {
+    "slug": "hex-color-code-extractor",
+    "name": "CSS & Code Hex Color Extractor",
+    "category": "Design",
+    "shortDescription": "Extract all HEX, RGB, RGBA, and HSL color codes from CSS, HTML, and JavaScript with live color swatch previews."
+  },
+  {
+    "slug": "hex-to-ascii",
+    "name": "Hex to ASCII Converter",
+    "category": "Encoding",
+    "shortDescription": "Convert Hexadecimal strings to plain ASCII text and encode text into Hex dumps."
+  },
+  {
+    "slug": "hex-to-rgb",
+    "name": "HEX to RGB Converter",
+    "category": "Design",
+    "shortDescription": "Convert HEX codes to RGB color values."
+  },
+  {
+    "slug": "hmac-generator",
+    "name": "HMAC Generator & Verifier",
+    "category": "Auth",
+    "shortDescription": "Generate and verify Hash-based Message Authentication Codes (HMAC) with SHA-256, SHA-512, and secret keys."
+  },
+  {
+    "slug": "how-to-schema-generator",
+    "name": "HowTo Step-by-Step Schema Generator",
+    "category": "Validation",
+    "shortDescription": "Build structured @type: 'HowTo' JSON-LD schema markup with step titles, descriptions, and supplies for Google."
+  },
+  {
+    "slug": "html-entity-decoder",
+    "name": "HTML Entity Decoder",
+    "category": "Encoding",
+    "shortDescription": "Decode HTML entities back to characters."
+  },
+  {
+    "slug": "html-entity-encoder",
+    "name": "HTML Entity Encoder",
+    "category": "Encoding",
+    "shortDescription": "Encode special characters into HTML entities."
+  },
+  {
+    "slug": "html-formatter",
+    "name": "HTML Formatter",
+    "category": "Data",
+    "shortDescription": "Format and beautify your HTML code."
+  },
+  {
+    "slug": "html-minifier",
+    "name": "HTML Minifier",
+    "category": "Data",
+    "shortDescription": "Compress HTML markup for better performance."
+  },
+  {
+    "slug": "html-table-to-json",
+    "name": "HTML Table to JSON Converter",
+    "category": "Data",
+    "shortDescription": "Extract and convert HTML table data into clean structured JSON."
+  },
+  {
+    "slug": "html-to-markdown",
+    "name": "HTML to Markdown Converter",
+    "category": "Text",
+    "shortDescription": "Convert HTML source code and articles into clean Markdown syntax."
+  },
+  {
+    "slug": "htpasswd-generator",
+    "name": "Apache & Nginx .htpasswd Generator",
+    "category": "Auth",
+    "shortDescription": "Generate secure HTTP Basic Authentication .htpasswd entries in Bcrypt, SHA-1, and MD5-APR1 formats."
+  },
+  {
+    "slug": "http-headers-parser",
+    "name": "HTTP Headers Parser & Security Audit",
+    "category": "Validation",
+    "shortDescription": "Parse raw HTTP request and response headers into structured JSON and perform an instant security audit."
+  },
+  {
+    "slug": "http-status-code-lookup",
+    "name": "HTTP Status Codes Directory",
+    "category": "Data",
+    "shortDescription": "Instant search and reference directory for all RFC HTTP status codes with caching and retry semantics."
+  },
+  {
+    "slug": "image-to-base64",
+    "name": "Image to Base64",
+    "category": "Encoding",
+    "shortDescription": "Convert images to Base64 data strings."
+  },
+  {
+    "slug": "invisible-character-detector",
+    "name": "Zero-Width & Invisible Character Detector",
+    "category": "Validation",
+    "shortDescription": "Detect, reveal, and remove hidden zero-width spaces, soft hyphens, and invisible Unicode control characters."
+  },
+  {
+    "slug": "ip-range-to-cidr",
+    "name": "IP Range to CIDR Converter",
+    "category": "Data",
+    "shortDescription": "Convert starting and ending IPv4 address ranges into the minimal set of CIDR subnet blocks."
+  },
+  {
+    "slug": "ipv4-subnet-calculator",
+    "name": "IPv4 Subnet Calculator & CIDR Analyzer",
+    "category": "Number",
+    "shortDescription": "Calculate network address, broadcast, netmask, wildcard mask, and usable IP host ranges from CIDR."
+  },
+  {
+    "slug": "ipv4-to-ipv6-converter",
+    "name": "IPv4 to IPv6 & IPv6 Expander/Compressor",
+    "category": "Encoding",
+    "shortDescription": "Convert IPv4 addresses to IPv4-mapped IPv6, 6to4 prefix, and expand/compress 128-bit IPv6 hextets."
+  },
+  {
+    "slug": "js-formatter",
+    "name": "JS Formatter",
+    "category": "Data",
+    "shortDescription": "Format and beautify JavaScript code."
+  },
+  {
+    "slug": "js-minifier",
+    "name": "JS Minifier",
+    "category": "Data",
+    "shortDescription": "Minify JavaScript to reduce file size."
+  },
+  {
+    "slug": "js-obfuscation-detector",
+    "name": "JavaScript Obfuscation & Entropy Analyzer",
+    "category": "Validation",
+    "shortDescription": "Detect code obfuscation, packed scripts, high Shannon entropy, eval() execution, and suspicious variable patterns in JavaScript."
+  },
+  {
+    "slug": "json-formatter",
+    "name": "JSON Formatter",
+    "category": "Data",
+    "shortDescription": "Format and validate JSON with instant error feedback."
+  },
+  {
+    "slug": "json-key-sorter",
+    "name": "JSON Key Alphabetical Sorter",
+    "category": "Data",
+    "shortDescription": "Recursively sort all JSON keys alphabetically (A-Z or Z-A) for clean git diffs."
+  },
+  {
+    "slug": "json-ld-generator",
+    "name": "JSON-LD Schema Markup Generator",
+    "category": "Data",
+    "shortDescription": "Create Google-compliant structured data markup (JSON-LD) for Articles, Organizations, FAQs, and Products."
+  },
+  {
+    "slug": "json-minifier",
+    "name": "JSON Minifier",
+    "category": "Data",
+    "shortDescription": "Compress JSON data by removing whitespace and comments."
+  },
+  {
+    "slug": "json-schema-to-typescript",
+    "name": "JSON Schema to TypeScript Converter",
+    "category": "Data",
+    "shortDescription": "Convert Draft-07 and 2020-12 JSON Schema specifications into clean TypeScript interfaces."
+  },
+  {
+    "slug": "json-size-analyzer",
+    "name": "JSON Size & Depth Analyzer",
+    "category": "Data",
+    "shortDescription": "Inspect byte size, minified size, gzip estimate, key counts, and nesting depth."
+  },
+  {
+    "slug": "json-to-csv",
+    "name": "JSON to CSV Converter",
+    "category": "Data",
+    "shortDescription": "Convert JSON arrays to CSV format."
+  },
+  {
+    "slug": "json-to-go-struct",
+    "name": "JSON to Go Struct Generator",
+    "category": "Data",
+    "shortDescription": "Convert JSON payloads into idiomatic Go (Golang) structs with json struct tags."
+  },
+  {
+    "slug": "json-to-graphql-schema",
+    "name": "JSON to GraphQL Schema Generator",
+    "category": "Data",
+    "shortDescription": "Convert JSON sample responses into GraphQL SDL type definitions with scalar types and nullability flags."
+  },
+  {
+    "slug": "json-to-json-schema",
+    "name": "JSON to JSON Schema Generator",
+    "category": "Data",
+    "shortDescription": "Generate standard Draft-07 and 2020-12 JSON Schema specifications from sample JSON objects."
+  },
+  {
+    "slug": "json-to-kotlin",
+    "name": "JSON to Kotlin Data Class Converter",
+    "category": "Data",
+    "shortDescription": "Transform JSON payloads into Kotlin data classes with kotlinx.serialization annotations."
+  },
+  {
+    "slug": "json-to-properties",
+    "name": "JSON to Java .properties / .env Converter",
+    "category": "Data",
+    "shortDescription": "Flatten nested JSON objects into dot-notated Java .properties or UPPER_SNAKE_CASE .env files."
+  },
+  {
+    "slug": "json-to-python-pydantic",
+    "name": "JSON to Python Pydantic (v2) Generator",
+    "category": "Data",
+    "shortDescription": "Convert JSON payloads into strict Python Pydantic v2 BaseModel classes with type annotations."
+  },
+  {
+    "slug": "json-to-rust-serde",
+    "name": "JSON to Rust Struct (Serde) Generator",
+    "category": "Data",
+    "shortDescription": "Convert JSON data into Rust structs with #[derive(Serialize, Deserialize)] annotations."
+  },
+  {
+    "slug": "json-to-sql-schema",
+    "name": "JSON to SQL DDL Table Creator",
+    "category": "Data",
+    "shortDescription": "Infer SQL column types from JSON objects to generate CREATE TABLE statements for PostgreSQL, MySQL, and SQLite."
+  },
+  {
+    "slug": "json-to-toml",
+    "name": "JSON to TOML Converter",
+    "category": "Data",
+    "shortDescription": "Convert JSON objects into clean, formatted TOML configuration files."
+  },
+  {
+    "slug": "json-to-typescript",
+    "name": "JSON to TypeScript",
+    "category": "Data",
+    "shortDescription": "Convert JSON objects to TypeScript interfaces."
+  },
+  {
+    "slug": "json-to-xml",
+    "name": "JSON to XML Converter",
+    "category": "Data",
+    "shortDescription": "Convert structured JSON objects and arrays into clean, indented XML documents."
+  },
+  {
+    "slug": "json-to-xml-schema-xsd",
+    "name": "JSON to XML Schema (XSD) Generator",
+    "category": "Data",
+    "shortDescription": "Generate standard W3C XML Schema Definition (XSD) documents from JSON objects and XML data."
+  },
+  {
+    "slug": "json-to-yaml",
+    "name": "JSON to YAML Converter",
+    "category": "Data",
+    "shortDescription": "Convert JSON data to YAML format."
+  },
+  {
+    "slug": "json-to-zod",
+    "name": "JSON to Zod Schema Generator",
+    "category": "Validation",
+    "shortDescription": "Convert JSON objects into strict TypeScript Zod validation schemas with automatic type inference."
+  },
+  {
+    "slug": "json-validator",
+    "name": "JSON Validator",
+    "category": "Validation",
+    "shortDescription": "Check if your JSON data is valid and well-formed."
+  },
+  {
+    "slug": "jwt-decoder",
+    "name": "JWT Decoder",
+    "category": "Auth",
+    "shortDescription": "Decode JWT header and payload for inspection."
+  },
+  {
+    "slug": "jwt-generator",
+    "name": "JWT Token Generator & Signer",
+    "category": "Auth",
+    "shortDescription": "Create, customize claims, and cryptographically sign JSON Web Tokens with HMAC-SHA256."
+  },
+  {
+    "slug": "keyword-density-analyzer",
+    "name": "Keyword Density & N-Gram Analyzer",
+    "category": "Text",
+    "shortDescription": "Analyze 1-word, 2-word, and 3-word n-gram frequency, density percentage, and keyword stuffing warnings."
+  },
+  {
+    "slug": "license-text-generator",
+    "name": "Open Source License Text Generator",
+    "category": "Dev",
+    "shortDescription": "Generate standard Open Source licenses (MIT, Apache 2.0, GPL-3.0, BSD-3-Clause, ISC) with custom author and year."
+  },
+  {
+    "slug": "line-counter",
+    "name": "Line Counter",
+    "category": "Text",
+    "shortDescription": "Count total lines, empty lines, and non-empty lines in text."
+  },
+  {
+    "slug": "line-numberer",
+    "name": "Line Numberer",
+    "category": "Text",
+    "shortDescription": "Add line numbers to text lines with customizable format and padding."
+  },
+  {
+    "slug": "list-randomizer",
+    "name": "List Randomizer",
+    "category": "Text",
+    "shortDescription": "Shuffle the order of lines in a list."
+  },
+  {
+    "slug": "lorem-ipsum-generator",
+    "name": "Lorem Ipsum Generator",
+    "category": "Text",
+    "shortDescription": "Generate placeholder text for your designs."
+  },
+  {
+    "slug": "mac-address-formatter",
+    "name": "MAC Address Formatter & Generator",
+    "category": "Data",
+    "shortDescription": "Format MAC addresses into Colon, Dash, Cisco dot, and space notations, or generate random valid MACs."
+  },
+  {
+    "slug": "markdown-heading-extractor",
+    "name": "Markdown Table of Contents Generator",
+    "category": "Text",
+    "shortDescription": "Extract Markdown H1 to H6 headings and generate indented, clickable Table of Contents (TOC) lists."
+  },
+  {
+    "slug": "markdown-previewer",
+    "name": "Markdown Previewer",
+    "category": "Text",
+    "shortDescription": "Live preview your Markdown code."
+  },
+  {
+    "slug": "markdown-table-to-csv",
+    "name": "Markdown Table to CSV & TSV Converter",
+    "category": "Data",
+    "shortDescription": "Parse GitHub-Flavored Markdown tables back into comma-separated (CSV) or tab-separated (TSV) spreadsheets."
+  },
+  {
+    "slug": "markdown-to-html",
+    "name": "Markdown to HTML Converter",
+    "category": "Text",
+    "shortDescription": "Convert GitHub Flavored Markdown into clean, exportable HTML code."
+  },
+  {
+    "slug": "markdown-to-pdf-cleaner",
+    "name": "Markdown Print & PDF Layout Optimizer",
+    "category": "Text",
+    "shortDescription": "Optimize and format raw Markdown for clean PDF exports and printing with automatic page breaks and print typography."
+  },
+  {
+    "slug": "matrix-calculator",
+    "name": "Matrix Mathematics & Determinant Calculator",
+    "category": "Number",
+    "shortDescription": "Perform 2x2, 3x3, and 4x4 matrix Addition, Subtraction, Multiplication, Determinant, Transpose, and Inverse calculations."
+  },
+  {
+    "slug": "md5-hash-generator",
+    "name": "MD5 Hash & Checksum Generator",
+    "category": "Encoding",
+    "shortDescription": "Compute standard 128-bit (32 hex characters) MD5 cryptographic checksums instantly."
+  },
+  {
+    "slug": "meta-description-previewer",
+    "name": "Google SERP Snippet & Meta Previewer",
+    "category": "Text",
+    "shortDescription": "Simulate live Google Search desktop and mobile snippets with pixel-width measurement and truncation checks."
+  },
+  {
+    "slug": "meta-robots-tag-generator",
+    "name": "Meta Robots & X-Robots-Tag Generator",
+    "category": "Validation",
+    "shortDescription": "Generate granular HTML meta robots directives (noindex, nofollow, nosnippet) and HTTP X-Robots-Tag response headers."
+  },
+  {
+    "slug": "meta-tag-generator",
+    "name": "Open Graph & Meta Tag Generator",
+    "category": "Validation",
+    "shortDescription": "Generate HTML meta tags, OpenGraph (Facebook/LinkedIn), and Twitter Cards."
+  },
+  {
+    "slug": "mime-type-lookup",
+    "name": "MIME Type & File Extension Directory",
+    "category": "Data",
+    "shortDescription": "Instant lookup connecting file extensions to official IANA MIME content-type headers."
+  },
+  {
+    "slug": "modulo-inverse-calculator",
+    "name": "Modular Arithmetic & Modulo Inverse Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate modular arithmetic, modular exponentiation (a^b mod m), and Extended Euclidean modular multiplicative inverse."
+  },
+  {
+    "slug": "morse-code-converter",
+    "name": "Morse Code Converter",
+    "category": "Encoding",
+    "shortDescription": "Convert text to Morse code and vice versa."
+  },
+  {
+    "slug": "nanoid-generator",
+    "name": "Nano ID Generator",
+    "category": "Data",
+    "shortDescription": "Generate cryptographically secure, URL-safe compact unique IDs with customizable length and alphabets."
+  },
+  {
+    "slug": "ndjson-to-json",
+    "name": "NDJSON / JSONL to JSON Array Converter",
+    "category": "Data",
+    "shortDescription": "Bidirectional converter between Newline Delimited JSON (.ndjson / .jsonl) and formatted JSON arrays."
+  },
+  {
+    "slug": "nginx-config-generator",
+    "name": "Nginx Configuration & Virtual Host Generator",
+    "category": "Dev",
+    "shortDescription": "Generate secure, high-performance Nginx server blocks for Reverse Proxies, SSL Certificates, Gzip compression, and SPAs."
+  },
+  {
+    "slug": "number-base-converter",
+    "name": "Number Base Converter",
+    "category": "Data",
+    "shortDescription": "Convert numbers between Binary, Octal, Decimal, and Hex."
+  },
+  {
+    "slug": "number-to-words",
+    "name": "Number to Words",
+    "category": "Number",
+    "shortDescription": "Convert numeric figures into written English words."
+  },
+  {
+    "slug": "open-graph-meta-generator",
+    "name": "Open Graph & Twitter Card Generator",
+    "category": "Data",
+    "shortDescription": "Create social sharing meta tags (OG & Twitter) with live interactive social preview cards."
+  },
+  {
+    "slug": "package-json-validator",
+    "name": "package.json Validator & Dependency Analyzer",
+    "category": "Validation",
+    "shortDescription": "Validate package.json syntax, check npm semver version ranges, and detect missing required fields."
+  },
+  {
+    "slug": "palette-generator",
+    "name": "Harmonious Color Palette Generator",
+    "category": "Design",
+    "shortDescription": "Generate complementary, analogous, triadic, and monochromatic color palettes from any base color."
+  },
+  {
+    "slug": "passive-to-active-voice-detector",
+    "name": "Passive Voice Detector & Writing Assistant",
+    "category": "Text",
+    "shortDescription": "Detect passive voice verb phrases in text and get actionable suggestions to convert them to active voice."
+  },
+  {
+    "slug": "password-generator",
+    "name": "Password Generator",
+    "category": "Auth",
+    "shortDescription": "Generate secure and random passwords."
+  },
+  {
+    "slug": "password-strength-checker",
+    "name": "Password Strength & Entropy Analyzer",
+    "category": "Auth",
+    "shortDescription": "Calculate Shannon entropy bits, estimated GPU crack time, and audit password security."
+  },
+  {
+    "slug": "percentage-calculator",
+    "name": "Percentage Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate percentages, percentage change, and reverse percentages."
+  },
+  {
+    "slug": "prefix-suffix-adder",
+    "name": "Prefix & Suffix Adder",
+    "category": "Text",
+    "shortDescription": "Add a custom prefix or suffix to each line of text."
+  },
+  {
+    "slug": "pressure-unit-converter",
+    "name": "Pressure Unit Converter",
+    "category": "Number",
+    "shortDescription": "Convert pressure units between Pascal (Pa), Bar, PSI, Torr / mmHg, Atmosphere (atm), and Kilopascals (kPa)."
+  },
+  {
+    "slug": "prime-number-checker",
+    "name": "Prime Number Checker",
+    "category": "Number",
+    "shortDescription": "Check if a number is prime and list its prime factors."
+  },
+  {
+    "slug": "properties-to-json",
+    "name": "Java .properties / .env to JSON Converter",
+    "category": "Data",
+    "shortDescription": "Convert dot-notated Java .properties configuration files and .env variables into nested JSON."
+  },
+  {
+    "slug": "protobuf-to-json",
+    "name": "Protobuf (.proto) to JSON Schema Converter",
+    "category": "Data",
+    "shortDescription": "Parse Protocol Buffer (proto3) message definitions into mock JSON data or JSON Schema specifications."
+  },
+  {
+    "slug": "punycode-converter",
+    "name": "Punycode (IDN) Converter",
+    "category": "Encoding",
+    "shortDescription": "Convert Internationalized Domain Names (IDNs) to Punycode (xn--) and back."
+  },
+  {
+    "slug": "px-to-rem-converter",
+    "name": "PX to REM & REM to PX Converter",
+    "category": "Design",
+    "shortDescription": "Convert pixels (px) to rem/em units and back with customizable base root font sizes."
+  },
+  {
+    "slug": "qr-code-generator",
+    "name": "QR Code Generator",
+    "category": "Data",
+    "shortDescription": "Generate QR codes for URLs or text."
+  },
+  {
+    "slug": "query-string-parser",
+    "name": "Query String to JSON & JSON to Query Converter",
+    "category": "Data",
+    "shortDescription": "Bidirectional parser converting URL query parameters to formatted JSON and JSON objects to query strings."
+  },
+  {
+    "slug": "random-number-generator",
+    "name": "Random Number Generator",
+    "category": "Number",
+    "shortDescription": "Generate random numbers with custom min, max, and quantity settings."
+  },
+  {
+    "slug": "read-time-calculator",
+    "name": "Reading & Speaking Time Calculator",
+    "category": "Text",
+    "shortDescription": "Estimate reading time, speech duration, and text readability metrics."
+  },
+  {
+    "slug": "reading-grade-level-calculator",
+    "name": "Readability & Grade Level Calculator",
+    "category": "Text",
+    "shortDescription": "Calculate Flesch Reading Ease, Flesch-Kincaid Grade Level, Gunning Fog, Coleman-Liau, and SMOG scores."
+  },
+  {
+    "slug": "readme-badge-generator",
+    "name": "README & GitHub Shields Badge Generator",
+    "category": "Dev",
+    "shortDescription": "Generate shields.io status badges for GitHub README files including npm version, build status, license, and stars."
+  },
+  {
+    "slug": "redirect-rule-generator",
+    "name": "Bulk 301/302 Redirect Rule Generator",
+    "category": "Data",
+    "shortDescription": "Generate bulk 301/302 redirects for Apache .htaccess, Nginx, Next.js config, and Cloudflare rules."
+  },
+  {
+    "slug": "regex-cheatsheet-tester",
+    "name": "RegEx Token Builder & Cheatsheet Tester",
+    "category": "Validation",
+    "shortDescription": "Interactive regular expression tester with quick-click token inserts for lookaheads, capture groups, and anchors."
+  },
+  {
+    "slug": "regex-tester",
+    "name": "Regex Tester",
+    "category": "Validation",
+    "shortDescription": "Test regular expressions with live match results."
+  },
+  {
+    "slug": "rgb-to-hex",
+    "name": "RGB to HEX Converter",
+    "category": "Design",
+    "shortDescription": "Convert RGB colors to HEX codes."
+  },
+  {
+    "slug": "ripemd160-generator",
+    "name": "RIPEMD-160 Hash Generator",
+    "category": "Encoding",
+    "shortDescription": "Compute 160-bit (40 hex characters) RIPEMD-160 cryptographic hashes used in Bitcoin address generation and PGP."
+  },
+  {
+    "slug": "robots-txt-generator",
+    "name": "Robots.txt Generator",
+    "category": "Validation",
+    "shortDescription": "Visual builder for search engine crawler directives and sitemap declarations."
+  },
+  {
+    "slug": "roman-numeral-converter",
+    "name": "Roman Numeral Converter",
+    "category": "Number",
+    "shortDescription": "Convert numbers (1–3999) to Roman numerals and back."
+  },
+  {
+    "slug": "rot13-converter",
+    "name": "ROT13 Converter",
+    "category": "Encoding",
+    "shortDescription": "Encode or decode text using the ROT13 cipher."
+  },
+  {
+    "slug": "rsa-key-generator",
+    "name": "RSA Public & Private Key Pair Generator",
+    "category": "Auth",
+    "shortDescription": "Generate cryptographically secure 2048-bit and 4096-bit RSA key pairs in standard PEM format."
+  },
+  {
+    "slug": "sales-tax-vat-calculator",
+    "name": "Sales Tax, GST & VAT Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate tax inclusive and tax exclusive pricing, gross totals, and net breakdown for custom sales tax and VAT rates."
+  },
+  {
+    "slug": "scientific-notation-converter",
+    "name": "Scientific & Engineering Notation Converter",
+    "category": "Number",
+    "shortDescription": "Convert between standard decimals, scientific notation (1.23e+8), and engineering metric prefixes (nano to tera)."
+  },
+  {
+    "slug": "screen-ppi-calculator",
+    "name": "Screen PPI & Pixel Density Calculator",
+    "category": "Number",
+    "shortDescription": "Calculate screen Pixels Per Inch (PPI), dot pitch, pixel density, and total megapixels from display resolution and size."
+  },
+  {
+    "slug": "semver-comparator",
+    "name": "SemVer Semantic Versioning Comparator",
+    "category": "Dev",
+    "shortDescription": "Compare semantic versions, validate npm range operators (^, ~, >=, x), and detect breaking major releases."
+  },
+  {
+    "slug": "sha3-hash-generator",
+    "name": "SHA-3 (Keccak) Hash Generator",
+    "category": "Encoding",
+    "shortDescription": "Generate FIPS 202 compliant SHA-3 (Keccak) cryptographic hashes (SHA3-256, SHA3-512, SHA3-384, SHA3-224)."
+  },
+  {
+    "slug": "sha512-hash-generator",
+    "name": "SHA-512 Hash Generator",
+    "category": "Encoding",
+    "shortDescription": "Compute secure 512-bit SHA-512 cryptographic checksums with client-side Web Crypto."
+  },
+  {
+    "slug": "sitemap-url-extractor",
+    "name": "XML Sitemap URL & Link Extractor",
+    "category": "Data",
+    "shortDescription": "Parse XML sitemaps to extract all <loc> URLs, lastmod timestamps, and changefreq tags into CSV or URL lists."
+  },
+  {
+    "slug": "social-media-post-formatter",
+    "name": "Social Media Unicode Font Formatter",
+    "category": "Text",
+    "shortDescription": "Convert plain text into Unicode bold, italic, monospace, cursive, and gothic font styles for social posts."
+  },
+  {
+    "slug": "social-share-url-generator",
+    "name": "Social Share URL & Intent Link Builder",
+    "category": "Text",
+    "shortDescription": "Generate 1-click social sharing links for Twitter/X, LinkedIn, Facebook, WhatsApp, Reddit, and Telegram."
+  },
+  {
+    "slug": "speed-distance-time-calculator",
+    "name": "Speed, Distance & Travel Pace Tool",
+    "category": "Number",
+    "shortDescription": "Calculate speed, elapsed travel time, total distance, and running pace across km/h, mph, m/s, knots, and min/km."
+  },
+  {
+    "slug": "sql-formatter",
+    "name": "SQL Formatter",
+    "category": "Data",
+    "shortDescription": "Beautify and format your SQL queries."
+  },
+  {
+    "slug": "sql-query-minifier",
+    "name": "SQL Query Minifier & Single-Line Optimizer",
+    "category": "Data",
+    "shortDescription": "Minify SQL queries by removing comments, collapsing whitespace, and compressing queries for embedded application strings."
+  },
+  {
+    "slug": "statistics-calculator",
+    "name": "Descriptive Statistics Calculator",
+    "category": "Number",
+    "shortDescription": "Compute Mean, Median, Mode, Variance, Standard Deviation, Quartiles, IQR, Range, and Z-Scores from numerical datasets."
+  },
+  {
+    "slug": "string-escape",
+    "name": "String Escape",
+    "category": "Encoding",
+    "shortDescription": "Escape strings for use in programming languages."
+  },
+  {
+    "slug": "string-unescape",
+    "name": "String Unescape",
+    "category": "Encoding",
+    "shortDescription": "Remove escapes from programming strings."
+  },
+  {
+    "slug": "svg-optimizer",
+    "name": "SVG Code Minifier & Optimizer",
+    "category": "Design",
+    "shortDescription": "Minify and clean SVG code by stripping XML headers, editor metadata, and redundant tags."
+  },
+  {
+    "slug": "svg-path-visualizer",
+    "name": "SVG Path Visualizer & Scaler",
+    "category": "Design",
+    "shortDescription": "Inspect, render, and convert raw SVG path d-strings into complete scalable SVG elements."
+  },
+  {
+    "slug": "svg-to-css-data-uri",
+    "name": "SVG to CSS Data URI Generator",
+    "category": "Design",
+    "shortDescription": "Convert SVG code into optimized, URL-encoded CSS background-image Data URIs."
+  },
+  {
+    "slug": "svg-to-jsx",
+    "name": "SVG to React JSX Converter",
+    "category": "Design",
+    "shortDescription": "Convert SVG code into clean React and React Native JSX components with camelCase attributes."
+  },
+  {
+    "slug": "temperature-converter",
+    "name": "Temperature Unit Converter",
+    "category": "Number",
+    "shortDescription": "Convert temperatures between Celsius, Fahrenheit, Kelvin, Rankine, and Delisle with step-by-step conversion formulas."
+  },
+  {
+    "slug": "text-case",
+    "name": "Text Case Converter",
+    "category": "Text",
+    "shortDescription": "Convert text to uppercase, lowercase, and title case."
+  },
+  {
+    "slug": "text-cliche-finder",
+    "name": "Corporate Jargon & Cliché Finder",
+    "category": "Text",
+    "shortDescription": "Identify overused business buzzwords, marketing clichés, and fluff words with concise alternatives."
+  },
+  {
+    "slug": "text-diff-checker",
+    "name": "Text Diff Checker",
+    "category": "Text",
+    "shortDescription": "Compare two texts to highlight line differences."
+  },
+  {
+    "slug": "text-indent-formatter",
+    "name": "Text Indent Formatter",
+    "category": "Text",
+    "shortDescription": "Indent or un-indent lines of text by tabs or spaces."
+  },
+  {
+    "slug": "text-reverser",
+    "name": "Text Reverser",
+    "category": "Text",
+    "shortDescription": "Reverse characters or words in a string."
+  },
+  {
+    "slug": "text-sentiment-analyzer",
+    "name": "Text Sentiment & Tone Analyzer",
+    "category": "Text",
+    "shortDescription": "Analyze sentiment polarity, emotional tone, and positive/negative word distributions in real time."
+  },
+  {
+    "slug": "text-sorter",
+    "name": "Text Sorter",
+    "category": "Text",
+    "shortDescription": "Sort text lines alphabetically (A-Z, Z-A), numerically, or by length."
+  },
+  {
+    "slug": "text-to-binary",
+    "name": "Text to Binary Converter",
+    "category": "Encoding",
+    "shortDescription": "Convert readable text into binary code."
+  },
+  {
+    "slug": "text-trimmer",
+    "name": "Text Trimmer",
+    "category": "Text",
+    "shortDescription": "Remove leading, trailing, and extra whitespace from text."
+  },
+  {
+    "slug": "text-word-wrap",
+    "name": "Text Word Wrap",
+    "category": "Text",
+    "shortDescription": "Wrap text lines at a specified column width."
+  },
+  {
+    "slug": "time-duration-calculator",
+    "name": "Time Duration Calculator",
+    "category": "Number",
+    "shortDescription": "Add, subtract, and convert time durations in hours, minutes, and seconds."
+  },
+  {
+    "slug": "timestamp-to-iso",
+    "name": "Timestamp to ISO 8601 Converter",
+    "category": "Number",
+    "shortDescription": "Convert Unix timestamps (seconds/ms) to ISO 8601 UTC and local date formats."
+  },
+  {
+    "slug": "toml-to-json",
+    "name": "TOML to JSON Converter",
+    "category": "Data",
+    "shortDescription": "Parse Cargo, PyProject, and generic TOML configuration files into clean structured JSON."
+  },
+  {
+    "slug": "tsv-to-csv",
+    "name": "TSV to CSV Converter",
+    "category": "Data",
+    "shortDescription": "Convert Tab-Separated Values (TSV) to Comma-Separated Values (CSV) and vice-versa."
+  },
+  {
+    "slug": "twitter-tweet-counter",
+    "name": "Twitter / X Thread Splitter & Counter",
+    "category": "Text",
+    "shortDescription": "Calculate weighted 280-character Twitter limits and automatically split long paragraphs into numbered threads."
+  },
+  {
+    "slug": "ulid-generator",
+    "name": "ULID Generator & Timestamp Decoder",
+    "category": "Data",
+    "shortDescription": "Generate 128-bit lexicographically sortable Crockford Base32 ULIDs and decode embedded timestamps."
+  },
+  {
+    "slug": "unicode-escape-converter",
+    "name": "Unicode & UTF-16 Escape Converter",
+    "category": "Encoding",
+    "shortDescription": "Encode text to Unicode escape sequences (A, 😀) and decode escaped strings back to UTF-8."
+  },
+  {
+    "slug": "unix-timestamp-converter",
+    "name": "Unix Timestamp Converter",
+    "category": "Data",
+    "shortDescription": "Convert Unix timestamps to readable dates."
+  },
+  {
+    "slug": "url-encoder-decoder",
+    "name": "URL Encoder/Decoder",
+    "category": "Encoding",
+    "shortDescription": "Encode or decode URL components safely."
+  },
+  {
+    "slug": "url-extractor",
+    "name": "URL & Link Extractor",
+    "category": "Text",
+    "shortDescription": "Extract and filter all HTTP/HTTPS links from raw text or source code."
+  },
+  {
+    "slug": "url-parser",
+    "name": "URL Parser",
+    "category": "Encoding",
+    "shortDescription": "Parse URLs into components and query params."
+  },
+  {
+    "slug": "url-slug-generator",
+    "name": "URL Slug Generator",
+    "category": "Text",
+    "shortDescription": "Convert titles into SEO-friendly URL slugs."
+  },
+  {
+    "slug": "user-agent-parser",
+    "name": "User Agent Parser",
+    "category": "Data",
+    "shortDescription": "Extract browser and OS info from a User Agent string."
+  },
+  {
+    "slug": "user-snippet-generator",
+    "name": "VS Code & Sublime User Snippet Generator",
+    "category": "Dev",
+    "shortDescription": "Convert raw code into VS Code, Cursor, and Sublime Text JSON code snippets with tabstops, prefix triggers, and placeholders."
+  },
+  {
+    "slug": "utm-builder",
+    "name": "UTM Campaign URL Builder",
+    "category": "Data",
+    "shortDescription": "Create trackable marketing URLs for Google Analytics with UTM parameters."
+  },
+  {
+    "slug": "uuid-generator",
+    "name": "UUID Generator",
+    "category": "Data",
+    "shortDescription": "Generate random UUIDs (v4) for your projects."
+  },
+  {
+    "slug": "websocket-frame-analyzer",
+    "name": "WebSocket & JSON-RPC Frame Inspector",
+    "category": "Validation",
+    "shortDescription": "Construct, validate, and simulate JSON-RPC 2.0 WebSocket messages and client connection scripts."
+  },
+  {
+    "slug": "whitespace-remover",
+    "name": "Whitespace Remover",
+    "category": "Text",
+    "shortDescription": "Remove all spaces, tabs, or newlines from text."
+  },
+  {
+    "slug": "whois-domain-parser",
+    "name": "WHOIS Record & RDAP Parser",
+    "category": "Data",
+    "shortDescription": "Parse raw WHOIS query text into structured registration details, expiry dates, and nameservers."
+  },
+  {
+    "slug": "word-counter",
+    "name": "Word Counter",
+    "category": "Text",
+    "shortDescription": "Count words, characters, sentences, paragraphs, and estimated reading time."
+  },
+  {
+    "slug": "xml-formatter",
+    "name": "XML Formatter",
+    "category": "Data",
+    "shortDescription": "Beautify and format XML data."
+  },
+  {
+    "slug": "xml-minifier",
+    "name": "XML Minifier",
+    "category": "Data",
+    "shortDescription": "Compress XML data by removing whitespace."
+  },
+  {
+    "slug": "xml-to-json",
+    "name": "XML to JSON Converter",
+    "category": "Data",
+    "shortDescription": "Parse XML documents and elements into clean, structured JSON objects with attribute preservation."
+  },
+  {
+    "slug": "yaml-to-json",
+    "name": "YAML to JSON Converter",
+    "category": "Data",
+    "shortDescription": "Convert YAML data to JSON format."
+  }
+]

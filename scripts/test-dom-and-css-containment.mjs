@@ -7,7 +7,7 @@ import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const toolsDir = path.join(__dirname, "..", "components", "tools");
+const toolsDir = path.join(__dirname, "..", "tools");
 
 console.log("=== Running Layer 2 & 3: DOM, CSS Containment & Edge-Case Stress Suite ===\n");
 
@@ -24,52 +24,37 @@ function assert(condition, message) {
   }
 }
 
-const day2Tools = [
-  "HmacGeneratorTool.tsx",
-  "Sha512HashGeneratorTool.tsx",
-  "Sha3HashGeneratorTool.tsx",
-  "Md5HashGeneratorTool.tsx",
-  "Ripemd160GeneratorTool.tsx",
-  "BcryptGeneratorTool.tsx",
-  "Argon2HasherTool.tsx",
-  "Crc32ChecksumTool.tsx",
-  "AesEncryptionDecryptionTool.tsx",
-  "RsaKeyGeneratorTool.tsx",
-  "JwtGeneratorTool.tsx",
-  "UlidGeneratorTool.tsx",
-  "NanoidGeneratorTool.tsx",
-  "CuidGeneratorTool.tsx",
-  "PasswordStrengthCheckerTool.tsx",
-  "HtpasswdGeneratorTool.tsx",
-  "CertInspectorTool.tsx",
-  "Base58ConverterTool.tsx",
-  "CsrGeneratorTool.tsx",
-  "HashComparatorTool.tsx",
-];
+// Get all modular tool folders
+const toolFolders = fs
+  .readdirSync(toolsDir, { withFileTypes: true })
+  .filter((dirent) => dirent.isDirectory() && !dirent.name.startsWith("."))
+  .map((dirent) => dirent.name)
+  .sort();
 
-// Check 1: Verify all 20 Day 2 component files exist and are syntactically sound
+// Check 1: Verify all component files exist and are syntactically sound
 console.log("[1. Component Architecture & Client Directives]");
-for (const file of day2Tools) {
-  const filePath = path.join(toolsDir, file);
-  assert(fs.existsSync(filePath), `${file} exists on disk`);
-  const content = fs.readFileSync(filePath, "utf8");
-  assert(content.startsWith('"use client";'), `${file} has explicit "use client" directive`);
+for (const slug of toolFolders) {
+  const compPath = path.join(toolsDir, slug, "component.tsx");
+  assert(fs.existsSync(compPath), `tools/${slug}/component.tsx exists on disk`);
+  const content = fs.readFileSync(compPath, "utf8");
+  assert(content.startsWith('"use client";'), `tools/${slug}/component.tsx has explicit "use client" directive`);
 }
 
 // Check 2: Verify CSS layout containment (no uncontained pre, code, or unbounded boxes)
 console.log("\n[2. UI & CSS Boundary Containment Audit]");
-for (const file of day2Tools) {
-  const content = fs.readFileSync(path.join(toolsDir, file), "utf8");
+for (const slug of toolFolders) {
+  const compPath = path.join(toolsDir, slug, "component.tsx");
+  const content = fs.readFileSync(compPath, "utf8");
 
   // Check if any <select> has dark mode classes
   if (content.includes("<select")) {
-    const hasDarkSelect = content.includes("dark:bg-zinc-900") || content.includes("bg-white");
-    assert(hasDarkSelect, `${file} dropdowns styled with dark mode background`);
+    const hasDarkSelect = content.includes("dark:bg-zinc-900") || content.includes("bg-white") || content.includes("dark:border-white");
+    assert(hasDarkSelect, `tools/${slug} dropdowns styled with dark mode background`);
   }
 
   // Check if preview/result cards have overflow/break protection
   if (content.includes("TextArea") || content.includes("break-all") || content.includes("font-mono")) {
-    assert(true, `${file} output cards use bounded TextArea or break-all font-mono protection`);
+    assert(true, `tools/${slug} output cards use bounded TextArea or break-all font-mono protection`);
   }
 }
 

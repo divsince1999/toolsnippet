@@ -3,7 +3,12 @@ export type ToolFaq = {
   answer: string;
 };
 
-export type ToolInfo = {
+export type ToolSeo = {
+  keywords?: string[];
+  canonicalOverride?: string;
+};
+
+export type ToolDefinition = {
   slug: string;
   name: string;
   category: string;
@@ -16,4 +21,14 @@ export type ToolInfo = {
   faqs: ToolFaq[];
   features?: string[];
   tips?: string[];
+  tags?: string[];
+  icon?: string;
+  seo?: ToolSeo;
 };
+
+export type ToolInfo = ToolDefinition;
+
+export type ToolManifestEntry = Pick<
+  ToolDefinition,
+  "slug" | "name" | "category" | "shortDescription" | "tags" | "icon"
+>;

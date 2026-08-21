@@ -6,78 +6,113 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, "..");
 
-// 1. Read components/tools/index.tsx to find registered slugs
-const registryPath = path.join(rootDir, "components", "tools", "index.tsx");
-const registryContent = fs.readFileSync(registryPath, "utf8");
-
-const registrySlugs = [];
-const registryRegex = /"([a-z0-9-]+)"\s*:\s*dynamic/g;
-let match;
-while ((match = registryRegex.exec(registryContent)) !== null) {
-  registrySlugs.push(match[1]);
-}
-
-// 2. Read lib/tools.ts (or modular files) to find tool definitions
-const toolsFilePath = path.join(rootDir, "lib", "tools.ts");
-const toolsContent = fs.readFileSync(toolsFilePath, "utf8");
-
-const definedSlugs = [];
-const slugRegex = /slug:\s*"([a-z0-9-]+)"/g;
-while ((match = slugRegex.exec(toolsContent)) !== null) {
-  definedSlugs.push(match[1]);
-}
-
-// Check category distribution
-const categoryRegex = /category:\s*"([^"]+)"/g;
-const categories = new Set();
-while ((match = categoryRegex.exec(toolsContent)) !== null) {
-  categories.add(match[1]);
-}
-
 console.log("=== ToolSnippet Registry Validation ===");
-console.log(`Total tools in metadata: ${definedSlugs.length}`);
-console.log(`Total tools in ToolRegistry: ${registrySlugs.length}`);
-console.log(`Categories found: ${Array.from(categories).join(", ")}`);
 
-// Check for duplicates
-const duplicateSlugs = definedSlugs.filter((slug, index) => definedSlugs.indexOf(slug) !== index);
-if (duplicateSlugs.length > 0) {
-  console.error(`❌ Duplicate slugs found in metadata: ${duplicateSlugs.join(", ")}`);
+let hasErrors = false;
+
+// 1. Modular Tools Validation (tools/ folder)
+const toolsDir = path.join(rootDir, "tools");
+if (!fs.existsSync(toolsDir)) {
+  console.error("❌ tools/ directory does not exist!");
   process.exit(1);
 }
 
-// Check missing in ToolRegistry
-const missingInRegistry = definedSlugs.filter(slug => !registrySlugs.includes(slug));
-if (missingInRegistry.length > 0) {
-  console.error(`❌ Tools defined in metadata but MISSING in ToolRegistry: ${missingInRegistry.join(", ")}`);
-  process.exit(1);
-}
+const toolFolders = fs
+  .readdirSync(toolsDir, { withFileTypes: true })
+  .filter((dirent) => dirent.isDirectory() && !dirent.name.startsWith("."))
+  .map((dirent) => dirent.name)
+  .sort();
 
-// Check missing in metadata
-const missingInMetadata = registrySlugs.filter(slug => !definedSlugs.includes(slug));
-if (missingInMetadata.length > 0) {
-  console.error(`❌ Tools in ToolRegistry but MISSING in metadata: ${missingInMetadata.join(", ")}`);
-  process.exit(1);
-}
+console.log(`📁 Modular tools directory: found ${toolFolders.length} tool folder(s)`);
 
-// Check that physical component files exist
-let missingFiles = 0;
-for (const slug of registrySlugs) {
-  // Find component import path in index.tsx
-  const importRegex = new RegExp(`"${slug}"\\s*:\\s*dynamic\\(\\(\\)\\s*=>\\s*import\\(["']\\.\\/([^"']+)["']\\)`);
-  const fileMatch = registryContent.match(importRegex);
-  if (fileMatch) {
-    const componentName = fileMatch[1];
-    const compFilePath = path.join(rootDir, "components", "tools", `${componentName}.tsx`);
-    if (!fs.existsSync(compFilePath)) {
-      console.error(`❌ Component file missing for "${slug}": ${compFilePath}`);
-      missingFiles++;
+const modularSlugs = [];
+const categories = new Set();
+
+for (const folder of toolFolders) {
+  const folderPath = path.join(toolsDir, folder);
+  const defPath = path.join(folderPath, "definition.ts");
+  const compPath = path.join(folderPath, "component.tsx");
+  const indexPath = path.join(folderPath, "index.ts");
+
+  if (!fs.existsSync(defPath)) {
+    console.error(`❌ [${folder}] Missing definition.ts`);
+    hasErrors = true;
+  }
+  if (!fs.existsSync(compPath)) {
+    console.error(`❌ [${folder}] Missing component.tsx`);
+    hasErrors = true;
+  }
+  if (!fs.existsSync(indexPath)) {
+    console.error(`❌ [${folder}] Missing index.ts`);
+    hasErrors = true;
+  }
+
+  if (fs.existsSync(defPath)) {
+    const defContent = fs.readFileSync(defPath, "utf8");
+    const slugMatch = defContent.match(/["']?slug["']?\s*:\s*["']([^"']+)["']/);
+    const categoryMatch = defContent.match(/["']?category["']?\s*:\s*["']([^"']+)["']/);
+
+    if (!slugMatch) {
+      console.error(`❌ [${folder}] definition.ts does not declare a valid slug`);
+      hasErrors = true;
+    } else {
+      modularSlugs.push(slugMatch[1]);
+    }
+
+    if (categoryMatch) {
+      categories.add(categoryMatch[1]);
     }
   }
 }
 
-if (missingFiles > 0) {
+// Check duplicate slugs in modular directory
+const duplicateModular = modularSlugs.filter((s, idx) => modularSlugs.indexOf(s) !== idx);
+if (duplicateModular.length > 0) {
+  console.error(`❌ Duplicate slugs in tools/ directory: ${duplicateModular.join(", ")}`);
+  hasErrors = true;
+}
+
+// Check sync with lib/tools/registry.ts and lib/tools/manifest.json
+const registryTsPath = path.join(rootDir, "lib", "tools", "registry.ts");
+const manifestJsonPath = path.join(rootDir, "lib", "tools", "manifest.json");
+
+if (!fs.existsSync(registryTsPath)) {
+  console.error("❌ lib/tools/registry.ts missing");
+  hasErrors = true;
+} else {
+  const registryContent = fs.readFileSync(registryTsPath, "utf8");
+  for (const slug of modularSlugs) {
+    if (!registryContent.includes(`"${slug}": dynamic`)) {
+      console.error(`❌ Slug "${slug}" from tools/ is missing in lib/tools/registry.ts`);
+      hasErrors = true;
+    }
+  }
+}
+
+if (!fs.existsSync(manifestJsonPath)) {
+  console.error("❌ lib/tools/manifest.json missing");
+  hasErrors = true;
+} else {
+  try {
+    const manifest = JSON.parse(fs.readFileSync(manifestJsonPath, "utf8"));
+    const manifestSlugs = manifest.map((m) => m.slug);
+    for (const slug of modularSlugs) {
+      if (!manifestSlugs.includes(slug)) {
+        console.error(`❌ Slug "${slug}" from tools/ is missing in lib/tools/manifest.json`);
+        hasErrors = true;
+      }
+    }
+    console.log(`📋 Total tools verified: ${manifest.length}`);
+    console.log(`   Categories: ${Array.from(categories).join(", ")}`);
+  } catch {
+    console.error("❌ lib/tools/manifest.json is invalid JSON");
+    hasErrors = true;
+  }
+}
+
+if (hasErrors) {
+  console.error("\n❌ Validation failed with errors.");
   process.exit(1);
 }
 
-console.log("✅ All tools are 100% matched, registered, and validated successfully!");
+console.log("✅ All registries are 100% synchronized and validated successfully!\n");

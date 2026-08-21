@@ -1,54 +1,38 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { tools } from "@/lib/tools";
+import { Suspense } from "react";
+import ToolsDirectory from "@/components/ToolsDirectory";
 
 export const metadata: Metadata = {
-  title: "All Tools | ToolSnippet",
+  title: "All Developer Tools & Utilities | ToolSnippet Directory",
   description:
-    "Browse all developer tools including text, encoding, auth, validation, and data utilities.",
+    "Explore 170+ free online developer tools: JSON, YAML, SQL, XML, CSV converters, Base64, hashing, JWT, regex, and encoding utilities.",
   alternates: {
     canonical: "/tools",
   },
 };
 
 export default function ToolsPage() {
-  const categories = Array.from(new Set(tools.map((t) => t.category)));
-
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-25">
-      <section>
-        <h1 className="mb-3 text-4xl font-bold tracking-tight text-center mb-4">All Tools</h1>
-        <p className="text-gray-600 dark:text-gray-300 text-center">
-          Find practical tools grouped by category for daily development work.
+    <main className="mx-auto w-full max-w-6xl px-4 py-12 md:py-16">
+      <section className="mb-10 text-center">
+        <h1 className="mb-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+          Developer Tools Directory
+        </h1>
+        <p className="mx-auto max-w-2xl text-sm text-gray-600 dark:text-gray-400 sm:text-base">
+          Browse and search 170+ fast, private browser-based utilities for text, schema conversion, cryptography, networking, and validation.
         </p>
       </section>
 
-      <section className="mt-10 space-y-10">
-        {categories.map((category) => {
-          const items = tools.filter((tool) => tool.category === category);
-          if (items.length === 0) {
-            return null;
-          }
-
-          return (
-            <div key={category}>
-              <h2 className="text-xl font-semibold">{category}</h2>
-              <ul className="mt-5 space-y-2 columns-3">
-                {items.map((tool) => (
-                  <li key={tool.slug}>
-                    <Link
-                      href={`/tools/${tool.slug}`}
-                      className="font-medium text-primary hover:underline"
-                    >
-                      {tool.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })}
-      </section>
+      <Suspense
+        fallback={
+          <div className="flex h-64 items-center justify-center">
+            <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary-solid border-t-transparent" />
+          </div>
+        }
+      >
+        <ToolsDirectory />
+      </Suspense>
     </main>
   );
 }
+
