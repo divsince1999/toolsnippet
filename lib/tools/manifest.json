@@ -552,6 +552,12 @@
     "shortDescription": "Instant search and reference directory for all RFC HTTP status codes with caching and retry semantics."
   },
   {
+    "slug": "image-compressor",
+    "name": "Image Compressor",
+    "category": "Design",
+    "shortDescription": "Compress, optimize, and resize JPG, PNG, and WebP images directly in your browser with zero server uploads."
+  },
+  {
     "slug": "image-to-base64",
     "name": "Image to Base64",
     "category": "Encoding",

@@ -106,146 +106,147 @@ import { definition as def_88_html_to_markdown } from "@/tools/html-to-markdown/
 import { definition as def_89_htpasswd_generator } from "@/tools/htpasswd-generator/definition";
 import { definition as def_90_http_headers_parser } from "@/tools/http-headers-parser/definition";
 import { definition as def_91_http_status_code_lookup } from "@/tools/http-status-code-lookup/definition";
-import { definition as def_92_image_to_base64 } from "@/tools/image-to-base64/definition";
-import { definition as def_93_invisible_character_detector } from "@/tools/invisible-character-detector/definition";
-import { definition as def_94_ip_range_to_cidr } from "@/tools/ip-range-to-cidr/definition";
-import { definition as def_95_ipv4_subnet_calculator } from "@/tools/ipv4-subnet-calculator/definition";
-import { definition as def_96_ipv4_to_ipv6_converter } from "@/tools/ipv4-to-ipv6-converter/definition";
-import { definition as def_97_js_formatter } from "@/tools/js-formatter/definition";
-import { definition as def_98_js_minifier } from "@/tools/js-minifier/definition";
-import { definition as def_99_js_obfuscation_detector } from "@/tools/js-obfuscation-detector/definition";
-import { definition as def_100_json_formatter } from "@/tools/json-formatter/definition";
-import { definition as def_101_json_key_sorter } from "@/tools/json-key-sorter/definition";
-import { definition as def_102_json_ld_generator } from "@/tools/json-ld-generator/definition";
-import { definition as def_103_json_minifier } from "@/tools/json-minifier/definition";
-import { definition as def_104_json_schema_to_typescript } from "@/tools/json-schema-to-typescript/definition";
-import { definition as def_105_json_size_analyzer } from "@/tools/json-size-analyzer/definition";
-import { definition as def_106_json_to_csv } from "@/tools/json-to-csv/definition";
-import { definition as def_107_json_to_go_struct } from "@/tools/json-to-go-struct/definition";
-import { definition as def_108_json_to_graphql_schema } from "@/tools/json-to-graphql-schema/definition";
-import { definition as def_109_json_to_json_schema } from "@/tools/json-to-json-schema/definition";
-import { definition as def_110_json_to_kotlin } from "@/tools/json-to-kotlin/definition";
-import { definition as def_111_json_to_properties } from "@/tools/json-to-properties/definition";
-import { definition as def_112_json_to_python_pydantic } from "@/tools/json-to-python-pydantic/definition";
-import { definition as def_113_json_to_rust_serde } from "@/tools/json-to-rust-serde/definition";
-import { definition as def_114_json_to_sql_schema } from "@/tools/json-to-sql-schema/definition";
-import { definition as def_115_json_to_toml } from "@/tools/json-to-toml/definition";
-import { definition as def_116_json_to_typescript } from "@/tools/json-to-typescript/definition";
-import { definition as def_117_json_to_xml } from "@/tools/json-to-xml/definition";
-import { definition as def_118_json_to_xml_schema_xsd } from "@/tools/json-to-xml-schema-xsd/definition";
-import { definition as def_119_json_to_yaml } from "@/tools/json-to-yaml/definition";
-import { definition as def_120_json_to_zod } from "@/tools/json-to-zod/definition";
-import { definition as def_121_json_validator } from "@/tools/json-validator/definition";
-import { definition as def_122_jwt_decoder } from "@/tools/jwt-decoder/definition";
-import { definition as def_123_jwt_generator } from "@/tools/jwt-generator/definition";
-import { definition as def_124_keyword_density_analyzer } from "@/tools/keyword-density-analyzer/definition";
-import { definition as def_125_license_text_generator } from "@/tools/license-text-generator/definition";
-import { definition as def_126_line_counter } from "@/tools/line-counter/definition";
-import { definition as def_127_line_numberer } from "@/tools/line-numberer/definition";
-import { definition as def_128_list_randomizer } from "@/tools/list-randomizer/definition";
-import { definition as def_129_lorem_ipsum_generator } from "@/tools/lorem-ipsum-generator/definition";
-import { definition as def_130_mac_address_formatter } from "@/tools/mac-address-formatter/definition";
-import { definition as def_131_markdown_heading_extractor } from "@/tools/markdown-heading-extractor/definition";
-import { definition as def_132_markdown_previewer } from "@/tools/markdown-previewer/definition";
-import { definition as def_133_markdown_table_to_csv } from "@/tools/markdown-table-to-csv/definition";
-import { definition as def_134_markdown_to_html } from "@/tools/markdown-to-html/definition";
-import { definition as def_135_markdown_to_pdf_cleaner } from "@/tools/markdown-to-pdf-cleaner/definition";
-import { definition as def_136_matrix_calculator } from "@/tools/matrix-calculator/definition";
-import { definition as def_137_md5_hash_generator } from "@/tools/md5-hash-generator/definition";
-import { definition as def_138_meta_description_previewer } from "@/tools/meta-description-previewer/definition";
-import { definition as def_139_meta_robots_tag_generator } from "@/tools/meta-robots-tag-generator/definition";
-import { definition as def_140_meta_tag_generator } from "@/tools/meta-tag-generator/definition";
-import { definition as def_141_mime_type_lookup } from "@/tools/mime-type-lookup/definition";
-import { definition as def_142_modulo_inverse_calculator } from "@/tools/modulo-inverse-calculator/definition";
-import { definition as def_143_morse_code_converter } from "@/tools/morse-code-converter/definition";
-import { definition as def_144_nanoid_generator } from "@/tools/nanoid-generator/definition";
-import { definition as def_145_ndjson_to_json } from "@/tools/ndjson-to-json/definition";
-import { definition as def_146_nginx_config_generator } from "@/tools/nginx-config-generator/definition";
-import { definition as def_147_number_base_converter } from "@/tools/number-base-converter/definition";
-import { definition as def_148_number_to_words } from "@/tools/number-to-words/definition";
-import { definition as def_149_open_graph_meta_generator } from "@/tools/open-graph-meta-generator/definition";
-import { definition as def_150_package_json_validator } from "@/tools/package-json-validator/definition";
-import { definition as def_151_palette_generator } from "@/tools/palette-generator/definition";
-import { definition as def_152_passive_to_active_voice_detector } from "@/tools/passive-to-active-voice-detector/definition";
-import { definition as def_153_password_generator } from "@/tools/password-generator/definition";
-import { definition as def_154_password_strength_checker } from "@/tools/password-strength-checker/definition";
-import { definition as def_155_percentage_calculator } from "@/tools/percentage-calculator/definition";
-import { definition as def_156_prefix_suffix_adder } from "@/tools/prefix-suffix-adder/definition";
-import { definition as def_157_pressure_unit_converter } from "@/tools/pressure-unit-converter/definition";
-import { definition as def_158_prime_number_checker } from "@/tools/prime-number-checker/definition";
-import { definition as def_159_properties_to_json } from "@/tools/properties-to-json/definition";
-import { definition as def_160_protobuf_to_json } from "@/tools/protobuf-to-json/definition";
-import { definition as def_161_punycode_converter } from "@/tools/punycode-converter/definition";
-import { definition as def_162_px_to_rem_converter } from "@/tools/px-to-rem-converter/definition";
-import { definition as def_163_qr_code_generator } from "@/tools/qr-code-generator/definition";
-import { definition as def_164_query_string_parser } from "@/tools/query-string-parser/definition";
-import { definition as def_165_random_number_generator } from "@/tools/random-number-generator/definition";
-import { definition as def_166_read_time_calculator } from "@/tools/read-time-calculator/definition";
-import { definition as def_167_reading_grade_level_calculator } from "@/tools/reading-grade-level-calculator/definition";
-import { definition as def_168_readme_badge_generator } from "@/tools/readme-badge-generator/definition";
-import { definition as def_169_redirect_rule_generator } from "@/tools/redirect-rule-generator/definition";
-import { definition as def_170_regex_cheatsheet_tester } from "@/tools/regex-cheatsheet-tester/definition";
-import { definition as def_171_regex_tester } from "@/tools/regex-tester/definition";
-import { definition as def_172_rgb_to_hex } from "@/tools/rgb-to-hex/definition";
-import { definition as def_173_ripemd160_generator } from "@/tools/ripemd160-generator/definition";
-import { definition as def_174_robots_txt_generator } from "@/tools/robots-txt-generator/definition";
-import { definition as def_175_roman_numeral_converter } from "@/tools/roman-numeral-converter/definition";
-import { definition as def_176_rot13_converter } from "@/tools/rot13-converter/definition";
-import { definition as def_177_rsa_key_generator } from "@/tools/rsa-key-generator/definition";
-import { definition as def_178_sales_tax_vat_calculator } from "@/tools/sales-tax-vat-calculator/definition";
-import { definition as def_179_scientific_notation_converter } from "@/tools/scientific-notation-converter/definition";
-import { definition as def_180_screen_ppi_calculator } from "@/tools/screen-ppi-calculator/definition";
-import { definition as def_181_semver_comparator } from "@/tools/semver-comparator/definition";
-import { definition as def_182_sha3_hash_generator } from "@/tools/sha3-hash-generator/definition";
-import { definition as def_183_sha512_hash_generator } from "@/tools/sha512-hash-generator/definition";
-import { definition as def_184_sitemap_url_extractor } from "@/tools/sitemap-url-extractor/definition";
-import { definition as def_185_social_media_post_formatter } from "@/tools/social-media-post-formatter/definition";
-import { definition as def_186_social_share_url_generator } from "@/tools/social-share-url-generator/definition";
-import { definition as def_187_speed_distance_time_calculator } from "@/tools/speed-distance-time-calculator/definition";
-import { definition as def_188_sql_formatter } from "@/tools/sql-formatter/definition";
-import { definition as def_189_sql_query_minifier } from "@/tools/sql-query-minifier/definition";
-import { definition as def_190_statistics_calculator } from "@/tools/statistics-calculator/definition";
-import { definition as def_191_string_escape } from "@/tools/string-escape/definition";
-import { definition as def_192_string_unescape } from "@/tools/string-unescape/definition";
-import { definition as def_193_svg_optimizer } from "@/tools/svg-optimizer/definition";
-import { definition as def_194_svg_path_visualizer } from "@/tools/svg-path-visualizer/definition";
-import { definition as def_195_svg_to_css_data_uri } from "@/tools/svg-to-css-data-uri/definition";
-import { definition as def_196_svg_to_jsx } from "@/tools/svg-to-jsx/definition";
-import { definition as def_197_temperature_converter } from "@/tools/temperature-converter/definition";
-import { definition as def_198_text_case } from "@/tools/text-case/definition";
-import { definition as def_199_text_cliche_finder } from "@/tools/text-cliche-finder/definition";
-import { definition as def_200_text_diff_checker } from "@/tools/text-diff-checker/definition";
-import { definition as def_201_text_indent_formatter } from "@/tools/text-indent-formatter/definition";
-import { definition as def_202_text_reverser } from "@/tools/text-reverser/definition";
-import { definition as def_203_text_sentiment_analyzer } from "@/tools/text-sentiment-analyzer/definition";
-import { definition as def_204_text_sorter } from "@/tools/text-sorter/definition";
-import { definition as def_205_text_to_binary } from "@/tools/text-to-binary/definition";
-import { definition as def_206_text_trimmer } from "@/tools/text-trimmer/definition";
-import { definition as def_207_text_word_wrap } from "@/tools/text-word-wrap/definition";
-import { definition as def_208_time_duration_calculator } from "@/tools/time-duration-calculator/definition";
-import { definition as def_209_timestamp_to_iso } from "@/tools/timestamp-to-iso/definition";
-import { definition as def_210_toml_to_json } from "@/tools/toml-to-json/definition";
-import { definition as def_211_tsv_to_csv } from "@/tools/tsv-to-csv/definition";
-import { definition as def_212_twitter_tweet_counter } from "@/tools/twitter-tweet-counter/definition";
-import { definition as def_213_ulid_generator } from "@/tools/ulid-generator/definition";
-import { definition as def_214_unicode_escape_converter } from "@/tools/unicode-escape-converter/definition";
-import { definition as def_215_unix_timestamp_converter } from "@/tools/unix-timestamp-converter/definition";
-import { definition as def_216_url_encoder_decoder } from "@/tools/url-encoder-decoder/definition";
-import { definition as def_217_url_extractor } from "@/tools/url-extractor/definition";
-import { definition as def_218_url_parser } from "@/tools/url-parser/definition";
-import { definition as def_219_url_slug_generator } from "@/tools/url-slug-generator/definition";
-import { definition as def_220_user_agent_parser } from "@/tools/user-agent-parser/definition";
-import { definition as def_221_user_snippet_generator } from "@/tools/user-snippet-generator/definition";
-import { definition as def_222_utm_builder } from "@/tools/utm-builder/definition";
-import { definition as def_223_uuid_generator } from "@/tools/uuid-generator/definition";
-import { definition as def_224_websocket_frame_analyzer } from "@/tools/websocket-frame-analyzer/definition";
-import { definition as def_225_whitespace_remover } from "@/tools/whitespace-remover/definition";
-import { definition as def_226_whois_domain_parser } from "@/tools/whois-domain-parser/definition";
-import { definition as def_227_word_counter } from "@/tools/word-counter/definition";
-import { definition as def_228_xml_formatter } from "@/tools/xml-formatter/definition";
-import { definition as def_229_xml_minifier } from "@/tools/xml-minifier/definition";
-import { definition as def_230_xml_to_json } from "@/tools/xml-to-json/definition";
-import { definition as def_231_yaml_to_json } from "@/tools/yaml-to-json/definition";
+import { definition as def_92_image_compressor } from "@/tools/image-compressor/definition";
+import { definition as def_93_image_to_base64 } from "@/tools/image-to-base64/definition";
+import { definition as def_94_invisible_character_detector } from "@/tools/invisible-character-detector/definition";
+import { definition as def_95_ip_range_to_cidr } from "@/tools/ip-range-to-cidr/definition";
+import { definition as def_96_ipv4_subnet_calculator } from "@/tools/ipv4-subnet-calculator/definition";
+import { definition as def_97_ipv4_to_ipv6_converter } from "@/tools/ipv4-to-ipv6-converter/definition";
+import { definition as def_98_js_formatter } from "@/tools/js-formatter/definition";
+import { definition as def_99_js_minifier } from "@/tools/js-minifier/definition";
+import { definition as def_100_js_obfuscation_detector } from "@/tools/js-obfuscation-detector/definition";
+import { definition as def_101_json_formatter } from "@/tools/json-formatter/definition";
+import { definition as def_102_json_key_sorter } from "@/tools/json-key-sorter/definition";
+import { definition as def_103_json_ld_generator } from "@/tools/json-ld-generator/definition";
+import { definition as def_104_json_minifier } from "@/tools/json-minifier/definition";
+import { definition as def_105_json_schema_to_typescript } from "@/tools/json-schema-to-typescript/definition";
+import { definition as def_106_json_size_analyzer } from "@/tools/json-size-analyzer/definition";
+import { definition as def_107_json_to_csv } from "@/tools/json-to-csv/definition";
+import { definition as def_108_json_to_go_struct } from "@/tools/json-to-go-struct/definition";
+import { definition as def_109_json_to_graphql_schema } from "@/tools/json-to-graphql-schema/definition";
+import { definition as def_110_json_to_json_schema } from "@/tools/json-to-json-schema/definition";
+import { definition as def_111_json_to_kotlin } from "@/tools/json-to-kotlin/definition";
+import { definition as def_112_json_to_properties } from "@/tools/json-to-properties/definition";
+import { definition as def_113_json_to_python_pydantic } from "@/tools/json-to-python-pydantic/definition";
+import { definition as def_114_json_to_rust_serde } from "@/tools/json-to-rust-serde/definition";
+import { definition as def_115_json_to_sql_schema } from "@/tools/json-to-sql-schema/definition";
+import { definition as def_116_json_to_toml } from "@/tools/json-to-toml/definition";
+import { definition as def_117_json_to_typescript } from "@/tools/json-to-typescript/definition";
+import { definition as def_118_json_to_xml } from "@/tools/json-to-xml/definition";
+import { definition as def_119_json_to_xml_schema_xsd } from "@/tools/json-to-xml-schema-xsd/definition";
+import { definition as def_120_json_to_yaml } from "@/tools/json-to-yaml/definition";
+import { definition as def_121_json_to_zod } from "@/tools/json-to-zod/definition";
+import { definition as def_122_json_validator } from "@/tools/json-validator/definition";
+import { definition as def_123_jwt_decoder } from "@/tools/jwt-decoder/definition";
+import { definition as def_124_jwt_generator } from "@/tools/jwt-generator/definition";
+import { definition as def_125_keyword_density_analyzer } from "@/tools/keyword-density-analyzer/definition";
+import { definition as def_126_license_text_generator } from "@/tools/license-text-generator/definition";
+import { definition as def_127_line_counter } from "@/tools/line-counter/definition";
+import { definition as def_128_line_numberer } from "@/tools/line-numberer/definition";
+import { definition as def_129_list_randomizer } from "@/tools/list-randomizer/definition";
+import { definition as def_130_lorem_ipsum_generator } from "@/tools/lorem-ipsum-generator/definition";
+import { definition as def_131_mac_address_formatter } from "@/tools/mac-address-formatter/definition";
+import { definition as def_132_markdown_heading_extractor } from "@/tools/markdown-heading-extractor/definition";
+import { definition as def_133_markdown_previewer } from "@/tools/markdown-previewer/definition";
+import { definition as def_134_markdown_table_to_csv } from "@/tools/markdown-table-to-csv/definition";
+import { definition as def_135_markdown_to_html } from "@/tools/markdown-to-html/definition";
+import { definition as def_136_markdown_to_pdf_cleaner } from "@/tools/markdown-to-pdf-cleaner/definition";
+import { definition as def_137_matrix_calculator } from "@/tools/matrix-calculator/definition";
+import { definition as def_138_md5_hash_generator } from "@/tools/md5-hash-generator/definition";
+import { definition as def_139_meta_description_previewer } from "@/tools/meta-description-previewer/definition";
+import { definition as def_140_meta_robots_tag_generator } from "@/tools/meta-robots-tag-generator/definition";
+import { definition as def_141_meta_tag_generator } from "@/tools/meta-tag-generator/definition";
+import { definition as def_142_mime_type_lookup } from "@/tools/mime-type-lookup/definition";
+import { definition as def_143_modulo_inverse_calculator } from "@/tools/modulo-inverse-calculator/definition";
+import { definition as def_144_morse_code_converter } from "@/tools/morse-code-converter/definition";
+import { definition as def_145_nanoid_generator } from "@/tools/nanoid-generator/definition";
+import { definition as def_146_ndjson_to_json } from "@/tools/ndjson-to-json/definition";
+import { definition as def_147_nginx_config_generator } from "@/tools/nginx-config-generator/definition";
+import { definition as def_148_number_base_converter } from "@/tools/number-base-converter/definition";
+import { definition as def_149_number_to_words } from "@/tools/number-to-words/definition";
+import { definition as def_150_open_graph_meta_generator } from "@/tools/open-graph-meta-generator/definition";
+import { definition as def_151_package_json_validator } from "@/tools/package-json-validator/definition";
+import { definition as def_152_palette_generator } from "@/tools/palette-generator/definition";
+import { definition as def_153_passive_to_active_voice_detector } from "@/tools/passive-to-active-voice-detector/definition";
+import { definition as def_154_password_generator } from "@/tools/password-generator/definition";
+import { definition as def_155_password_strength_checker } from "@/tools/password-strength-checker/definition";
+import { definition as def_156_percentage_calculator } from "@/tools/percentage-calculator/definition";
+import { definition as def_157_prefix_suffix_adder } from "@/tools/prefix-suffix-adder/definition";
+import { definition as def_158_pressure_unit_converter } from "@/tools/pressure-unit-converter/definition";
+import { definition as def_159_prime_number_checker } from "@/tools/prime-number-checker/definition";
+import { definition as def_160_properties_to_json } from "@/tools/properties-to-json/definition";
+import { definition as def_161_protobuf_to_json } from "@/tools/protobuf-to-json/definition";
+import { definition as def_162_punycode_converter } from "@/tools/punycode-converter/definition";
+import { definition as def_163_px_to_rem_converter } from "@/tools/px-to-rem-converter/definition";
+import { definition as def_164_qr_code_generator } from "@/tools/qr-code-generator/definition";
+import { definition as def_165_query_string_parser } from "@/tools/query-string-parser/definition";
+import { definition as def_166_random_number_generator } from "@/tools/random-number-generator/definition";
+import { definition as def_167_read_time_calculator } from "@/tools/read-time-calculator/definition";
+import { definition as def_168_reading_grade_level_calculator } from "@/tools/reading-grade-level-calculator/definition";
+import { definition as def_169_readme_badge_generator } from "@/tools/readme-badge-generator/definition";
+import { definition as def_170_redirect_rule_generator } from "@/tools/redirect-rule-generator/definition";
+import { definition as def_171_regex_cheatsheet_tester } from "@/tools/regex-cheatsheet-tester/definition";
+import { definition as def_172_regex_tester } from "@/tools/regex-tester/definition";
+import { definition as def_173_rgb_to_hex } from "@/tools/rgb-to-hex/definition";
+import { definition as def_174_ripemd160_generator } from "@/tools/ripemd160-generator/definition";
+import { definition as def_175_robots_txt_generator } from "@/tools/robots-txt-generator/definition";
+import { definition as def_176_roman_numeral_converter } from "@/tools/roman-numeral-converter/definition";
+import { definition as def_177_rot13_converter } from "@/tools/rot13-converter/definition";
+import { definition as def_178_rsa_key_generator } from "@/tools/rsa-key-generator/definition";
+import { definition as def_179_sales_tax_vat_calculator } from "@/tools/sales-tax-vat-calculator/definition";
+import { definition as def_180_scientific_notation_converter } from "@/tools/scientific-notation-converter/definition";
+import { definition as def_181_screen_ppi_calculator } from "@/tools/screen-ppi-calculator/definition";
+import { definition as def_182_semver_comparator } from "@/tools/semver-comparator/definition";
+import { definition as def_183_sha3_hash_generator } from "@/tools/sha3-hash-generator/definition";
+import { definition as def_184_sha512_hash_generator } from "@/tools/sha512-hash-generator/definition";
+import { definition as def_185_sitemap_url_extractor } from "@/tools/sitemap-url-extractor/definition";
+import { definition as def_186_social_media_post_formatter } from "@/tools/social-media-post-formatter/definition";
+import { definition as def_187_social_share_url_generator } from "@/tools/social-share-url-generator/definition";
+import { definition as def_188_speed_distance_time_calculator } from "@/tools/speed-distance-time-calculator/definition";
+import { definition as def_189_sql_formatter } from "@/tools/sql-formatter/definition";
+import { definition as def_190_sql_query_minifier } from "@/tools/sql-query-minifier/definition";
+import { definition as def_191_statistics_calculator } from "@/tools/statistics-calculator/definition";
+import { definition as def_192_string_escape } from "@/tools/string-escape/definition";
+import { definition as def_193_string_unescape } from "@/tools/string-unescape/definition";
+import { definition as def_194_svg_optimizer } from "@/tools/svg-optimizer/definition";
+import { definition as def_195_svg_path_visualizer } from "@/tools/svg-path-visualizer/definition";
+import { definition as def_196_svg_to_css_data_uri } from "@/tools/svg-to-css-data-uri/definition";
+import { definition as def_197_svg_to_jsx } from "@/tools/svg-to-jsx/definition";
+import { definition as def_198_temperature_converter } from "@/tools/temperature-converter/definition";
+import { definition as def_199_text_case } from "@/tools/text-case/definition";
+import { definition as def_200_text_cliche_finder } from "@/tools/text-cliche-finder/definition";
+import { definition as def_201_text_diff_checker } from "@/tools/text-diff-checker/definition";
+import { definition as def_202_text_indent_formatter } from "@/tools/text-indent-formatter/definition";
+import { definition as def_203_text_reverser } from "@/tools/text-reverser/definition";
+import { definition as def_204_text_sentiment_analyzer } from "@/tools/text-sentiment-analyzer/definition";
+import { definition as def_205_text_sorter } from "@/tools/text-sorter/definition";
+import { definition as def_206_text_to_binary } from "@/tools/text-to-binary/definition";
+import { definition as def_207_text_trimmer } from "@/tools/text-trimmer/definition";
+import { definition as def_208_text_word_wrap } from "@/tools/text-word-wrap/definition";
+import { definition as def_209_time_duration_calculator } from "@/tools/time-duration-calculator/definition";
+import { definition as def_210_timestamp_to_iso } from "@/tools/timestamp-to-iso/definition";
+import { definition as def_211_toml_to_json } from "@/tools/toml-to-json/definition";
+import { definition as def_212_tsv_to_csv } from "@/tools/tsv-to-csv/definition";
+import { definition as def_213_twitter_tweet_counter } from "@/tools/twitter-tweet-counter/definition";
+import { definition as def_214_ulid_generator } from "@/tools/ulid-generator/definition";
+import { definition as def_215_unicode_escape_converter } from "@/tools/unicode-escape-converter/definition";
+import { definition as def_216_unix_timestamp_converter } from "@/tools/unix-timestamp-converter/definition";
+import { definition as def_217_url_encoder_decoder } from "@/tools/url-encoder-decoder/definition";
+import { definition as def_218_url_extractor } from "@/tools/url-extractor/definition";
+import { definition as def_219_url_parser } from "@/tools/url-parser/definition";
+import { definition as def_220_url_slug_generator } from "@/tools/url-slug-generator/definition";
+import { definition as def_221_user_agent_parser } from "@/tools/user-agent-parser/definition";
+import { definition as def_222_user_snippet_generator } from "@/tools/user-snippet-generator/definition";
+import { definition as def_223_utm_builder } from "@/tools/utm-builder/definition";
+import { definition as def_224_uuid_generator } from "@/tools/uuid-generator/definition";
+import { definition as def_225_websocket_frame_analyzer } from "@/tools/websocket-frame-analyzer/definition";
+import { definition as def_226_whitespace_remover } from "@/tools/whitespace-remover/definition";
+import { definition as def_227_whois_domain_parser } from "@/tools/whois-domain-parser/definition";
+import { definition as def_228_word_counter } from "@/tools/word-counter/definition";
+import { definition as def_229_xml_formatter } from "@/tools/xml-formatter/definition";
+import { definition as def_230_xml_minifier } from "@/tools/xml-minifier/definition";
+import { definition as def_231_xml_to_json } from "@/tools/xml-to-json/definition";
+import { definition as def_232_yaml_to_json } from "@/tools/yaml-to-json/definition";
 export const tools: ToolDefinition[] = [
   def_0_ad_copy_character_counter,
   def_1_advanced_case_converter,
@@ -339,146 +340,147 @@ export const tools: ToolDefinition[] = [
   def_89_htpasswd_generator,
   def_90_http_headers_parser,
   def_91_http_status_code_lookup,
-  def_92_image_to_base64,
-  def_93_invisible_character_detector,
-  def_94_ip_range_to_cidr,
-  def_95_ipv4_subnet_calculator,
-  def_96_ipv4_to_ipv6_converter,
-  def_97_js_formatter,
-  def_98_js_minifier,
-  def_99_js_obfuscation_detector,
-  def_100_json_formatter,
-  def_101_json_key_sorter,
-  def_102_json_ld_generator,
-  def_103_json_minifier,
-  def_104_json_schema_to_typescript,
-  def_105_json_size_analyzer,
-  def_106_json_to_csv,
-  def_107_json_to_go_struct,
-  def_108_json_to_graphql_schema,
-  def_109_json_to_json_schema,
-  def_110_json_to_kotlin,
-  def_111_json_to_properties,
-  def_112_json_to_python_pydantic,
-  def_113_json_to_rust_serde,
-  def_114_json_to_sql_schema,
-  def_115_json_to_toml,
-  def_116_json_to_typescript,
-  def_117_json_to_xml,
-  def_118_json_to_xml_schema_xsd,
-  def_119_json_to_yaml,
-  def_120_json_to_zod,
-  def_121_json_validator,
-  def_122_jwt_decoder,
-  def_123_jwt_generator,
-  def_124_keyword_density_analyzer,
-  def_125_license_text_generator,
-  def_126_line_counter,
-  def_127_line_numberer,
-  def_128_list_randomizer,
-  def_129_lorem_ipsum_generator,
-  def_130_mac_address_formatter,
-  def_131_markdown_heading_extractor,
-  def_132_markdown_previewer,
-  def_133_markdown_table_to_csv,
-  def_134_markdown_to_html,
-  def_135_markdown_to_pdf_cleaner,
-  def_136_matrix_calculator,
-  def_137_md5_hash_generator,
-  def_138_meta_description_previewer,
-  def_139_meta_robots_tag_generator,
-  def_140_meta_tag_generator,
-  def_141_mime_type_lookup,
-  def_142_modulo_inverse_calculator,
-  def_143_morse_code_converter,
-  def_144_nanoid_generator,
-  def_145_ndjson_to_json,
-  def_146_nginx_config_generator,
-  def_147_number_base_converter,
-  def_148_number_to_words,
-  def_149_open_graph_meta_generator,
-  def_150_package_json_validator,
-  def_151_palette_generator,
-  def_152_passive_to_active_voice_detector,
-  def_153_password_generator,
-  def_154_password_strength_checker,
-  def_155_percentage_calculator,
-  def_156_prefix_suffix_adder,
-  def_157_pressure_unit_converter,
-  def_158_prime_number_checker,
-  def_159_properties_to_json,
-  def_160_protobuf_to_json,
-  def_161_punycode_converter,
-  def_162_px_to_rem_converter,
-  def_163_qr_code_generator,
-  def_164_query_string_parser,
-  def_165_random_number_generator,
-  def_166_read_time_calculator,
-  def_167_reading_grade_level_calculator,
-  def_168_readme_badge_generator,
-  def_169_redirect_rule_generator,
-  def_170_regex_cheatsheet_tester,
-  def_171_regex_tester,
-  def_172_rgb_to_hex,
-  def_173_ripemd160_generator,
-  def_174_robots_txt_generator,
-  def_175_roman_numeral_converter,
-  def_176_rot13_converter,
-  def_177_rsa_key_generator,
-  def_178_sales_tax_vat_calculator,
-  def_179_scientific_notation_converter,
-  def_180_screen_ppi_calculator,
-  def_181_semver_comparator,
-  def_182_sha3_hash_generator,
-  def_183_sha512_hash_generator,
-  def_184_sitemap_url_extractor,
-  def_185_social_media_post_formatter,
-  def_186_social_share_url_generator,
-  def_187_speed_distance_time_calculator,
-  def_188_sql_formatter,
-  def_189_sql_query_minifier,
-  def_190_statistics_calculator,
-  def_191_string_escape,
-  def_192_string_unescape,
-  def_193_svg_optimizer,
-  def_194_svg_path_visualizer,
-  def_195_svg_to_css_data_uri,
-  def_196_svg_to_jsx,
-  def_197_temperature_converter,
-  def_198_text_case,
-  def_199_text_cliche_finder,
-  def_200_text_diff_checker,
-  def_201_text_indent_formatter,
-  def_202_text_reverser,
-  def_203_text_sentiment_analyzer,
-  def_204_text_sorter,
-  def_205_text_to_binary,
-  def_206_text_trimmer,
-  def_207_text_word_wrap,
-  def_208_time_duration_calculator,
-  def_209_timestamp_to_iso,
-  def_210_toml_to_json,
-  def_211_tsv_to_csv,
-  def_212_twitter_tweet_counter,
-  def_213_ulid_generator,
-  def_214_unicode_escape_converter,
-  def_215_unix_timestamp_converter,
-  def_216_url_encoder_decoder,
-  def_217_url_extractor,
-  def_218_url_parser,
-  def_219_url_slug_generator,
-  def_220_user_agent_parser,
-  def_221_user_snippet_generator,
-  def_222_utm_builder,
-  def_223_uuid_generator,
-  def_224_websocket_frame_analyzer,
-  def_225_whitespace_remover,
-  def_226_whois_domain_parser,
-  def_227_word_counter,
-  def_228_xml_formatter,
-  def_229_xml_minifier,
-  def_230_xml_to_json,
-  def_231_yaml_to_json,
+  def_92_image_compressor,
+  def_93_image_to_base64,
+  def_94_invisible_character_detector,
+  def_95_ip_range_to_cidr,
+  def_96_ipv4_subnet_calculator,
+  def_97_ipv4_to_ipv6_converter,
+  def_98_js_formatter,
+  def_99_js_minifier,
+  def_100_js_obfuscation_detector,
+  def_101_json_formatter,
+  def_102_json_key_sorter,
+  def_103_json_ld_generator,
+  def_104_json_minifier,
+  def_105_json_schema_to_typescript,
+  def_106_json_size_analyzer,
+  def_107_json_to_csv,
+  def_108_json_to_go_struct,
+  def_109_json_to_graphql_schema,
+  def_110_json_to_json_schema,
+  def_111_json_to_kotlin,
+  def_112_json_to_properties,
+  def_113_json_to_python_pydantic,
+  def_114_json_to_rust_serde,
+  def_115_json_to_sql_schema,
+  def_116_json_to_toml,
+  def_117_json_to_typescript,
+  def_118_json_to_xml,
+  def_119_json_to_xml_schema_xsd,
+  def_120_json_to_yaml,
+  def_121_json_to_zod,
+  def_122_json_validator,
+  def_123_jwt_decoder,
+  def_124_jwt_generator,
+  def_125_keyword_density_analyzer,
+  def_126_license_text_generator,
+  def_127_line_counter,
+  def_128_line_numberer,
+  def_129_list_randomizer,
+  def_130_lorem_ipsum_generator,
+  def_131_mac_address_formatter,
+  def_132_markdown_heading_extractor,
+  def_133_markdown_previewer,
+  def_134_markdown_table_to_csv,
+  def_135_markdown_to_html,
+  def_136_markdown_to_pdf_cleaner,
+  def_137_matrix_calculator,
+  def_138_md5_hash_generator,
+  def_139_meta_description_previewer,
+  def_140_meta_robots_tag_generator,
+  def_141_meta_tag_generator,
+  def_142_mime_type_lookup,
+  def_143_modulo_inverse_calculator,
+  def_144_morse_code_converter,
+  def_145_nanoid_generator,
+  def_146_ndjson_to_json,
+  def_147_nginx_config_generator,
+  def_148_number_base_converter,
+  def_149_number_to_words,
+  def_150_open_graph_meta_generator,
+  def_151_package_json_validator,
+  def_152_palette_generator,
+  def_153_passive_to_active_voice_detector,
+  def_154_password_generator,
+  def_155_password_strength_checker,
+  def_156_percentage_calculator,
+  def_157_prefix_suffix_adder,
+  def_158_pressure_unit_converter,
+  def_159_prime_number_checker,
+  def_160_properties_to_json,
+  def_161_protobuf_to_json,
+  def_162_punycode_converter,
+  def_163_px_to_rem_converter,
+  def_164_qr_code_generator,
+  def_165_query_string_parser,
+  def_166_random_number_generator,
+  def_167_read_time_calculator,
+  def_168_reading_grade_level_calculator,
+  def_169_readme_badge_generator,
+  def_170_redirect_rule_generator,
+  def_171_regex_cheatsheet_tester,
+  def_172_regex_tester,
+  def_173_rgb_to_hex,
+  def_174_ripemd160_generator,
+  def_175_robots_txt_generator,
+  def_176_roman_numeral_converter,
+  def_177_rot13_converter,
+  def_178_rsa_key_generator,
+  def_179_sales_tax_vat_calculator,
+  def_180_scientific_notation_converter,
+  def_181_screen_ppi_calculator,
+  def_182_semver_comparator,
+  def_183_sha3_hash_generator,
+  def_184_sha512_hash_generator,
+  def_185_sitemap_url_extractor,
+  def_186_social_media_post_formatter,
+  def_187_social_share_url_generator,
+  def_188_speed_distance_time_calculator,
+  def_189_sql_formatter,
+  def_190_sql_query_minifier,
+  def_191_statistics_calculator,
+  def_192_string_escape,
+  def_193_string_unescape,
+  def_194_svg_optimizer,
+  def_195_svg_path_visualizer,
+  def_196_svg_to_css_data_uri,
+  def_197_svg_to_jsx,
+  def_198_temperature_converter,
+  def_199_text_case,
+  def_200_text_cliche_finder,
+  def_201_text_diff_checker,
+  def_202_text_indent_formatter,
+  def_203_text_reverser,
+  def_204_text_sentiment_analyzer,
+  def_205_text_sorter,
+  def_206_text_to_binary,
+  def_207_text_trimmer,
+  def_208_text_word_wrap,
+  def_209_time_duration_calculator,
+  def_210_timestamp_to_iso,
+  def_211_toml_to_json,
+  def_212_tsv_to_csv,
+  def_213_twitter_tweet_counter,
+  def_214_ulid_generator,
+  def_215_unicode_escape_converter,
+  def_216_unix_timestamp_converter,
+  def_217_url_encoder_decoder,
+  def_218_url_extractor,
+  def_219_url_parser,
+  def_220_url_slug_generator,
+  def_221_user_agent_parser,
+  def_222_user_snippet_generator,
+  def_223_utm_builder,
+  def_224_uuid_generator,
+  def_225_websocket_frame_analyzer,
+  def_226_whitespace_remover,
+  def_227_whois_domain_parser,
+  def_228_word_counter,
+  def_229_xml_formatter,
+  def_230_xml_minifier,
+  def_231_xml_to_json,
+  def_232_yaml_to_json,
 ];
 
 export const ToolRegistry: Record<string, React.ComponentType> = {
@@ -574,6 +576,7 @@ export const ToolRegistry: Record<string, React.ComponentType> = {
   "htpasswd-generator": dynamic(() => import("@/tools/htpasswd-generator/component"), { loading: ToolSkeleton }),
   "http-headers-parser": dynamic(() => import("@/tools/http-headers-parser/component"), { loading: ToolSkeleton }),
   "http-status-code-lookup": dynamic(() => import("@/tools/http-status-code-lookup/component"), { loading: ToolSkeleton }),
+  "image-compressor": dynamic(() => import("@/tools/image-compressor/component"), { loading: ToolSkeleton }),
   "image-to-base64": dynamic(() => import("@/tools/image-to-base64/component"), { loading: ToolSkeleton }),
   "invisible-character-detector": dynamic(() => import("@/tools/invisible-character-detector/component"), { loading: ToolSkeleton }),
   "ip-range-to-cidr": dynamic(() => import("@/tools/ip-range-to-cidr/component"), { loading: ToolSkeleton }),

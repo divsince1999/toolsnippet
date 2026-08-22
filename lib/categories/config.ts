@@ -208,7 +208,7 @@ export const CATEGORIES: CategoryConfig[] = [
       { id: "all", label: "All Design Tools", keywords: [] },
       { id: "css-effects", label: "CSS Effects & Glass", keywords: ["shadow", "glass", "glassmorphism", "blur", "border", "neumorphism"] },
       { id: "colors", label: "Colors & Gradients", keywords: ["color", "gradient", "palette", "contrast", "hex", "hsl"] },
-      { id: "svg-icons", label: "SVG & Visuals", keywords: ["svg", "jsx", "icon", "data-uri", "path", "optimizer"] },
+      { id: "svg-icons", label: "SVG & Visuals", keywords: ["svg", "jsx", "icon", "data-uri", "path", "optimizer", "image", "compress"] },
       { id: "layout", label: "Grid & Typography", keywords: ["grid", "flexbox", "typography", "clamp", "aspect-ratio"] }
     ],
     faqs: [

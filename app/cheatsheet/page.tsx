@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import CheatsheetCard from "@/components/CheatsheetCard";
 import { CHEATSHEETS } from "@/lib/cheatsheets/config";
 import { buildAllCheatsheetsBreadcrumbSchema } from "@/lib/seo/schema";
+import { tools } from "@/lib/tools";
 
 export const metadata: Metadata = {
   title: "Developer Cheat Sheets & Syntax Reference Hubs | ToolSnippet",
@@ -98,14 +99,14 @@ export default function CheatsheetsIndexPage() {
             Need interactive generators and converters?
           </h2>
           <p className="mx-auto mb-6 max-w-xl text-sm text-gray-600 dark:text-gray-400">
-            Explore 232+ client-side developer utilities designed to build, format, validate, and convert code in real-time.
+            Explore {tools.length}+ client-side developer utilities designed to build, format, validate, and convert code in real-time.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/tools"
               className="inline-flex items-center rounded-md bg-primary-solid px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-solid-hover dark:text-black"
             >
-              Browse All Tools (232) →
+              Browse All Tools ({tools.length}) →
             </Link>
             <Link
               href="/category"

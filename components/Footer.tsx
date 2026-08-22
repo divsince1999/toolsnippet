@@ -129,7 +129,7 @@ export default function Footer() {
                   href="/tools"
                   className="hover:text-primary-solid transition-colors"
                 >
-                  Tools Directory (232)
+                  Tools Directory ({tools.length})
                 </Link>
               </li>
               <li>
