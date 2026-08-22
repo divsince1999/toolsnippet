@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { tools } from "@/lib/tools";
 import { CATEGORIES } from "@/lib/categories/config";
+import { CHEATSHEETS } from "@/lib/cheatsheets/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.toolsnippet.com";
@@ -26,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/cheatsheet`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/privacy`,
       lastModified: currentDate,
       changeFrequency: "yearly" as const,
@@ -40,6 +47,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  const cheatsheetPages = CHEATSHEETS.map((cs) => ({
+    url: `${baseUrl}/cheatsheet/${cs.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly" as const,
+    priority: 0.85,
+  }));
+
   const toolPages = tools.map((tool) => ({
     url: `${baseUrl}/tools/${tool.slug}`,
     lastModified: currentDate,
@@ -47,5 +61,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...categoryPages, ...toolPages];
+  return [...staticPages, ...categoryPages, ...cheatsheetPages, ...toolPages];
 }

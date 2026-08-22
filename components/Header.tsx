@@ -46,6 +46,11 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/cheatsheet" className="hover:text-primary-solid transition-colors whitespace-nowrap">
+                Cheat Sheets
+              </Link>
+            </li>
+            <li>
               <Link href="/tools" className="hover:text-primary-solid transition-colors">
                 Tools
               </Link>

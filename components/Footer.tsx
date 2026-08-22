@@ -1,19 +1,20 @@
 import Link from "next/link";
 import { tools } from "@/lib/tools";
 import { CATEGORIES } from "@/lib/categories/config";
+import { CHEATSHEETS } from "@/lib/cheatsheets/config";
 
 export default function Footer() {
   const currentYear = 2026;
 
   // Select a few tools to display in Quick Links
-  const quickLinkTools = tools.slice(0, 6);
+  const quickLinkTools = tools.slice(0, 5);
 
   return (
     <footer className="mt-auto border-t border-black/10 bg-white pt-16 dark:border-white/10 dark:bg-black/20">
       <div className="mx-auto max-w-6xl px-4">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {/* Logo and Description */}
-          <div className="lg:col-span-2">
+          <div className="sm:col-span-2 md:col-span-3 lg:col-span-1">
             <Link
               href="/"
               aria-label="ToolSnippet home"
@@ -39,18 +40,18 @@ export default function Footer() {
                 ToolSnippet
               </span>
             </Link>
-            <p className="mt-4 max-w-sm text-sm text-gray-600 dark:text-gray-400">
-              Free, fast, private, and client-side utilities built for modern web developers, copywriters, and engineers. Zero server tracking, instant browser computation.
+            <p className="mt-4 text-xs sm:text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+              Free, fast, private, and client-side utilities built for web developers and engineers.
             </p>
           </div>
 
           {/* Categories Hub Links */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white">
-              Tool Categories
+              Categories
             </h3>
-            <ul className="mt-4 space-y-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-              {CATEGORIES.slice(0, 6).map((cat) => (
+            <ul className="mt-4 space-y-2 text-xs text-gray-600 dark:text-gray-400">
+              {CATEGORIES.slice(0, 5).map((cat) => (
                 <li key={cat.slug}>
                   <Link
                     href={`/category/${cat.slug}`}
@@ -71,12 +72,39 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Cheat Sheets */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white">
+              Cheat Sheets
+            </h3>
+            <ul className="mt-4 space-y-2 text-xs text-gray-600 dark:text-gray-400">
+              {CHEATSHEETS.slice(0, 5).map((cs) => (
+                <li key={cs.slug}>
+                  <Link
+                    href={`/cheatsheet/${cs.slug}`}
+                    className="hover:text-primary-solid transition-colors"
+                  >
+                    {cs.title.split(" (")[0]}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/cheatsheet"
+                  className="font-semibold text-primary-solid hover:underline"
+                >
+                  All {CHEATSHEETS.length} Guides →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Popular Tools */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white">
-              Popular Tools
+              Top Tools
             </h3>
-            <ul className="mt-4 space-y-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <ul className="mt-4 space-y-2 text-xs text-gray-600 dark:text-gray-400">
               {quickLinkTools.map((tool) => (
                 <li key={tool.slug}>
                   <Link
@@ -95,7 +123,7 @@ export default function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white">
               Resources
             </h3>
-            <ul className="mt-4 space-y-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <ul className="mt-4 space-y-2 text-xs text-gray-600 dark:text-gray-400">
               <li>
                 <Link
                   href="/tools"
@@ -109,7 +137,15 @@ export default function Footer() {
                   href="/category"
                   className="hover:text-primary-solid transition-colors"
                 >
-                  Category Hubs
+                  Topic Clusters
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cheatsheet"
+                  className="hover:text-primary-solid transition-colors"
+                >
+                  Quick Reference
                 </Link>
               </li>
               <li>

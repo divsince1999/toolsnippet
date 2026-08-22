@@ -2,6 +2,7 @@ import { ToolInfo, ToolFaq } from "@/lib/tools";
 import type { CategoryConfig } from "@/lib/categories/config";
 import { getCategoryByToolCategory } from "@/lib/categories/config";
 import type { ToolManifestEntry } from "@/lib/tools/types";
+import type { CheatsheetConfig } from "@/lib/cheatsheets/config";
 
 // TypeScript interfaces for Schema.org structured data
 interface SchemaOrganization {
@@ -82,10 +83,26 @@ interface SchemaItemList {
   }[];
 }
 
+interface SchemaTechArticle {
+  "@context": string;
+  "@type": "TechArticle";
+  headline: string;
+  description: string;
+  url: string;
+  inLanguage: string;
+  author: SchemaOrganization;
+  publisher: SchemaOrganization;
+}
+
 export type CategoryJsonLdSchema =
   | SchemaCollectionPage
   | SchemaBreadcrumbList
   | SchemaItemList
+  | SchemaFAQPage;
+
+export type CheatsheetJsonLdSchema =
+  | SchemaTechArticle
+  | SchemaBreadcrumbList
   | SchemaFAQPage;
 
 const baseUrl = "https://www.toolsnippet.com";
@@ -347,3 +364,114 @@ export function buildAllSchemas(
 
   return schemas;
 }
+
+/**
+ * Builds TechArticle schema for a cheat sheet reference guide
+ */
+export function buildCheatsheetArticleSchema(
+  cheatsheet: CheatsheetConfig
+): SchemaTechArticle {
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: cheatsheet.headline,
+    description: cheatsheet.description,
+    url: `${baseUrl}/cheatsheet/${cheatsheet.slug}`,
+    inLanguage: "en-US",
+    author: {
+      "@type": "Organization",
+      name: "ToolSnippet",
+      url: baseUrl,
+      logo: `${baseUrl}/images/site-logo.png`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "ToolSnippet",
+      url: baseUrl,
+      logo: `${baseUrl}/images/site-logo.png`,
+    },
+  };
+}
+
+/**
+ * Builds BreadcrumbList schema for a cheat sheet:
+ * Home > Cheat Sheets > [Cheat Sheet Title]
+ */
+export function buildCheatsheetBreadcrumbSchema(
+  cheatsheet: CheatsheetConfig
+): SchemaBreadcrumbList {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Cheat Sheets",
+        item: `${baseUrl}/cheatsheet`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: cheatsheet.title,
+        item: `${baseUrl}/cheatsheet/${cheatsheet.slug}`,
+      },
+    ],
+  };
+}
+
+/**
+ * Builds BreadcrumbList schema for All Cheat Sheets Index:
+ * Home > Cheat Sheets
+ */
+export function buildAllCheatsheetsBreadcrumbSchema(): SchemaBreadcrumbList {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Cheat Sheets",
+        item: `${baseUrl}/cheatsheet`,
+      },
+    ],
+  };
+}
+
+/**
+ * Builds FAQPage schema for a cheat sheet
+ */
+export function buildCheatsheetFAQSchema(
+  cheatsheet: CheatsheetConfig
+): SchemaFAQPage | null {
+  if (!cheatsheet.faqs || cheatsheet.faqs.length === 0) {
+    return null;
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: cheatsheet.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
