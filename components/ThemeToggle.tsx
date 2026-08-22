@@ -1,28 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+function subscribe(callback: () => void) {
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.attributeName === "class") {
+        callback();
+      }
+    }
+  });
+
+  observer.observe(document.documentElement, { attributes: true });
+  window.addEventListener("storage", callback);
+
+  return () => {
+    observer.disconnect();
+    window.removeEventListener("storage", callback);
+  };
+}
+
+function getSnapshot() {
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+}
+
+function getServerSnapshot() {
+  return "light";
+}
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    // Determine initial theme from html class or localStorage
-    const isDark =
-      document.documentElement.classList.contains("dark") ||
-      window.localStorage.getItem("theme") === "dark" ||
-      (!("theme" in window.localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-    setTheme(isDark ? "dark" : "light");
-    setMounted(true);
-  }, []);
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   function toggleTheme() {
     const nextTheme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-
     const root = document.documentElement;
+
     if (nextTheme === "dark") {
       root.classList.add("dark");
       window.localStorage.setItem("theme", "dark");
@@ -30,20 +42,6 @@ export default function ThemeToggle() {
       root.classList.remove("dark");
       window.localStorage.setItem("theme", "light");
     }
-  }
-
-  // Prevent hydration layout shift
-  if (!mounted) {
-    return (
-      <button
-        type="button"
-        className="flex h-9 w-9 items-center justify-center rounded-lg border border-black/10 transition hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/10"
-        aria-label="Toggle dark mode"
-        title="Toggle dark mode"
-      >
-        <span className="h-4 w-4" />
-      </button>
-    );
   }
 
   return (

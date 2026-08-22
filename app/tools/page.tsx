@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import ToolsDirectory from "@/components/ToolsDirectory";
+import rawManifest from "@/lib/tools/manifest.json";
+
+const totalTools = rawManifest.length;
 
 export const metadata: Metadata = {
   title: "All Developer Tools & Utilities | ToolSnippet Directory",
   description:
-    "Explore 170+ free online developer tools: JSON, YAML, SQL, XML, CSV converters, Base64, hashing, JWT, regex, and encoding utilities.",
+    `Explore ${totalTools}+ free online developer tools: JSON, YAML, SQL, XML, CSV converters, Base64, hashing, JWT, regex, and encoding utilities.`,
   alternates: {
     canonical: "/tools",
   },
@@ -19,7 +22,7 @@ export default function ToolsPage() {
           Developer Tools Directory
         </h1>
         <p className="mx-auto max-w-2xl text-sm text-gray-600 dark:text-gray-400 sm:text-base">
-          Browse and search 170+ fast, private browser-based utilities for text, schema conversion, cryptography, networking, and validation.
+          Browse and search {totalTools}+ fast, private browser-based utilities for text, schema conversion, cryptography, networking, and validation.
         </p>
       </section>
 
@@ -35,4 +38,3 @@ export default function ToolsPage() {
     </main>
   );
 }
-

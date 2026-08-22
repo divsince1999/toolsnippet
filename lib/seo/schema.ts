@@ -1,4 +1,7 @@
 import { ToolInfo, ToolFaq } from "@/lib/tools";
+import type { CategoryConfig } from "@/lib/categories/config";
+import { getCategoryByToolCategory } from "@/lib/categories/config";
+import type { ToolManifestEntry } from "@/lib/tools/types";
 
 // TypeScript interfaces for Schema.org structured data
 interface SchemaOrganization {
@@ -56,13 +59,41 @@ interface SchemaBreadcrumbList {
   itemListElement: SchemaBreadcrumbItem[];
 }
 
+interface SchemaCollectionPage {
+  "@context": string;
+  "@type": "CollectionPage";
+  name: string;
+  description: string;
+  url: string;
+  numberOfItems: number;
+  publisher: SchemaOrganization;
+}
+
+interface SchemaItemList {
+  "@context": string;
+  "@type": "ItemList";
+  name: string;
+  itemListElement: {
+    "@type": "ListItem";
+    position: number;
+    name: string;
+    url: string;
+    description: string;
+  }[];
+}
+
+export type CategoryJsonLdSchema =
+  | SchemaCollectionPage
+  | SchemaBreadcrumbList
+  | SchemaItemList
+  | SchemaFAQPage;
+
+const baseUrl = "https://www.toolsnippet.com";
+
 /**
  * Builds a WebApplication schema for a tool
- * @param tool - The tool object containing metadata
- * @returns A valid Schema.org WebApplication JSON-LD object
  */
 export function buildWebApplicationSchema(tool: ToolInfo): SchemaWebApplication {
-  const baseUrl = "https://www.toolsnippet.com";
   const toolUrl = `${baseUrl}/tools/${tool.slug}`;
 
   return {
@@ -91,8 +122,6 @@ export function buildWebApplicationSchema(tool: ToolInfo): SchemaWebApplication 
 
 /**
  * Builds an FAQPage schema from tool FAQs
- * @param tool - The tool object containing FAQs
- * @returns A valid Schema.org FAQPage JSON-LD object, or null if no FAQs exist
  */
 export function buildFAQSchema(tool: ToolInfo): SchemaFAQPage | null {
   if (!tool.faqs || tool.faqs.length === 0) {
@@ -116,14 +145,93 @@ export function buildFAQSchema(tool: ToolInfo): SchemaFAQPage | null {
 }
 
 /**
- * Builds a BreadcrumbList schema for a tool page
- * @param tool - The tool object containing name and slug
- * @returns A valid Schema.org BreadcrumbList JSON-LD object
+ * Builds a 4-tier BreadcrumbList schema for a tool page:
+ * Home > Categories > [Category Name] > [Tool Name]
  */
 export function buildBreadcrumbSchema(tool: ToolInfo): SchemaBreadcrumbList {
-  const baseUrl = "https://www.toolsnippet.com";
   const toolUrl = `${baseUrl}/tools/${tool.slug}`;
+  const categoryConfig = getCategoryByToolCategory(tool.category);
 
+  const breadcrumbs: SchemaBreadcrumbItem[] = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: baseUrl,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Categories",
+      item: `${baseUrl}/category`,
+    },
+  ];
+
+  if (categoryConfig) {
+    breadcrumbs.push({
+      "@type": "ListItem",
+      position: 3,
+      name: categoryConfig.name,
+      item: `${baseUrl}/category/${categoryConfig.slug}`,
+    });
+    breadcrumbs.push({
+      "@type": "ListItem",
+      position: 4,
+      name: tool.name,
+      item: toolUrl,
+    });
+  } else {
+    breadcrumbs.push({
+      "@type": "ListItem",
+      position: 3,
+      name: "Tools",
+      item: `${baseUrl}/tools`,
+    });
+    breadcrumbs.push({
+      "@type": "ListItem",
+      position: 4,
+      name: tool.name,
+      item: toolUrl,
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbs,
+  };
+}
+
+/**
+ * Builds CollectionPage schema for category hub
+ */
+export function buildCollectionPageSchema(
+  category: CategoryConfig,
+  toolCount: number
+): SchemaCollectionPage {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${category.name} - Free Online Utilities`,
+    description: category.description,
+    url: `${baseUrl}/category/${category.slug}`,
+    numberOfItems: toolCount,
+    publisher: {
+      "@type": "Organization",
+      name: "ToolSnippet",
+      url: baseUrl,
+      logo: `${baseUrl}/images/site-logo.png`,
+    },
+  };
+}
+
+/**
+ * Builds BreadcrumbList schema for category hub:
+ * Home > Categories > [Category Name]
+ */
+export function buildCategoryBreadcrumbSchema(
+  category: CategoryConfig
+): SchemaBreadcrumbList {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -137,25 +245,96 @@ export function buildBreadcrumbSchema(tool: ToolInfo): SchemaBreadcrumbList {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Tools",
-        item: `${baseUrl}/tools`,
+        name: "Categories",
+        item: `${baseUrl}/category`,
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: tool.name,
-        item: toolUrl,
+        name: category.name,
+        item: `${baseUrl}/category/${category.slug}`,
       },
     ],
   };
 }
 
 /**
- * Combines all schemas into a single array for rendering
- * @param tool - The tool object containing metadata
- * @returns Array of all valid schemas (WebApplication, FAQPage if FAQs exist, BreadcrumbList)
+ * Builds BreadcrumbList schema for the All Categories Index:
+ * Home > Categories
  */
-export function buildAllSchemas(tool: ToolInfo): (SchemaWebApplication | SchemaFAQPage | SchemaBreadcrumbList)[] {
+export function buildAllCategoriesBreadcrumbSchema(): SchemaBreadcrumbList {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Categories",
+        item: `${baseUrl}/category`,
+      },
+    ],
+  };
+}
+
+/**
+ * Builds ItemList schema for top tools in a category
+ */
+export function buildCategoryItemListSchema(
+  category: CategoryConfig,
+  tools: ToolManifestEntry[]
+): SchemaItemList {
+  const topTools = tools.slice(0, 15);
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `Top ${category.name} Tools`,
+    itemListElement: topTools.map((tool, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: tool.name,
+      url: `${baseUrl}/tools/${tool.slug}`,
+      description: tool.shortDescription,
+    })),
+  };
+}
+
+/**
+ * Builds FAQPage schema for category hub
+ */
+export function buildCategoryFAQSchema(
+  category: CategoryConfig
+): SchemaFAQPage | null {
+  if (!category.faqs || category.faqs.length === 0) {
+    return null;
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: category.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+/**
+ * Combines all schemas into a single array for rendering on tool pages
+ */
+export function buildAllSchemas(
+  tool: ToolInfo
+): (SchemaWebApplication | SchemaFAQPage | SchemaBreadcrumbList)[] {
   const schemas: (SchemaWebApplication | SchemaFAQPage | SchemaBreadcrumbList)[] = [
     buildWebApplicationSchema(tool),
     buildBreadcrumbSchema(tool),

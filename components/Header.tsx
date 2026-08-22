@@ -41,6 +41,11 @@ export default function Header() {
               </Link>
             </li>
             <li>
+              <Link href="/category" className="hover:text-primary-solid transition-colors">
+                Categories
+              </Link>
+            </li>
+            <li>
               <Link href="/tools" className="hover:text-primary-solid transition-colors">
                 Tools
               </Link>
