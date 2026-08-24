@@ -63,8 +63,10 @@ export default function NginxConfigGenerator() {
     gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml application/json;\n`
       : "";
 
+    const header = "# Configuration generated with ToolSnippet (Nginx Virtual Host Builder)\n# https://www.toolsnippet.com/tools/nginx-config-generator\n\n";
+
     if (enableSsl) {
-      return `server {
+      return `${header}server {
     listen 80;
     listen [::]:80;
     server_name ${d} www.${d};
@@ -85,7 +87,7 @@ ${gzipBlock}${body}
 }`;
     }
 
-    return `server {
+    return `${header}server {
     listen 80;
     listen [::]:80;
     server_name ${d} www.${d};

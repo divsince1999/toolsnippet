@@ -37,6 +37,7 @@ export default function GitignoreGenerator() {
   const [copied, setCopied] = useState(false);
 
   const gitignoreContent = useMemo(() => {
+    const header = "# Generated with ToolSnippet (.gitignore Generator)\n# https://www.toolsnippet.com/tools/gitignore-generator\n\n";
     const sections: string[] = [];
 
     for (const key of selected) {
@@ -50,7 +51,7 @@ export default function GitignoreGenerator() {
       sections.push(`# === Custom Rules ===\n${customRules.trim()}`);
     }
 
-    return sections.join("\n\n");
+    return header + sections.join("\n\n");
   }, [selected, customRules]);
 
   const togglePreset = (key: string) => {

@@ -12,9 +12,11 @@ export default function DockerfileGenerator() {
   const [copied, setCopied] = useState(false);
 
   const dockerfile = useMemo(() => {
+    const header = "# Generated with ToolSnippet (Dockerfile Builder)\n# https://www.toolsnippet.com/tools/dockerfile-generator\n\n";
+
     if (stack === "node") {
       const installCmd = pkgManager === "pnpm" ? "corepack enable && pnpm install --frozen-lockfile" : pkgManager === "yarn" ? "yarn install --frozen-lockfile" : "npm ci";
-      return `# Stage 1: Dependencies & Build
+      return `${header}# Stage 1: Dependencies & Build
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ${pkgManager === "pnpm" ? "pnpm-lock.yaml " : pkgManager === "yarn" ? "yarn.lock " : ""}./
@@ -37,7 +39,7 @@ CMD ["node", "server.js"]`;
     }
 
     if (stack === "python") {
-      return `FROM python:3.11-slim AS builder
+      return `${header}FROM python:3.11-slim AS builder
 WORKDIR /app
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
@@ -55,7 +57,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "${port}"]`;
     }
 
     if (stack === "go") {
-      return `# Build Stage
+      return `${header}# Build Stage
 FROM golang:1.22-alpine AS builder
 WORKDIR /app
 COPY go.mod go.sum ./
@@ -73,7 +75,7 @@ CMD ["/server"]`;
     }
 
     if (stack === "rust") {
-      return `FROM rust:1.77-alpine AS builder
+      return `${header}FROM rust:1.77-alpine AS builder
 WORKDIR /app
 RUN apk add --no-cache musl-dev
 COPY Cargo.toml Cargo.lock ./
@@ -88,7 +90,7 @@ EXPOSE ${port}
 CMD ["/app/server"]`;
     }
 
-    return `FROM nginx:alpine
+    return `${header}FROM nginx:alpine
 COPY . /usr/share/nginx/html
 EXPOSE ${port}
 CMD ["nginx", "-g", "daemon off;"]`;

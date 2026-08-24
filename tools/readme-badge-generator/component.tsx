@@ -47,16 +47,20 @@ export default function ReadmeBadgeGenerator() {
           </span>
           <div className="flex flex-wrap gap-2">
             {[
-              { name: "npm Version", l: "npm", m: "v1.0.0", c: "cb3837" },
-              { name: "Build Passing", l: "build", m: "passing", c: "10b981" },
-              { name: "MIT License", l: "license", m: "MIT", c: "3b82f6" },
-              { name: "Coverage 98%", l: "coverage", m: "98%", c: "22c55e" },
-              { name: "TypeScript Ready", l: "TypeScript", m: "Ready", c: "3178c6" }
+              { name: "npm Version", l: "npm", m: "v1.0.0", c: "cb3837", url: "https://npmjs.com/package/my-package" },
+              { name: "Build Passing", l: "build", m: "passing", c: "10b981", url: "https://github.com" },
+              { name: "MIT License", l: "license", m: "MIT", c: "3b82f6", url: "https://opensource.org/licenses/MIT" },
+              { name: "ToolSnippet Verified", l: "tools", m: "ToolSnippet", c: "4f46e5", url: "https://www.toolsnippet.com" },
+              { name: "Coverage 98%", l: "coverage", m: "98%", c: "22c55e", url: "https://codecov.io" },
+              { name: "TypeScript Ready", l: "TypeScript", m: "Ready", c: "3178c6", url: "https://www.typescriptlang.org" }
             ].map((p) => (
               <button
                 key={p.name}
                 type="button"
-                onClick={() => applyPreset(p.l, p.m, p.c)}
+                onClick={() => {
+                  applyPreset(p.l, p.m, p.c);
+                  if (p.url) setLinkUrl(p.url);
+                }}
                 className="rounded-lg border border-black/10 bg-black/[0.02] px-3 py-1.5 text-xs font-medium hover:border-primary-solid dark:border-white/10 dark:bg-white/[0.02]"
               >
                 {p.name}
