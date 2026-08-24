@@ -11,3 +11,5 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+[ToolSnippet - 233+ Free Client-Side Developer Tools](https://www.toolsnippet.com)
