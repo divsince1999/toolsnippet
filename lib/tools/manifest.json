@@ -498,6 +498,12 @@
     "shortDescription": "Build structured @type: 'HowTo' JSON-LD schema markup with step titles, descriptions, and supplies for Google."
   },
   {
+    "slug": "html-color-picker",
+    "name": "HTML Color Picker & EyeDropper",
+    "category": "Design",
+    "shortDescription": "Pick, convert, and extract colors from screen or canvas with live HEX, RGB, HSL, CMYK, OKLCH conversions and WCAG contrast check."
+  },
+  {
     "slug": "html-entity-decoder",
     "name": "HTML Entity Decoder",
     "category": "Encoding",
@@ -736,6 +742,12 @@
     "name": "JSON Validator",
     "category": "Validation",
     "shortDescription": "Check if your JSON data is valid and well-formed."
+  },
+  {
+    "slug": "jsonpath-evaluator",
+    "name": "JSONPath Evaluator & Query Tester",
+    "category": "Data",
+    "shortDescription": "Test, evaluate, and extract data from JSON documents using JSONPath syntax expressions in real-time."
   },
   {
     "slug": "jwt-decoder",
