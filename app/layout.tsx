@@ -90,6 +90,12 @@ export default function RootLayout({
     >
       <head>
         <ThemeScript />
+        <meta name="google-adsense-account" content="ca-pub-1851411713709519" />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1851411713709519"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className={`${poppins.className} min-h-full flex flex-col font-sans`}>
         <Header />
