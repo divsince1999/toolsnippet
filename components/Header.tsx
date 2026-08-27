@@ -5,7 +5,7 @@ import HeaderSearch from "@/components/HeaderSearch";
 export default function Header() {
   return (
     <header className="min-h-[73px] border-b border-black/10 dark:border-white/10 sticky top-0 z-40 bg-white/80 backdrop-blur-md dark:bg-zinc-950/80">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 p-4 md:flex-nowrap md:gap-6">
+      <div className="mx-auto flex w-full max-w-[1920px] flex-wrap items-center justify-between gap-3 p-4 md:flex-nowrap md:gap-6">
         <Link href="/" aria-label="ToolSnippet home" className="flex shrink-0 items-center gap-2 hover:opacity-90 transition-opacity">
           <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-solid text-white">
             <svg

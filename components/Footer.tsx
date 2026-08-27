@@ -118,34 +118,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal & Directory */}
+          {/* Legal & Company */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white">
-              Resources
+              Company &amp; Legal
             </h3>
             <ul className="mt-4 space-y-2 text-xs text-gray-600 dark:text-gray-400">
               <li>
                 <Link
-                  href="/tools"
+                  href="/about"
                   className="hover:text-primary-solid transition-colors"
                 >
-                  Tools Directory ({tools.length})
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/category"
-                  className="hover:text-primary-solid transition-colors"
-                >
-                  Topic Clusters
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cheatsheet"
-                  className="hover:text-primary-solid transition-colors"
-                >
-                  Quick Reference
+                  About Us
                 </Link>
               </li>
               <li>
@@ -154,6 +138,30 @@ export default function Footer() {
                   className="hover:text-primary-solid transition-colors"
                 >
                   Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="hover:text-primary-solid transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-primary-solid transition-colors"
+                >
+                  Contact Support
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools"
+                  className="hover:text-primary-solid transition-colors"
+                >
+                  Tools Directory ({tools.length})
                 </Link>
               </li>
             </ul>

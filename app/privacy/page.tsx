@@ -128,16 +128,55 @@ export default function PrivacyPage() {
           </ul>
         </section>
 
+        {/* Advertising & Google AdSense */}
+        <section className="rounded-2xl border border-black/10 bg-white p-8 dark:border-white/5 dark:bg-white/[0.02]">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+            Third-Party Advertising &amp; Google AdSense
+          </h2>
+          <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+            We may use third-party advertising companies, such as Google AdSense, to serve advertisements when you visit our website. These companies may use cookies and web beacons to collect non-personally identifiable information (such as your browser type, device specifications, and general geographic region) in order to provide advertisements about goods and services that may interest you.
+          </p>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-gray-600 dark:text-gray-400">
+            <li>
+              <strong>Google Advertising Cookies:</strong> Google, as a third-party vendor, uses cookies to serve ads on ToolSnippet. Google&apos;s use of advertising cookies enables it and its partners to serve personalized or non-personalized ads to our users based on visits to ToolSnippet and other websites across the internet.
+            </li>
+            <li>
+              <strong>User Cookie Choices &amp; Opt-Out:</strong> Users may choose to opt out of personalized advertising by visiting{" "}
+              <a
+                href="https://myadcenter.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-solid hover:underline"
+              >
+                Google My Ad Center
+              </a>{" "}
+              or by visiting the Network Advertising Initiative opt-out page at{" "}
+              <a
+                href="https://optout.aboutads.info/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-solid hover:underline"
+              >
+                www.aboutads.info
+              </a>
+              .
+            </li>
+            <li>
+              <strong>Tool Input Isolation:</strong> Under no circumstances do advertising scripts have access to your tool inputs, converted text, generated keys, or compressed files.
+            </li>
+          </ul>
+        </section>
+
         {/* Hosting & Infrastructure */}
         <section className="rounded-2xl border border-black/10 bg-white p-8 dark:border-white/5 dark:bg-white/[0.02]">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-            Hosting & Infrastructure
+            Hosting &amp; Infrastructure
           </h2>
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            This website is served as a collection of static HTML, CSS, and JavaScript files. We use standard static hosting (e.g., GitHub Pages) which may log standard HTTP access logs (IP address, page requested, timestamp) as part of routine infrastructure operation. These logs are controlled by the hosting provider and are not accessible to or used by ToolSnippet for any purpose.
+            This website is served as a collection of static HTML, CSS, and JavaScript files. We use standard global edge infrastructure which may log basic HTTP access metadata (IP address, requested path, timestamp) strictly for security and denial-of-service prevention.
           </p>
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            All pages are served exclusively over <span className="font-semibold">HTTPS</span> to ensure the transport layer between your browser and our CDN is encrypted.
+            All traffic is enforced exclusively over <span className="font-semibold">HTTPS</span> (TLS 1.3 encryption) to ensure a secure, tamper-proof connection.
           </p>
         </section>
 
