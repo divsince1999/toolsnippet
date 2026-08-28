@@ -192,6 +192,12 @@
     "shortDescription": "Convert cron expressions into human-readable text."
   },
   {
+    "slug": "cron-expression-validator",
+    "name": "Cron Expression Validator & Schedule Inspector",
+    "category": "Dev",
+    "shortDescription": "Validate, inspect, and calculate upcoming execution schedules for 5-field and 6-field crontab expressions."
+  },
+  {
     "slug": "cron-job-generator",
     "name": "Cron Expression Generator & Visual Scheduler",
     "category": "Dev",
@@ -286,6 +292,12 @@
     "name": "CSS Text Shadow Generator",
     "category": "Design",
     "shortDescription": "Create custom CSS text shadows, neon glow effects, and 3D typography styling."
+  },
+  {
+    "slug": "css-to-tailwind",
+    "name": "CSS to Tailwind Converter",
+    "category": "Design",
+    "shortDescription": "Convert standard CSS declaration rules and stylesheets into Tailwind CSS utility classes instantly."
   },
   {
     "slug": "css-triangle-generator",
@@ -546,6 +558,12 @@
     "shortDescription": "Generate secure HTTP Basic Authentication .htpasswd entries in Bcrypt, SHA-1, and MD5-APR1 formats."
   },
   {
+    "slug": "http-header-analyzer",
+    "name": "HTTP Security Header Analyzer",
+    "category": "Web",
+    "shortDescription": "Analyze HTTP response headers for security vulnerabilities, caching policies, and SEO optimization."
+  },
+  {
     "slug": "http-headers-parser",
     "name": "HTTP Headers Parser & Security Audit",
     "category": "Validation",
@@ -574,6 +592,12 @@
     "name": "Zero-Width & Invisible Character Detector",
     "category": "Validation",
     "shortDescription": "Detect, reveal, and remove hidden zero-width spaces, soft hyphens, and invisible Unicode control characters."
+  },
+  {
+    "slug": "ip-geolocation-lookup",
+    "name": "IP Address & Subnet Inspector",
+    "category": "Web",
+    "shortDescription": "Inspect IPv4/IPv6 addresses, subnet masks, network CIDR ranges, and network classification locally."
   },
   {
     "slug": "ip-range-to-cidr",
@@ -750,6 +774,12 @@
     "shortDescription": "Test, evaluate, and extract data from JSON documents using JSONPath syntax expressions in real-time."
   },
   {
+    "slug": "jwt-builder",
+    "name": "JWT Builder & Signer",
+    "category": "Auth",
+    "shortDescription": "Build, sign, and verify JSON Web Tokens (JWT) with HMAC-SHA256 and custom payload claims 100% in-browser."
+  },
+  {
     "slug": "jwt-decoder",
     "name": "JWT Decoder",
     "category": "Auth",
@@ -826,6 +856,12 @@
     "name": "Markdown to HTML Converter",
     "category": "Text",
     "shortDescription": "Convert GitHub Flavored Markdown into clean, exportable HTML code."
+  },
+  {
+    "slug": "markdown-to-pdf",
+    "name": "Markdown to PDF Converter",
+    "category": "Text",
+    "shortDescription": "Convert Markdown documents into beautifully styled, printable PDF documents directly in your browser."
   },
   {
     "slug": "markdown-to-pdf-cleaner",
@@ -1152,6 +1188,12 @@
     "shortDescription": "Beautify and format your SQL queries."
   },
   {
+    "slug": "sql-query-explainer",
+    "name": "SQL Query Explainer & Visualizer",
+    "category": "Data",
+    "shortDescription": "Break down complex SQL queries into readable plain-English step-by-step logic, clause trees, and table operations."
+  },
+  {
     "slug": "sql-query-minifier",
     "name": "SQL Query Minifier & Single-Line Optimizer",
     "category": "Data",
@@ -1294,6 +1336,12 @@
     "name": "Twitter / X Thread Splitter & Counter",
     "category": "Text",
     "shortDescription": "Calculate weighted 280-character Twitter limits and automatically split long paragraphs into numbered threads."
+  },
+  {
+    "slug": "typescript-playground",
+    "name": "TypeScript Playground & Transpiler",
+    "category": "Dev",
+    "shortDescription": "Live in-browser TypeScript editor, type checker, and JavaScript compiler with instant execution."
   },
   {
     "slug": "ulid-generator",
