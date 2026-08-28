@@ -36,7 +36,7 @@ function transpileTypeScriptToJs(ts: string): string {
   js = js.replace(/\s+as\s+[A-Za-z0-9_<>\[\]|&\s]+/g, "");
 
   // 6. Remove generic signatures on function declarations and calls: function foo<T>(x: T): T -> function foo(x)
-  js = js.replace(/<[A-Za-z0-9_,\s\<\>\[\]|&=]+>(?=\s*\()/g, "");
+  js = js.replace(/<[^>]+>(?=\s*\()/g, "");
 
   // 7. Remove function return type annotations: ): ReturnType { -> ) {
   js = js.replace(/\)\s*:\s*[A-Za-z0-9_<>\[\]|&\s]+(?=\s*(=>|\{))/g, ")");
